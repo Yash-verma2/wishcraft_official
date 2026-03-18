@@ -1,0 +1,1369 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Viewport + Theme -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f43f5e" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- SEO Core -->
+  <title>WishCraft | Create Magical Birthday & Celebration Pages</title>
+  <meta name="description"
+    content="Create stunning, aesthetic, and professional digital birthday pages instantly with WishCraft. Add music, photos, and share unforgettable moments." />
+  <meta name="keywords"
+    content="birthday page generator, digital birthday card, celebration website, online wishes maker, aesthetic birthday page" />
+  <meta name="author" content="WishCraft" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://wishcraft-sxsd.onrender.com" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="WishCraft" />
+
+  <!-- Favicon Pack -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://www.gstatic.com">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="WishCraft" />
+  <meta property="og:url" content="https://wishcraft-sxsd.onrender.com" />
+  <meta property="og:title" content="WishCraft | Create Magical Celebration Pages Instantly" />
+  <meta property="og:description"
+    content="Design beautiful digital birthday pages with music, photos, and premium animations." />
+  <meta property="og:image" content="https://wishcraft-sxsd.onrender.com/static/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WishCraft | Magical Celebration Pages" />
+  <meta name="twitter:description" content="Create stunning digital birthday pages in seconds." />
+  <meta name="twitter:image" content="https://wishcraft-sxsd.onrender.com/static/og-image.png" />
+
+  <!-- Fonts (Optimized) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#fff1f2',
+              100: '#ffe4e6',
+              500: '#f43f5e',
+              600: '#e11d48',
+              700: '#be123c',
+            }
+          },
+          animation: {
+            float: 'float 3s ease-in-out infinite',
+            shimmer: 'shimmer 2s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%,100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Firebase -->
+  <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "WishCraft",
+    "url": "https://wishcraft-sxsd.onrender.com",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "description": "Create magical digital celebration pages with music, photos and premium design.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Styles -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .dark .glass {
+      background: rgba(15, 10, 15, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #f43f5e, #fb923c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn-premium {
+      transition: all .3s ease;
+    }
+
+    .btn-premium:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(244, 63, 94, .4);
+    }
+
+    /* Animations & Carousel */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+
+    .feedback-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .feedback-carousel {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Dashboard Preview Carousel */
+    .preview-carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .preview-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .preview-slide {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+    }
+
+    .preview-dot {
+      transition: all 0.3s ease;
+    }
+
+    /* FAQ Accordion Styles */
+    .faq-item {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-item.active {
+      background: rgba(244, 63, 94, 0.03);
+      border-color: rgba(244, 63, 94, 0.2);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      margin-top: 1rem;
+    }
+
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Modal Styles */
+    #resourceModal {
+      transition: opacity 0.3s ease;
+    }
+
+    #resourceModal.hidden {
+      display: none;
+      opacity: 0;
+    }
+
+    .modal-content {
+      transform: translateY(20px);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    #resourceModal:not(.hidden) .modal-content {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+
+<body class="bg-[#fafafa] dark:bg-[#030712] text-gray-900 dark:text-gray-100 font-sans selection:bg-brand-500/30">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 glass transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3 group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <div
+          class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-brand-500/20 group-hover:scale-110 transition-transform">
+          <span class="text-white font-bold text-xl">W</span>
+        </div>
+        <span class="text-2xl font-display font-extrabold tracking-tight gradient-text">WishCraft</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+        <a href="#features" class="hover:text-brand-500 transition-colors">Features</a>
+        <a href="#how-it-works" class="hover:text-brand-500 transition-colors">How it Works</a>
+        <a href="#feedbacks" class="hover:text-brand-500 transition-colors">Top Feedbacks</a>
+        <button id="pwaInstall"
+          class="hidden px-5 py-2.5 bg-indigo-600 text-white rounded-full btn-premium shadow-lg shadow-indigo-500/25">Install
+          App</button>
+        <button onclick="launchApp()"
+          class="px-5 py-2.5 bg-brand-500 text-white rounded-full btn-premium shadow-lg shadow-brand-500/25">Create
+          Magic Now
+        </button>
+      </nav>
+
+      <button class="md:hidden p-2 text-2xl" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div id="mobileNav"
+    class="fixed inset-0 z-[60] bg-white dark:bg-gray-900 hidden flex flex-col p-8 gap-6 pt-24 text-xl font-bold">
+    <button class="absolute top-6 right-6 text-3xl" onclick="toggleMobileMenu()">×</button>
+    <a href="#features" onclick="toggleMobileMenu()">Features</a>
+    <a href="#how-it-works" onclick="toggleMobileMenu()">How it Works</a>
+    <a href="#feedbacks" onclick="toggleMobileMenu()">Top Feedbacks</a>
+    <button id="pwaInstallMobile"
+      class="hidden mt-4 w-full py-4 bg-indigo-600 text-white text-center rounded-2xl">Install App</button>
+    <button onclick="toggleMobileMenu(); launchApp();"
+      class="mt-4 w-full py-4 bg-brand-500 text-white text-center rounded-2xl">Create Magic Now</button>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="relative pt-40 pb-20 overflow-hidden">
+      <!-- Background Blobs -->
+      <div
+        class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-500/15 rounded-full blur-[120px] -z-10 animate-pulse">
+      </div>
+      <div
+        class="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-orange-500/15 rounded-full blur-[100px] -z-10 animate-pulse"
+        style="animation-delay: 1s;"></div>
+
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/5 border border-brand-500/10 text-brand-600 dark:text-brand-400 text-sm font-bold mb-8 animate-float">
+          <span class="flex h-2 w-2 rounded-full bg-brand-500"></span>
+          Trusted by many users worldwide
+        </div>
+
+        <h1 class="text-5xl lg:text-7xl font-display font-black tracking-tight mb-8 leading-[1.1]">
+          Make Them <br />
+          <span class="gradient-text">Feel Truly Special</span>
+        </h1>
+
+        <p
+          class="text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
+          Create stunning digital pages for birthdays, anniversaries, Valentine’s, and every moment that deserves more
+          than just a simple wish.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+          <button onclick="launchApp()"
+            class="w-full sm:w-auto px-10 py-5 bg-brand-600 text-white rounded-2xl text-lg font-bold btn-premium shadow-xl shadow-brand-500/30 text-center">
+            Create Your Wish →
+          </button>
+
+          <button onclick="openHowToUse()"
+            class="w-full sm:w-auto px-8 py-5 glass rounded-2xl text-lg font-bold flex items-center justify-center gap-2 btn-premium">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            See How It Works
+          </button>
+        </div>
+
+        <p class="mt-6 text-sm text-gray-500 dark:text-gray-400 font-bold tracking-wide opacity-80">
+          Birthday • Anniversary • Valentine’s • And more
+        </p>
+
+      </div>
+
+      <!-- Dashboard Preview Slideshow -->
+      <div class="mt-20 relative group max-w-5xl mx-auto">
+        <div
+          class="absolute inset-0 bg-brand-500/20 blur-[80px] -z-10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+        </div>
+        <div
+          class="rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-2xl transition-all duration-500 group-hover:scale-[1.01] group-hover:shadow-brand-500/10 bg-white dark:bg-gray-900">
+          <div id="previewCarousel" class="preview-carousel">
+            <div class="preview-slide">
+              <img src="assets/previews/preview1.png" alt="WishCraft QR Dashboard" class="w-full" />
+            </div>
+            <div class="preview-slide">
+              <img src="assets/previews/preview2.png" alt="WishCraft Celebration Dashboard" class="w-full" />
+            </div>
+            <div class="preview-slide">
+              <img
+                src="https://raw.githubusercontent.com/Yash-verma2/Event-site-server/main/templates/static/previews/hbd2-preview.png"
+                alt="WishCraft Legacy Preview" class="w-full" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="flex justify-center gap-2 mt-8">
+          <div class="preview-dot w-2 h-2 rounded-full bg-brand-500 shadow-lg shadow-brand-500/40"></div>
+          <div class="preview-dot w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-800"></div>
+          <div class="preview-dot w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-800"></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="py-24 bg-white dark:bg-gray-950">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16 fade-up">
+          <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3">Core Capabilities</h2>
+          <p class="text-4xl lg:text-5xl font-display font-black tracking-tight">Everything you need for <br /> <span
+              class="gradient-text">The Perfect Surprise</span></p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-up">
+          <!-- Feature 1 -->
+          <div
+            class="p-8 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 group">
+            <div
+              class="w-14 h-14 rounded-2xl bg-brand-500/10 flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Magic Music Sync</h3>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Choose from our curated library or upload your
+              own tracks. Our engine automatically syncs animations to the beat.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="p-8 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 group">
+            <div
+              class="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-500 mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Stunning Galleries</h3>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Upload up to 8 high-resolution photos. We
+              display them in a premium, interactive cinematic gallery.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="p-8 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 group">
+            <div
+              class="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Instant Sharing</h3>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Generate a unique link in seconds and share it
+              via WhatsApp, Instagram, or Facebook with one click.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="py-24 bg-gray-50 dark:bg-[#020617] fade-up">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3 text-center">Easy Process</h2>
+        <p class="text-4xl lg:text-5xl font-display font-black tracking-tight mb-16">Three Steps to <span
+            class="gradient-text">Celebrate</span></p>
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24 relative">
+          <!-- Step 1 -->
+          <div class="relative z-10 w-full max-w-[280px]">
+            <div
+              class="w-20 h-20 bg-brand-500 text-white rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-xl shadow-brand-500/30">
+              1</div>
+            <h3 class="text-xl font-bold mb-2">Fill the Details</h3>
+            <p class="text-gray-600 dark:text-gray-400">Enter the name, special messages, and a beautiful cover photo.
+            </p>
+          </div>
+
+          <!-- Connector 1 -->
+          <div
+            class="hidden md:block absolute top-10 left-[35%] w-[10%] border-t-2 border-dashed border-gray-300 dark:border-gray-700">
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative z-10 w-full max-w-[280px]">
+            <div
+              class="w-20 h-20 bg-indigo-500 text-white rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-xl shadow-indigo-500/30">
+              2</div>
+            <h3 class="text-xl font-bold mb-2">Pick Music & Gift</h3>
+            <p class="text-gray-600 dark:text-gray-400">Choose from or upload a custom track and pick a virtual gift
+              box.</p>
+          </div>
+
+          <!-- Connector 2 -->
+          <div
+            class="hidden md:block absolute top-10 right-[35%] w-[10%] border-t-2 border-dashed border-gray-300 dark:border-gray-700">
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative z-10 w-full max-w-[280px]">
+            <div
+              class="w-20 h-20 bg-brand-500 text-white rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-xl shadow-brand-500/30">
+              3</div>
+            <h3 class="text-xl font-bold mb-2">Launch & Share</h3>
+            <p class="text-gray-600 dark:text-gray-400">Hit generate and send the magical link to your favorite person.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION (Replaces local form) -->
+    <section id="launch" class="py-24 relative overflow-hidden fade-up">
+      <div class="absolute inset-0 bg-brand-500/5 -z-10"></div>
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="glass p-12 md:p-20 rounded-[40px] border border-brand-500/20 shadow-2xl relative">
+          <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-500/10 rounded-full blur-3xl"></div>
+          <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-500/10 rounded-full blur-3xl"></div>
+
+          <h2 class="text-4xl md:text-6xl font-display font-black tracking-tight mb-6">Ready to Create your <br /> <span
+              class="gradient-text">Magical Moment?</span></h2>
+          <p class="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-xl mx-auto font-medium">
+            Join thousands of happy users and launch your professional celebration page in under 60 seconds.
+          </p>
+
+          <button onclick="launchApp()"
+            class="inline-flex items-center gap-3 px-12 py-6 bg-brand-600 text-white rounded-2xl text-xl font-bold btn-premium shadow-2xl shadow-brand-500/40">
+            Create Magic Now
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </button>
+
+          <p
+            class="mt-8 text-sm text-gray-500 font-bold uppercase tracking-widest flex items-center justify-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Server Live & Ready
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOP FEEDBACKS SECTION -->
+    <section id="feedbacks" class="py-24 bg-white dark:bg-gray-950 fade-up">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3">User Loved</h2>
+          <p class="text-4xl lg:text-5xl font-display font-black tracking-tight">Top <span
+              class="gradient-text">Feedbacks</span></p>
+        </div>
+
+        <!-- Dynamic Feedback Container - Carousel Style -->
+        <div id="feedbacksContainer"
+          class="feedback-carousel flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth min-h-[300px]">
+          <!-- Skeleton Loaders -->
+          <div
+            class="snap-center shrink-0 w-[85vw] md:w-[400px] p-8 rounded-3xl glass border border-gray-100 dark:border-gray-800 animate-pulse">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-gray-200 dark:bg-gray-800 rounded-full"></div>
+              <div class="space-y-2">
+                <div class="h-4 w-24 bg-gray-200 dark:bg-gray-800 rounded"></div>
+                <div class="h-3 w-16 bg-gray-100 dark:bg-gray-900 rounded"></div>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div class="h-4 w-full bg-gray-100 dark:bg-gray-900 rounded"></div>
+              <div class="h-4 w-5/6 bg-gray-100 dark:bg-gray-900 rounded"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 fade-up">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3 text-center">Questions?</h2>
+          <p class="text-4xl lg:text-5xl font-display font-black tracking-tight mb-4">Frequently Asked <span
+              class="gradient-text">Questions</span></p>
+          <p class="text-gray-600 dark:text-gray-400 font-medium">Everything you need to know about creating the perfect
+            celebration.</p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div
+            class="faq-item group p-6 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/30 transition-all cursor-pointer"
+            onclick="toggleFaq(this)">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-lg dark:text-white">What exactly is WishCraft?</h4>
+              <div
+                class="faq-icon w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center text-brand-600">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
+              WishCraft is a premium digital celebration page builder. We help you create stunning, interactive, and
+              personalized websites for birthdays, anniversaries, and special moments in just a few clicks.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div
+            class="faq-item group p-6 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/30 transition-all cursor-pointer"
+            onclick="toggleFaq(this)">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-lg dark:text-white">Is it really free for everyone?</h4>
+              <div
+                class="faq-icon w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center text-brand-600">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
+              Yes! Our core celebration page generator is completely free. You can create, customize, and share as many
+              pages as you want without any hidden charges.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div
+            class="faq-item group p-6 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/30 transition-all cursor-pointer"
+            onclick="toggleFaq(this)">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-lg dark:text-white">Can I add my own music and photos?</h4>
+              <div
+                class="faq-icon w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center text-brand-600">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
+              Absolutely. You can upload multiple photos to create a gallery and either choose from our curated library
+              or upload your own MP3 for the perfect soundtrack.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div
+            class="faq-item group p-6 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/30 transition-all cursor-pointer"
+            onclick="toggleFaq(this)">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-lg dark:text-white">How do I share my creation?</h4>
+              <div
+                class="faq-icon w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center text-brand-600">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
+              Once you're done, we generate a unique, short link for your page. You can share it directly via WhatsApp,
+              Instagram, or any other platform. It works perfectly on all devices.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEEDBACK SECTION -->
+    <section id="feedback" class="py-24 bg-gray-50 dark:bg-[#020617] fade-up">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3 text-center">Your Voice</h2>
+          <p class="text-4xl lg:text-5xl font-display font-black tracking-tight mb-4">Share Your <span
+              class="gradient-text">Feedback</span></p>
+          <p class="text-gray-600 dark:text-gray-400 font-medium">Help us make WishCraft even more magical.</p>
+        </div>
+
+        <div class="glass p-8 md:p-12 rounded-[32px] border border-brand-500/10 shadow-xl relative overflow-hidden">
+          <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-500/5 rounded-full blur-3xl"></div>
+
+          <form id="feedbackForm" class="relative space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Full Name</label>
+                <input type="text" name="name" required
+                  class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium"
+                  placeholder="John Doe">
+              </div>
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Email Address</label>
+                <input type="email" name="email" required
+                  class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium"
+                  placeholder="john@example.com">
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Message</label>
+              <textarea name="message" required rows="4"
+                class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium resize-none"
+                placeholder="What's on your mind?"></textarea>
+            </div>
+
+            <button type="submit" id="feedbackSubmit"
+              class="w-full py-5 bg-brand-600 text-white rounded-2xl text-lg font-bold btn-premium shadow-xl shadow-brand-500/20 flex items-center justify-center gap-3">
+              <span>Send Feedback</span>
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white dark:bg-gray-950 pt-24 pb-12 border-t border-gray-100 dark:border-gray-900">
+    <div class="max-w-7xl mx-auto px-4 text-left">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <!-- Brand Column -->
+        <div class="space-y-6">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-brand-500/20">
+              <span class="text-white font-bold text-xl">W</span>
+            </div>
+            <span class="text-2xl font-display font-extrabold tracking-tight gradient-text">WishCraft</span>
+          </div>
+          <p class="text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
+            Building digital experiences with emotion & code. Crafting the future of celebration.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="https://www.instagram.com/yash_verma_690/" target="_blank"
+              class="w-10 h-10 rounded-full border border-gray-100 dark:border-gray-800 flex items-center justify-center text-gray-400 hover:text-brand-500 hover:border-brand-500 transition-all font-bold">G</a>
+            <a href="https://www.instagram.com/yash_verma_690/" target="_blank"
+              class="w-10 h-10 rounded-full border border-gray-100 dark:border-gray-800 flex items-center justify-center text-gray-400 hover:text-brand-500 hover:border-brand-500 transition-all font-bold">In</a>
+            <a href="javascript:void(0)" onclick="showToast('🐦 Follow us on 𝕏 for more magic!')"
+              class="w-10 h-10 rounded-full border border-gray-100 dark:border-gray-800 flex items-center justify-center text-gray-400 hover:text-brand-500 hover:border-brand-500 transition-all font-bold">𝕏</a>
+          </div>
+        </div>
+
+        <!-- Resources Column -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-sm tracking-widest">Resources</h4>
+          <ul class="space-y-4 text-gray-500 dark:text-gray-400 font-medium">
+            <li><a href="javascript:void(0)" onclick="openModal('help')"
+                class="hover:text-brand-500 transition-colors">Help Center</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('support')"
+                class="hover:text-brand-500 transition-colors">Support</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('status')"
+                class="hover:text-brand-500 transition-colors">Platform Status</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('releases')"
+                class="hover:text-brand-500 transition-colors">Release Notes</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Column -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-sm tracking-widest">Legal</h4>
+          <ul class="space-y-4 text-gray-500 dark:text-gray-400 font-medium">
+            <li><a href="javascript:void(0)" onclick="openModal('privacy')"
+                class="hover:text-brand-500 transition-colors">Privacy Policy</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('terms')"
+                class="hover:text-brand-500 transition-colors">Terms of Service</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('cookies')"
+                class="hover:text-brand-500 transition-colors">Cookie Policy</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('accessibility')"
+                class="hover:text-brand-500 transition-colors">Accessibility</a></li>
+          </ul>
+        </div>
+
+        <!-- Support Column -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-sm tracking-widest">Support</h4>
+          <ul class="space-y-4 text-gray-500 dark:text-gray-400 font-medium">
+            <li><a href="#feedbacks" class="hover:text-brand-500 transition-colors">Top Feedbacks</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('contact')"
+                class="hover:text-brand-500 transition-colors">Contact Us</a></li>
+            <li><a href="#faq" class="hover:text-brand-500 transition-colors">FAQs</a></li>
+            <li><a href="mailto:support@wishcraft.io" class="inline-flex items-center gap-2 group">
+                <span
+                  class="text-brand-500 font-bold underline decoration-brand-500/30 group-hover:decoration-brand-500 transition-all">Email
+                  Support</span>
+              </a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div
+        class="pt-8 border-t border-gray-50 dark:border-gray-900 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+        <p class="text-gray-400 text-sm font-medium">
+          © 2026 WishCraft Inc. All rights reserved. Made with ✨ by Yash.
+        </p>
+        <div class="flex items-center gap-6 text-sm text-gray-400 font-medium">
+          <span class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
+            onclick="openModal('status')">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            System Operational
+          </span>
+          <a href="#" class="hover:text-brand-500 transition-colors font-bold">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Launch Transition Overlay -->
+  <div id="launchOverlay" class="fixed inset-0 z-[200] hidden flex flex-col items-center justify-center"
+    style="background: radial-gradient(ellipse at center, #1a0a10 0%, #030712 70%)">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div
+        class="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-brand-500/10 rounded-full blur-[120px] animate-pulse">
+      </div>
+      <div
+        class="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-indigo-500/10 rounded-full blur-[100px] animate-pulse"
+        style="animation-delay:0.8s"></div>
+    </div>
+    <div class="relative text-center">
+      <div id="launchLogo"
+        class="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center shadow-2xl shadow-brand-500/40 mb-6"
+        style="transition: transform 0.6s cubic-bezier(.34,1.56,.64,1)">
+        <span class="text-white font-black text-4xl font-display">W</span>
+      </div>
+      <p class="text-white text-2xl font-display font-black mb-2">Launching <span class="gradient-text">WishCraft</span>
+      </p>
+      <p class="text-gray-400 text-sm font-medium mb-10">Taking you to the live app...</p>
+      <div class="w-56 h-1.5 bg-gray-800 rounded-full overflow-hidden mx-auto">
+        <div id="launchBar" class="h-full rounded-full w-0"
+          style="background: linear-gradient(90deg, #f43f5e, #fb923c); transition: width 1.4s cubic-bezier(.4,0,.2,1);">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Header Scroll Effect
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 20) {
+        header.classList.add('py-4', 'shadow-xl');
+      } else {
+        header.classList.remove('py-4', 'shadow-xl');
+      }
+    });
+
+    // Mobile Menu
+    function toggleMobileMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('hidden');
+      document.body.classList.toggle('overflow-hidden');
+    }
+
+    // FAQ Accordion
+    function toggleFaq(el) {
+      el.classList.toggle('active');
+    }
+
+    // Watch Demo / How To Use
+    function openHowToUse() {
+      openModal('demo');
+    }
+
+    // Branded Launch Transition
+    function launchApp() {
+      const overlay = document.getElementById('launchOverlay');
+      const bar = document.getElementById('launchBar');
+      const logo = document.getElementById('launchLogo');
+
+      overlay.classList.remove('hidden');
+      overlay.style.opacity = '0';
+      overlay.style.transition = 'opacity 0.3s ease';
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          overlay.style.opacity = '1';
+          logo.style.transform = 'scale(1.15) rotate(-3deg)';
+          setTimeout(() => { logo.style.transform = 'scale(1) rotate(0deg)'; }, 300);
+          setTimeout(() => { bar.style.width = '100%'; }, 50);
+          setTimeout(() => {
+            window.open('https://wishcraft-sxsd.onrender.com/', '_blank');
+            setTimeout(() => {
+              overlay.style.opacity = '0';
+              setTimeout(() => overlay.classList.add('hidden'), 300);
+            }, 400);
+          }, 1600);
+        });
+      });
+    }
+
+    // Toast Utility
+    function showToast(message, isError = false) {
+      const toast = document.createElement('div');
+      toast.className = `fixed bottom-8 right-8 px-6 py-4 rounded-2xl shadow-2xl z-[200] transform transition-all duration-500 translate-y-20 opacity-0 ${isError ? 'bg-red-500 text-white' : 'bg-brand-500 text-white'}`;
+      toast.innerHTML = `<div class="flex items-center gap-3">
+        <span class="text-xl">${isError ? '⚠️' : '🎉'}</span>
+        <span class="font-bold">${message}</span>
+      </div>`;
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-20', 'opacity-0');
+      }, 100);
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        setTimeout(() => toast.remove(), 500);
+      }, 4000);
+    }
+
+
+
+    // Initial Load
+    document.addEventListener('DOMContentLoaded', () => {
+      const firstGift = document.querySelector('.gift-options img:first-child');
+      if (firstGift) selectGift(firstGift);
+
+      // Scroll Animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+      // Firebase Configuration (PLACEHOLDER)
+      const firebaseConfig = {
+        apiKey: "AIzaSyAyof4JXS10wiMyJVNFoDpSxs713bId3Ug",
+        authDomain: "wishcraft-cb4b6.firebaseapp.com",
+        projectId: "wishcraft-cb4b6",
+        storageBucket: "wishcraft-cb4b6.firebasestorage.app",
+        messagingSenderId: "1091531835143",
+        appId: "1:1091531835143:web:19cb506dcc28a84ea7a7a2",
+        measurementId: "G-B7NYNTDT0T"
+      };
+
+      // Initialize Firebase (Check if config is filled)
+      let db = null;
+      if (firebaseConfig.apiKey !== "YOUR_API_KEY") {
+        firebase.initializeApp(firebaseConfig);
+        db = firebase.firestore();
+      }
+
+      // Load Feedbacks from Firestore
+      async function loadLiveFeedbacks() {
+        const container = document.getElementById('feedbacksContainer');
+        if (!db) {
+          container.innerHTML = `<div class="col-span-full py-12 text-center text-gray-400 font-medium">
+            <p>Connect Firebase to see live feedbacks.</p>
+          </div>`;
+          return;
+        }
+
+        db.collection('feedbacks').orderBy('timestamp', 'desc').limit(6).onSnapshot((snapshot) => {
+          container.innerHTML = '';
+          snapshot.forEach((doc) => {
+            const data = doc.data();
+            const card = document.createElement('div');
+            card.className = "snap-center shrink-0 w-[85vw] md:w-[400px] p-8 rounded-3xl glass border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 animate-fade-in";
+            // Ensure data.timestamp exists (Firestore might take a second to sync)
+            let dateStr = 'Just now';
+            if (data.timestamp && data.timestamp.toDate) {
+              dateStr = new Date(data.timestamp.toDate()).toLocaleDateString();
+            }
+            card.innerHTML = `
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center rounded-full text-xl font-bold text-brand-600">
+                  ${(data.name || 'A').charAt(0).toUpperCase()}
+                </div>
+                <div>
+                  <h4 class="font-bold">${data.name || 'Anonymous'}</h4>
+                  <p class="text-[10px] text-brand-600 font-bold uppercase tracking-wider">${dateStr}</p>
+                </div>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400 italic leading-relaxed">"${data.message || ''}"</p>
+            `;
+            container.appendChild(card);
+          });
+
+          if (snapshot.empty) {
+            container.innerHTML = `<div class="col-span-full py-12 text-center text-gray-400 font-medium">
+              <p>No feedbacks yet. Be the first to share one!</p>
+            </div>`;
+          }
+        });
+      }
+
+      loadLiveFeedbacks();
+
+      // Auto-scroll logic
+      function setupAutoScroll() {
+        const container = document.getElementById('feedbacksContainer');
+        let scrollAmount = 0;
+        let isPaused = false;
+
+        container.addEventListener('mouseenter', () => isPaused = true);
+        container.addEventListener('mouseleave', () => isPaused = false);
+        container.addEventListener('touchstart', () => isPaused = true);
+        container.addEventListener('touchend', () => isPaused = false);
+
+        setInterval(() => {
+          if (isPaused || !container.children.length) return;
+
+          const cardWidth = container.children[0].offsetWidth + 24; // Width + gap
+          scrollAmount += cardWidth;
+
+          if (scrollAmount >= container.scrollWidth - container.offsetWidth) {
+            scrollAmount = 0;
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+          }
+        }, 3000);
+      }
+
+      setupAutoScroll();
+
+      // Dashboard Preview Slideshow (Premium Version)
+      function setupPreviewSlideshow() {
+        const container = document.getElementById('previewCarousel');
+        const dots = document.querySelectorAll('.preview-dot');
+
+        if (!container || !dots.length) return;
+
+        let currentIndex = 0;
+        let interval;
+        let isPaused = false;
+
+        const slideWidth = () => container.offsetWidth;
+        const totalSlides = dots.length;
+
+        // 🔹 Go to specific slide
+        function goToSlide(index) {
+          currentIndex = index;
+          container.scrollTo({
+            left: slideWidth() * currentIndex,
+            behavior: 'smooth'
+          });
+          updateDots();
+        }
+
+        // 🔹 Update active dot UI
+        function updateDots() {
+          dots.forEach((dot, idx) => {
+            dot.classList.toggle('bg-brand-500', idx === currentIndex);
+            dot.classList.toggle('shadow-lg', idx === currentIndex);
+            dot.classList.toggle('shadow-brand-500/40', idx === currentIndex);
+
+            dot.classList.toggle('bg-gray-300', idx !== currentIndex);
+            dot.classList.toggle('dark:bg-gray-800', idx !== currentIndex);
+          });
+        }
+
+        // 🔹 Auto slide
+        function startAutoSlide() {
+          interval = setInterval(() => {
+            if (isPaused) return;
+
+            currentIndex = (currentIndex + 1) % totalSlides;
+            goToSlide(currentIndex);
+          }, 4000);
+        }
+
+        function stopAutoSlide() {
+          clearInterval(interval);
+        }
+
+        // 🔹 Pause on hover/touch
+        container.addEventListener('mouseenter', () => isPaused = true);
+        container.addEventListener('mouseleave', () => isPaused = false);
+        container.addEventListener('touchstart', () => isPaused = true);
+        container.addEventListener('touchend', () => isPaused = false);
+
+        // 🔹 Make dots clickable
+        dots.forEach((dot, index) => {
+          dot.style.cursor = 'pointer';
+
+          dot.addEventListener('click', () => {
+            stopAutoSlide();        // reset timing for better UX
+            goToSlide(index);
+            startAutoSlide();
+          });
+        });
+
+        // 🔹 Handle manual scroll sync (important for touch swipe)
+        container.addEventListener('scroll', () => {
+          const index = Math.round(container.scrollLeft / slideWidth());
+          if (index !== currentIndex) {
+            currentIndex = index;
+            updateDots();
+          }
+        });
+
+        // Init
+        updateDots();
+        startAutoSlide();
+      }
+
+      setupPreviewSlideshow();
+
+      // Register Service Worker for PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js')
+            .then(reg => console.log('Service Worker registered', reg))
+            .catch(err => console.error('Service Worker registration failed', err));
+        });
+      }
+
+      // Modal Content Data
+      const modalData = {
+        privacy: {
+          title: 'Privacy Policy',
+          content: `
+            <div class="space-y-6">
+              <p>At WishCraft, we take your privacy seriously. This policy outlines how we handle your data.</p>
+              <h4 class="font-bold text-gray-900 dark:text-white">1. Data Collection</h4>
+              <p>We only collect essential data like your name and email when you provide feedback or use our service to generate pages.</p>
+              <h4 class="font-bold text-gray-900 dark:text-white">2. Data Usage</h4>
+              <p>Your uploaded photos and music are used solely to build your custom celebration page. We do not sell or share your personal data with third parties.</p>
+              <h4 class="font-bold text-gray-900 dark:text-white">3. Security</h4>
+              <p>We use industry-standard encryption and security measures to protect your information and content.</p>
+            </div>
+          `
+        },
+        terms: {
+          title: 'Terms of Service',
+          content: `
+            <div class="space-y-6">
+              <p>By using WishCraft, you agree to the following terms and conditions.</p>
+              <h4 class="font-bold text-gray-900 dark:text-white">1. Service Usage</h4>
+              <p>WishCraft is provided as-is for personal, non-commercial use. Users are responsible for the content they upload.</p>
+              <h4 class="font-bold text-gray-900 dark:text-white">2. Prohibited Content</h4>
+              <p>Illegal, offensive, or copyrighted materials without permission are strictly prohibited.</p>
+              <h4 class="font-bold text-gray-900 dark:text-white">3. Platform Rights</h4>
+              <p>We reserve the right to remove any content that violates these terms or appears harmful to the community.</p>
+            </div>
+          `
+        },
+        cookies: {
+          title: 'Cookie Policy',
+          content: `
+            <div class="space-y-6">
+              <p>We use essential cookies to make WishCraft function correctly.</p>
+              <h4 class="font-bold text-gray-900 dark:text-white">1. What are cookies?</h4>
+              <p>Cookies are small text files stored on your device that help us remember your preferences and keep you logged in.</p>
+              <h4 class="font-bold text-gray-900 dark:text-white">2. How we use them</h4>
+              <p>We use strictly necessary cookies for session management and performance tracking to improve your experience.</p>
+            </div>
+          `
+        },
+        accessibility: {
+          title: 'Accessibility Statement',
+          content: `
+            <div class="space-y-6">
+              <p>WishCraft is dedicated to digital inclusion for everyone.</p>
+              <h4 class="font-bold text-gray-900 dark:text-white">1. Our Goal</h4>
+              <p>We strive to meet WCAG 2.1 Level AA standards to ensure our platform is accessible to people with various disabilities.</p>
+              <h4 class="font-bold text-gray-900 dark:text-white">2. Features</h4>
+              <p>We include high contrast modes, screen reader support, and keyboard navigation as core features of our design.</p>
+            </div>
+          `
+        },
+        help: {
+          title: 'Help Center',
+          content: `
+            <div class="space-y-6 text-center">
+              <div class="p-6 rounded-2xl bg-brand-50 dark:bg-brand-500/5 mb-6">
+                <p class="font-bold text-brand-600 mb-2">Need a quick guide?</p>
+                <p class="text-gray-600 dark:text-gray-400">WishCraft is designed to be intuitive. Simply scroll to the "How it Works" section to see the 3-step magic, or reach out to our team if you have any questions.</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <button onclick="window.location.href='#how-it-works'; closeModal();" class="px-8 py-3 bg-brand-500 text-white rounded-xl font-bold">View Guide</button>
+                <button onclick="openModal('support')" class="px-8 py-3 border border-gray-200 dark:border-gray-800 rounded-xl font-bold">Contact Support</button>
+              </div>
+            </div>
+          `
+        },
+        support: {
+          title: 'Support Details',
+          content: `
+            <div class="space-y-6">
+              <p>We're here to help you create magic.</p>
+              <ul class="space-y-4">
+                <li class="flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center">📧</span>
+                  <span class="font-medium text-gray-600 dark:text-gray-400">Instagram : @yash_verma_690</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center">⏱️</span>
+                  <span class="font-medium text-gray-600 dark:text-gray-400">Response time: Within 24 hours</span>
+                </li>
+              </ul>
+            </div>
+          `
+        },
+        status: {
+          title: 'Platform Status',
+          content: `
+            <div class="space-y-6">
+              <div class="flex items-center gap-4 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-500/20">
+                <div class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></div>
+                <div class="font-bold text-emerald-700 dark:text-emerald-400">All Systems Operational</div>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="p-4 rounded-xl border border-gray-100 dark:border-gray-800">
+                  <p class="text-xs text-gray-400 uppercase font-black mb-1">Web App</p>
+                  <p class="font-bold text-emerald-500">100%</p>
+                </div>
+                <div class="p-4 rounded-xl border border-gray-100 dark:border-gray-800">
+                  <p class="text-xs text-gray-400 uppercase font-black mb-1">Database</p>
+                  <p class="font-bold text-emerald-500">Normal</p>
+                </div>
+              </div>
+            </div>
+          `
+        },
+        releases: {
+          title: 'Release Notes',
+          content: `
+            <div class="space-y-6">
+              <div class="pb-6 border-b border-gray-100 dark:border-gray-800">
+                <p class="text-brand-600 font-bold mb-1">v2.0 - The Global Release</p>
+                <ul class="list-disc list-inside text-gray-500 dark:text-gray-400 space-y-1">
+                  <li>Added real-time feedback system</li>
+                  <li>New premium carousel animations</li>
+                  <li>PWA support for mobile installation</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-gray-400 font-bold mb-1">v1.5 - Performance Boost</p>
+                <p class="text-gray-500 dark:text-gray-400 italic text-sm">Improved image loading and cross-browser compatibility.</p>
+              </div>
+            </div>
+          `
+        },
+        contact: {
+          title: 'Contact Us',
+          content: `
+            <div class="space-y-6 text-center">
+              <p class="text-gray-600 dark:text-gray-400">Have a specific inquiry? Use our feedback form or DM us on Instagram.</p>
+              <div class="flex flex-col gap-3">
+                <button onclick="window.location.href='#feedback'; closeModal();" class="w-full py-4 bg-brand-500 text-white rounded-xl font-bold shadow-lg shadow-brand-500/20">Go to Feedback Form</button>
+                <a href="https://www.instagram.com/yash_verma_690/" class="w-full py-4 border border-gray-200 dark:border-gray-800 rounded-xl font-bold hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">DM on Instagram</a>
+              </div>
+            </div>
+          `
+        },
+        demo: {
+          title: 'WishCraft Demo',
+          content: `
+            <div class="space-y-6">
+              <div class="aspect-video rounded-[24px] overflow-hidden bg-gray-950 shadow-2xl border border-white/10 relative group">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/R3GfuzLMPkA?rel=0" title="WishCraft Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              </div>
+              <div class="flex flex-col items-center gap-3">
+                <a href="https://www.youtube.com/watch?v=R3GfuzLMPkA" target="_blank" class="w-full py-4 bg-brand-500 text-white rounded-xl font-bold shadow-lg shadow-brand-500/20 text-center hover:scale-[1.02] transition-transform">
+                  🚀 Watch on YouTube (Direct Link)
+                </a>
+                </div>
+            </div>
+          `
+        }
+      };
+
+      // Modal Handlers
+      window.openModal = function (type) {
+        const modal = document.getElementById('resourceModal');
+        const titleEl = document.getElementById('modalTitle');
+        const contentEl = document.getElementById('modalBody');
+        const data = modalData[type];
+
+        if (data) {
+          titleEl.textContent = data.title;
+          contentEl.innerHTML = data.content;
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+      };
+
+      window.closeModal = function () {
+        const modal = document.getElementById('resourceModal');
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      };
+
+      // PWA Install Prompt Logic
+      let deferredPrompt;
+      const installBtn = document.getElementById('pwaInstall');
+      const installBtnMobile = document.getElementById('pwaInstallMobile');
+
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        installBtn.classList.remove('hidden');
+        installBtnMobile.classList.remove('hidden');
+      });
+
+      [installBtn, installBtnMobile].forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          installBtn.classList.add('hidden');
+          installBtnMobile.classList.add('hidden');
+          if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+              deferredPrompt = null;
+            });
+          }
+        });
+      });
+
+      // Feedback Form Handling
+      const feedbackForm = document.getElementById('feedbackForm');
+      if (feedbackForm) {
+        feedbackForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const btn = document.getElementById('feedbackSubmit');
+          const originalContent = btn.innerHTML;
+
+          btn.disabled = true;
+          btn.innerHTML = `<span class="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span> Sending...`;
+
+          try {
+            const formData = new FormData(feedbackForm);
+            const feedbackData = {
+              name: formData.get('name'),
+              email: formData.get('email'),
+              message: formData.get('message'),
+              timestamp: db ? firebase.firestore.FieldValue.serverTimestamp() : new Date()
+            };
+
+            // 1. Save to Firestore (if connected)
+            if (db) {
+              await db.collection('feedbacks').add(feedbackData);
+
+              // Immediate success feedback
+              btn.innerHTML = `<span class="text-emerald-500 font-bold">✅ Sent!</span>`;
+              feedbackForm.reset();
+              showToast('✨ Thank you! Your feedback is now live.');
+
+              setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = originalContent;
+              }, 800);
+            } else {
+              throw new Error('Firebase not initialized.');
+            }
+          } catch (error) {
+            console.error("Submission Error:", error);
+            showToast('❌ Submission failed. Please try again.', true);
+            btn.disabled = false;
+            btn.innerHTML = originalContent;
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- RESOURCE MODAL -->
+  <div id="resourceModal" class="fixed inset-0 z-[150] hidden flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-gray-950/40 backdrop-blur-md" onclick="closeModal()"></div>
+    <div
+      class="relative w-full max-w-xl glass p-8 md:p-12 rounded-[40px] border border-white/20 shadow-2xl modal-content">
+      <button onclick="closeModal()"
+        class="absolute top-8 right-8 w-12 h-12 rounded-full border border-gray-100 dark:border-gray-800 flex items-center justify-center text-gray-400 hover:text-brand-500 hover:border-brand-500 transition-all font-bold">×</button>
+
+      <div class="mb-8">
+        <h2 id="modalTitle" class="text-3xl font-display font-black tracking-tight gradient-text">Resource</h2>
+      </div>
+
+      <div id="modalBody"
+        class="max-h-[60vh] overflow-y-auto text-gray-600 dark:text-gray-400 font-medium leading-relaxed pr-2">
+        <!-- Content injected here -->
+      </div>
+
+      <div class="mt-10 pt-8 border-t border-gray-50 dark:border-gray-900 text-center">
+        <button onclick="closeModal()"
+          class="px-8 py-4 bg-brand-500 text-white rounded-2xl font-bold btn-premium shadow-lg shadow-brand-500/20">Close
+          Panel</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

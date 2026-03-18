@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wishcraft-pages.vercel.app/sitemap.xml

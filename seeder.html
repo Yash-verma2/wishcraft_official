@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WishCraft Premium Seeder</title>
+</head>
+
+<body>
+
+    <h2>🔥 WishCraft Premium Feedback Seeder</h2>
+    <button onclick="seed()">Seed Premium Feedbacks</button>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAyof4JXS10wiMyJVNFoDpSxs713bId3Ug",
+            authDomain: "wishcraft-cb4b6.firebaseapp.com",
+            projectId: "wishcraft-cb4b6",
+            storageBucket: "wishcraft-cb4b6.firebasestorage.app",
+            messagingSenderId: "1091531835143",
+            appId: "1:1091531835143:web:19cb506dcc28a84ea7a7a2",
+            measurementId: "G-B7NYNTDT0T"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        async function seed() {
+
+            const feedbacks = [
+                {
+                    name: "Aarav Sharma",
+                    message: "Super smooth experience. I created a full birthday page in minutes and it looked amazing.",
+                    rating: 5,
+                    tag: "Ease of Use",
+                    isDemo: true,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                },
+                {
+                    name: "Priya Verma",
+                    message: "I used this for my best friend’s birthday and she literally cried. That says everything ❤️",
+                    rating: 5,
+                    tag: "Emotional Impact",
+                    isDemo: true,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                },
+                {
+                    name: "Rohit Kumar",
+                    message: "UI feels like a premium SaaS product. Animations are next level.",
+                    rating: 5,
+                    tag: "Design",
+                    isDemo: true,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                },
+                {
+                    name: "Sneha Gupta",
+                    message: "Didn’t expect something this polished for free. Seriously impressive work.",
+                    rating: 5,
+                    tag: "Value",
+                    isDemo: true,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                },
+                {
+                    name: "Aditya Singh",
+                    message: "Way better than other boring generators. Clean, fast, and actually fun to use.",
+                    rating: 5,
+                    tag: "Comparison",
+                    isDemo: true,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                },
+                {
+                    name: "Neha Patel",
+                    message: "Perfect for special moments. Everything just works without confusion.",
+                    rating: 5,
+                    tag: "Simplicity",
+                    isDemo: true,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                },
+                {
+                    name: "Karan Mehta",
+                    message: "The page I created looked like something a professional designer made.",
+                    rating: 5,
+                    tag: "Quality",
+                    isDemo: true,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                },
+                {
+                    name: "Anjali Kapoor",
+                    message: "Loved the animations and flow. It feels magical while creating the page.",
+                    rating: 5,
+                    tag: "Experience",
+                    isDemo: true,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                },
+                {
+                    name: "Vikram Joshi",
+                    message: "Fast, clean, no lag. Exactly what a modern tool should be.",
+                    rating: 5,
+                    tag: "Performance",
+                    isDemo: true,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                },
+                {
+                    name: "Riya Das",
+                    message: "I’ve tried many tools, but this one stands out. Super intuitive.",
+                    rating: 5,
+                    tag: "Usability",
+                    isDemo: true,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                },
+                {
+                    name: "Sahil Khan",
+                    message: "Created a surprise page in minutes. Sharing was instant. Loved it.",
+                    rating: 5,
+                    tag: "Speed",
+                    isDemo: true,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                },
+                {
+                    name: "Pooja Sharma",
+                    message: "Beautiful, emotional, and easy. This tool is something special.",
+                    rating: 5,
+                    tag: "Overall",
+                    isDemo: true,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                }
+            ];
+
+            for (const fb of feedbacks) {
+                await db.collection("feedbacks").add(fb);
+                console.log("Added:", fb.name);
+            }
+
+            alert("🔥 Premium Feedbacks Seeded Successfully!");
+        }
+    </script>
+
+</body>
+
+</html>

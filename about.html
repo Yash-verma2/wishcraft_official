@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f43f5e" />
+  <meta name="color-scheme" content="light dark" />
+
+  <title>About WishCraft | #1 Digital Celebration Platform & Brand Story</title>
+  <meta name="description"
+    content="Learn more about WishCraft - the world's most elegant digital birthday website generator. Our mission is to transform simple wishes into lasting digital masterpieces." />
+  <meta name="keywords"
+    content="about wishcraft, birthday website generator brand, digital celebration mission, premium wishes maker story" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://wishcraft-pages.vercel.app/about.html" />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/branding/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/branding/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="assets/branding/icon-192.png">
+  <link rel="shortcut icon" href="assets/branding/favicon.ico">
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#fff1f2',
+              100: '#ffe4e6',
+              500: '#f43f5e',
+              600: '#e11d48',
+              700: '#be123c',
+            }
+          },
+          animation: {
+            float: 'float 3s ease-in-out infinite',
+            shimmer: 'shimmer 2s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%,100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .dark .glass {
+      background: rgba(15, 10, 15, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #f43f5e, #fb923c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn-premium {
+      transition: all .3s ease;
+    }
+
+    .btn-premium:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(244, 63, 94, .4);
+    }
+  </style>
+</head>
+
+<body class="bg-[#fafafa] dark:bg-[#030712] text-gray-900 dark:text-gray-100 font-sans selection:bg-brand-500/30">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 glass transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3 group cursor-pointer" onclick="window.location.href='/'">
+        <div
+          class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-brand-500/20 group-hover:scale-110 transition-transform">
+          <span class="text-white font-bold text-xl">W</span>
+        </div>
+        <span class="text-2xl font-display font-extrabold tracking-tight gradient-text">WishCraft</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+        <a href="/about.html" class="text-brand-500 underline decoration-2 decoration-brand-500/30">About</a>
+        <a href="/#features" class="hover:text-brand-500 transition-colors">Features</a>
+        <a href="/#how-it-works" class="hover:text-brand-500 transition-colors">How it Works</a>
+        <a href="/#feedbacks" class="hover:text-brand-500 transition-colors">Top Feedbacks</a>
+        <button onclick="window.open('https://wishcraft-sxsd.onrender.com/', '_blank')"
+          class="px-5 py-2.5 bg-brand-500 text-white rounded-full btn-premium shadow-lg shadow-brand-500/25">Create
+          Magic Now</button>
+      </nav>
+
+      <button class="md:hidden p-2 text-2xl" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div id="mobileNav"
+    class="fixed inset-0 z-[60] bg-white dark:bg-gray-900 hidden flex flex-col p-8 gap-6 pt-24 text-xl font-bold">
+    <button class="absolute top-6 right-6 text-3xl" onclick="toggleMobileMenu()">×</button>
+    <a href="/about.html" onclick="toggleMobileMenu()">About</a>
+    <a href="/#features" onclick="toggleMobileMenu()">Features</a>
+    <a href="/#how-it-works" onclick="toggleMobileMenu()">How it Works</a>
+    <a href="/#feedbacks" onclick="toggleMobileMenu()">Top Feedbacks</a>
+    <button onclick="toggleMobileMenu(); window.open('https://wishcraft-sxsd.onrender.com/', '_blank');"
+      class="mt-4 w-full py-4 bg-brand-500 text-white text-center rounded-2xl">Create Magic Now</button>
+  </div>
+
+  <main class="pt-32">
+    <!-- HERO SECTION -->
+    <section class="py-20 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <!-- Text Content -->
+          <div class="lg:w-1/2 space-y-8 animate-fade-in">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 dark:text-brand-400 text-xs font-black uppercase tracking-widest">
+              <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+              Top Brand Level Status
+            </div>
+
+            <h1 class="text-5xl lg:text-7xl font-display font-black tracking-tight leading-[1.1]">
+              The Story of <br />
+              <span class="gradient-text">WishCraft</span>
+            </h1>
+
+            <p class="text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
+              We started with a simple belief: every special moment deserves more than just a text message. Today,
+              WishCraft is the world's most elegant platform for digital celebrations.
+            </p>
+
+            <div class="grid grid-cols-2 gap-6">
+              <div class="p-8 rounded-3xl glass border border-gray-100 dark:border-gray-800">
+                <p class="text-4xl font-black text-brand-500 mb-1">#1</p>
+                <p class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.15em]">Ranked
+                  Platform</p>
+              </div>
+              <div class="p-8 rounded-3xl glass border border-gray-100 dark:border-gray-800">
+                <p class="text-4xl font-black text-indigo-500 mb-1">100k+</p>
+                <p class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.15em]">Surprises
+                  Generated</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Image -->
+          <div class="lg:w-1/2 relative">
+            <div class="absolute inset-0 bg-brand-500/20 blur-3xl -z-10 rounded-full"></div>
+            <div
+              class="rounded-[48px] overflow-hidden border border-white/20 shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+              <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=800"
+                alt="Elegant celebration atmosphere" class="w-full h-[600px] object-cover" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent flex items-end p-12">
+                <div class="text-white">
+                  <p class="text-sm font-bold uppercase tracking-[0.3em] mb-4 opacity-80">Our Vision</p>
+                  <p class="text-3xl font-display font-bold leading-tight">Crafting the future of digital memories, one
+                    wish at a time.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION SECTION -->
+    <section class="py-24 bg-white dark:bg-gray-950">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-sm font-bold text-brand-600 tracking-[0.2em] uppercase mb-6">Our DNA</h2>
+        <h3 class="text-4xl lg:text-5xl font-display font-black tracking-tight mb-12">Why We Exist</h3>
+
+        <div class="space-y-12 text-left">
+          <div
+            class="p-8 rounded-[32px] glass border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all">
+            <h4 class="text-2xl font-bold mb-4 flex items-center gap-3">
+              <span
+                class="w-8 h-8 rounded-lg bg-brand-500 text-white flex items-center justify-center text-sm">01</span>
+              Aesthetic Excellence
+            </h4>
+            <p class="text-gray-600 dark:text-gray-400 leading-loose font-medium">
+              We don't do basic templates. Every WishCraft page is a carefully curated digital masterpiece, combining
+              premium typography, cinematic animations, and flawless UX to create a high-end feel.
+            </p>
+          </div>
+
+          <div
+            class="p-8 rounded-[32px] glass border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all">
+            <h4 class="text-2xl font-bold mb-4 flex items-center gap-3">
+              <span
+                class="w-8 h-8 rounded-lg bg-indigo-500 text-white flex items-center justify-center text-sm">02</span>
+              Instant Magic
+            </h4>
+            <p class="text-gray-600 dark:text-gray-400 leading-loose font-medium">
+              Power shouldn't mean complexity. Our engine allows anyone to create a professional-grade celebration page
+              in under 60 seconds. We've automated the magic so you can focus on the sentiment.
+            </p>
+          </div>
+
+          <div
+            class="p-8 rounded-[32px] glass border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all">
+            <h4 class="text-2xl font-bold mb-4 flex items-center gap-3">
+              <span
+                class="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center text-sm">03</span>
+              Accessibility for All
+            </h4>
+            <p class="text-gray-600 dark:text-gray-400 leading-loose font-medium">
+              Great design should be accessible. WishCraft remains free and easy to use on any device, anywhere in the
+              world, ensuring that magic moments have no boundaries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-24 relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="glass p-16 rounded-[48px] border border-brand-500/20 relative">
+          <h2 class="text-4xl md:text-5xl font-display font-black tracking-tight mb-8">Ready to make someone <span
+              class="gradient-text">Smile?</span></h2>
+          <button onclick="window.open('https://wishcraft-sxsd.onrender.com/', '_blank')"
+            class="px-12 py-6 bg-brand-600 text-white rounded-2xl text-xl font-bold btn-premium shadow-2xl shadow-brand-500/40">
+            Create Your Wish Now →
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white dark:bg-[#030712] pt-24 pb-8 border-t border-gray-100 dark:border-gray-800/60">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <div class="flex items-center justify-center gap-3 mb-8">
+        <div
+          class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-brand-500/20">
+          <span class="text-white font-bold text-xl">W</span>
+        </div>
+        <span class="text-2xl font-display font-black tracking-tight text-gray-900 dark:text-white">WishCraft</span>
+      </div>
+      <p class="text-gray-500 dark:text-gray-400 max-w-md mx-auto mb-12 font-medium">
+        The world's most elegant platform for digital celebrations. Crafted with magic in 2026.
+      </p>
+      <div class="flex justify-center gap-8 text-sm font-bold uppercase tracking-widest mb-12 text-gray-400">
+        <a href="index.html" class="hover:text-brand-500 transition-colors">Home</a>
+        <a href="index.html#features" class="hover:text-brand-500 transition-colors">Features</a>
+        <a href="about.html" class="text-brand-500">About</a>
+        <a href="index.html#feedbacks" class="hover:text-brand-500 transition-colors">Feedbacks</a>
+      </div>
+      <div class="pt-8 border-t border-gray-100 dark:border-gray-800/60 text-sm text-gray-400">
+        © 2026 WishCraft. A creation by Yash Verma · Powered by Aryan.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('hidden');
+      document.body.classList.toggle('overflow-hidden');
+    }
+  </script>
+</body>
+
+</html>

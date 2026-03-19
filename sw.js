@@ -2,12 +2,12 @@ const CACHE_NAME = 'wishcraft-cache-v1';
 const ASSETS_TO_CACHE = [
   'index.html',
   'manifest.json',
-  'favicon.ico',
-  'favicon-16.png',
-  'favicon-32.png',
-  'icon-192.png',
-  'icon-512.png',
-  'apple-touch-icon.png'
+  'assets/branding/favicon.ico',
+  'assets/branding/favicon-16.png',
+  'assets/branding/favicon-32.png',
+  'assets/branding/icon-192.png',
+  'assets/branding/icon-512.png',
+  'assets/branding/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', (event) => {

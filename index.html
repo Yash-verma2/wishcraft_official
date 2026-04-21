@@ -14,7 +14,7 @@
   <meta name="description"
     content="Create stunning digital birthday pages and celebration websites instantly for free. Add photos, music, and share magic with WishCraft's aesthetic generator." />
   <meta name="keywords"
-    content="free birthday website generator, create digital birthday card, online celebration page maker, aesthetic birthday website, digital anniversary page, free wishes maker , free birthday page generator, free anniversary page generator, free celebration page generator, free birthday website, free anniversary website, free celebration website, free birthday wishes, free anniversary wishes, free celebration wishes, free birthday card, free anniversary card, free celebration card, free birthday messages, free anniversary messages, free celebration messages, free birthday quotes, free anniversary quotes, free celebration quotes  " />
+    content="free birthday website generator, create digital birthday card, online celebration page maker, aesthetic birthday website, digital anniversary page, free wishes maker" />
   <meta name="author" content="WishCraft" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
@@ -23,16 +23,16 @@
 
   <!-- PWA -->
   <link rel="manifest" href="manifest.json" />
-  <link rel="apple-touch-icon" href="assets/branding/favicon-180x180.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="WishCraft" />
 
   <!-- Favicon Pack -->
-  <link rel="icon" href="assets/branding/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="assets/branding/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="apple-touch-icon" href="assets/branding/favicon-192x192.png">
-  <link rel="shortcut icon" href="assets/branding/favicon.ico">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="icon-192.png">
 
   <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +47,7 @@
   <meta property="og:title" content="Free Birthday Website Generator | Create Magic - WishCraft" />
   <meta property="og:description"
     content="Create stunning digital birthday and celebration pages instantly for free. Add photos, music, and premium animations." />
-  <meta property="og:image" content="https://wishcraft-pages.vercel.app/assets/branding/favicon-512x512.png" />
+  <meta property="og:image" content="https://wishcraft-pages.vercel.app/static/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -55,7 +55,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Free Birthday Website Generator - WishCraft" />
   <meta name="twitter:description" content="Create aesthetic digital celebration pages for free in seconds." />
-  <meta name="twitter:image" content="https://wishcraft-pages.vercel.app/assets/branding/favicon-512x512.png" />
+  <meta name="twitter:image" content="https://wishcraft-pages.vercel.app/static/og-image.png" />
 
   <!-- Fonts (Optimized) -->
   <link
@@ -67,19 +67,24 @@
 
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7NYNTDT0T"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5K0KP4T3ZN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    gtag('config', 'G-B7NYNTDT0T');
+    gtag('config', 'G-5K0KP4T3ZN');
   </script>
+
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
 
+  <meta name="google-site-verification" content="oFD9rQUzUexG-79hAg9jhI2Fhaib1xMuBKqDZDmuMIg" />
+
   <!-- Google Verification -->
-  <meta name="google-site-verification" content="Uwia-S7T9z1xzkMoqDzX38nJuxWbcPElMM2yqi8krJE" />
+  <meta name="google-site-verification" content="SChU32SQzLKjpsov7BPszW9wFd1ugxB6w77JwRMWcXA" />
+
+
 
   <script>
     tailwind.config = {
@@ -179,7 +184,6 @@
     .gradient-text {
       background: linear-gradient(135deg, #f43f5e, #fb923c);
       -webkit-background-clip: text;
-      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
@@ -288,8 +292,10 @@
       transform: translateY(0);
     }
   </style>
-</head>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9926780793434030"
+    crossorigin="anonymous"></script>
+</head>
 
 <body class="bg-[#fafafa] dark:bg-[#030712] text-gray-900 dark:text-gray-100 font-sans selection:bg-brand-500/30">
 
@@ -297,13 +303,14 @@
   <header class="fixed top-0 left-0 w-full z-50 glass transition-all duration-300" id="mainHeader">
     <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3 group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <img src="assets/branding/favicon-192x192.png" alt="WishCraft Logo"
-          class="w-10 h-10 rounded-xl shadow-lg shadow-brand-500/20 group-hover:scale-110 transition-transform">
+        <div
+          class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-brand-500/20 group-hover:scale-110 transition-transform">
+          <span class="text-white font-bold text-xl">W</span>
+        </div>
         <span class="text-2xl font-display font-extrabold tracking-tight gradient-text">WishCraft</span>
       </div>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
-        <a href="about.html" class="hover:text-brand-500 transition-colors">About</a>
         <a href="#features" class="hover:text-brand-500 transition-colors">Features</a>
         <a href="#how-it-works" class="hover:text-brand-500 transition-colors">How it Works</a>
         <a href="#feedbacks" class="hover:text-brand-500 transition-colors">Top Feedbacks</a>
@@ -324,7 +331,6 @@
   <div id="mobileNav"
     class="fixed inset-0 z-[60] bg-white dark:bg-gray-900 hidden flex flex-col p-8 gap-6 pt-24 text-xl font-bold">
     <button class="absolute top-6 right-6 text-3xl" onclick="toggleMobileMenu()">×</button>
-    <a href="about.html" onclick="toggleMobileMenu()">About</a>
     <a href="#features" onclick="toggleMobileMenu()">Features</a>
     <a href="#how-it-works" onclick="toggleMobileMenu()">How it Works</a>
     <a href="#feedbacks" onclick="toggleMobileMenu()">Top Feedbacks</a>
@@ -348,8 +354,8 @@
       <div class="max-w-7xl mx-auto px-4 text-center">
         <div
           class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/5 border border-brand-500/10 text-brand-600 dark:text-brand-400 text-sm font-bold mb-8 animate-float">
-          <span class="flex h-2 w-2 rounded-full bg-brand-500 animate-pulse"></span>
-          ✨ #1 Digital Celebration Platform | Voted Top Brand
+          <span class="flex h-2 w-2 rounded-full bg-brand-500"></span>
+          Trusted by many users worldwide
         </div>
 
         <h1 class="sr-only">Free Birthday Website Generator & Digital Celebration Maker</h1>
@@ -394,17 +400,92 @@
           class="rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-2xl transition-all duration-500 group-hover:scale-[1.01] group-hover:shadow-brand-500/10 bg-white dark:bg-gray-900">
           <div id="previewCarousel" class="preview-carousel">
             <div class="preview-slide">
-              <img src="assets/previews/dashboard_preview_image_1.png"
-                alt="WishCraft digital celebration analytics dashboard"
-                class="w-full h-[300px] md:h-[500px] object-cover" />
+              <img src="assets/previews/preview1.png" alt="WishCraft digital birthday page dashboard and QR code"
+                class="w-full" />
             </div>
             <div class="preview-slide">
-              <img src="assets/previews/dashboard_preview_image_2.png" alt="Aesthetic template designer experience"
-                class="w-full h-[300px] md:h-[500px] object-cover" />
+              <img src="assets/previews/preview2.png" alt="WishCraft aesthetic celebration website template showcase"
+                class="w-full" />
             </div>
             <div class="preview-slide">
-              <img src="assets/previews/dashboard_preview_image_3.png" alt="Premium mobile celebration experience"
-                class="w-full h-[300px] md:h-[500px] object-cover" />
+              <img
+                src="https://raw.githubusercontent.com/Yash-verma2/Event-site-server/main/templates/static/previews/hbd2-preview.png"
+                alt="WishCraft free online wishes maker demo preview" class="w-full" />
+            </div>
+            <!-- Advertisement Slide -->
+            <div class="preview-slide flex items-center justify-center p-8 bg-gray-50/10 dark:bg-gray-900/10">
+              <div
+                class="w-full h-full min-h-[400px] flex flex-col items-center justify-center relative overflow-hidden border border-brand-500/10 rounded-[24px]">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 to-indigo-500/5 pointer-events-none">
+                </div>
+                <span
+                  class="absolute top-6 right-6 text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest bg-white/80 dark:bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-lg border border-gray-200/50 dark:border-gray-800/50 shadow-sm z-20">Sponsored</span>
+                <div class="w-full flex-1 flex justify-center items-center">
+                  <!-- horizontal display ad -->
+                  <ins class="adsbygoogle relative z-10 w-full text-center" style="display:block;"
+                    data-ad-client="ca-pub-9926780793434030" data-ad-slot="7936201505" data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                  <script>
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
+                </div>
+              </div>
+            </div>
+            <!-- Advertisement Slide 2 -->
+            <div class="preview-slide flex items-center justify-center p-8 bg-gray-50/10 dark:bg-gray-900/10">
+              <div
+                class="w-full h-full min-h-[400px] flex flex-col items-center justify-center relative overflow-hidden border border-brand-500/10 rounded-[24px]">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 to-indigo-500/5 pointer-events-none">
+                </div>
+                <span
+                  class="absolute top-6 right-6 text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest bg-white/80 dark:bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-lg border border-gray-200/50 dark:border-gray-800/50 shadow-sm z-20">Sponsored</span>
+                <div class="w-full flex-1 flex justify-center items-center">
+                  <!-- horizontal display ad -->
+                  <ins class="adsbygoogle relative z-10 w-full text-center" style="display:block;"
+                    data-ad-client="ca-pub-9926780793434030" data-ad-slot="7936201505" data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                  <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
+                </div>
+              </div>
+            </div>
+            <!-- Advertisement Slide 3 -->
+            <div class="preview-slide flex items-center justify-center p-8 bg-gray-50/10 dark:bg-gray-900/10">
+              <div
+                class="w-full h-full min-h-[400px] flex flex-col items-center justify-center relative overflow-hidden border border-brand-500/10 rounded-[24px]">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 to-indigo-500/5 pointer-events-none">
+                </div>
+                <span
+                  class="absolute top-6 right-6 text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest bg-white/80 dark:bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-lg border border-gray-200/50 dark:border-gray-800/50 shadow-sm z-20">Sponsored</span>
+                <div class="w-full flex-1 flex justify-center items-center">
+                  <!-- horizontal display ad -->
+                  <ins class="adsbygoogle relative z-10 w-full text-center" style="display:block;"
+                    data-ad-client="ca-pub-9926780793434030" data-ad-slot="7936201505" data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                  <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
+                </div>
+              </div>
+            </div>
+            <!-- Advertisement Slide 4 -->
+            <div class="preview-slide flex items-center justify-center p-8 bg-gray-50/10 dark:bg-gray-900/10">
+              <div
+                class="w-full h-full min-h-[400px] flex flex-col items-center justify-center relative overflow-hidden border border-brand-500/10 rounded-[24px]">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 to-indigo-500/5 pointer-events-none">
+                </div>
+                <span
+                  class="absolute top-6 right-6 text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest bg-white/80 dark:bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-lg border border-gray-200/50 dark:border-gray-800/50 shadow-sm z-20">Sponsored</span>
+                <div class="w-full flex-1 flex justify-center items-center">
+                  <!-- ad 2 -->
+                  <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
+                    data-ad-client="ca-pub-9926780793434030" data-ad-slot="9987649771"></ins>
+                  <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -414,374 +495,369 @@
           <div class="preview-dot w-2 h-2 rounded-full bg-brand-500 shadow-lg shadow-brand-500/40"></div>
           <div class="preview-dot w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-800"></div>
           <div class="preview-dot w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-800"></div>
+          <div class="preview-dot w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-800"></div>
+          <div class="preview-dot w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-800"></div>
+          <div class="preview-dot w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-800"></div>
+          <div class="preview-dot w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-800"></div>
         </div>
       </div>
-      </div> <!-- ABOUT SECTION -->
-      <!-- ABOUT SECTION MOVED TO about.html -->
+      </div>
 
-
-      <!-- FEATURES SECTION -->
-      <section id="features" class="py-24 bg-white dark:bg-gray-950">
-        <div class="max-w-7xl mx-auto px-4">
-          <div class="text-center mb-16 fade-up">
-            <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3">Core Capabilities</h2>
-            <h3 class="text-4xl lg:text-5xl font-display font-black tracking-tight text-gray-900 dark:text-white">
-              Everything you need for <br /> <span class="gradient-text">The Perfect Surprise</span></h3>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-up">
-            <!-- Feature 1 -->
-            <div
-              class="p-8 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 group">
-              <div
-                class="w-14 h-14 rounded-2xl bg-brand-500/10 flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold mb-4">Magic Music Sync</h3>
-              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Choose from our curated library or upload your
-                own tracks. Our engine automatically syncs animations to the beat.</p>
-            </div>
-
-            <!-- Feature 2 -->
-            <div
-              class="p-8 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 group">
-              <div
-                class="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-500 mb-6 group-hover:scale-110 transition-transform">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold mb-4">Stunning Galleries</h3>
-              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Upload up to 8 high-resolution photos. We
-                display them in a premium, interactive cinematic gallery.</p>
-            </div>
-
-            <!-- Feature 3 -->
-            <div
-              class="p-8 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 group">
-              <div
-                class="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 mb-6 group-hover:scale-110 transition-transform">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold mb-4">Instant Sharing</h3>
-              <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Generate a unique link in seconds and share it
-                via WhatsApp, Instagram, or Facebook with one click.</p>
-            </div>
-          </div>
+    </section>
+    <!-- FEATURES SECTION -->
+    <section id="features" class="py-24 bg-white dark:bg-gray-950">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16 fade-up">
+          <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3">Core Capabilities</h2>
+          <h3 class="text-4xl lg:text-5xl font-display font-black tracking-tight text-gray-900 dark:text-white">
+            Everything you need for <br /> <span class="gradient-text">The Perfect Surprise</span></h3>
         </div>
-      </section>
 
-      <!-- HOW IT WORKS -->
-      <section id="how-it-works" class="py-24 bg-gray-50 dark:bg-[#020617] fade-up">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-          <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3 text-center">Easy Process</h2>
-          <h3
-            class="text-4xl lg:text-5xl font-display font-black tracking-tight mb-16 text-center text-gray-900 dark:text-white">
-            Three Steps to <span class="gradient-text">Celebrate</span></h3>
-
-          <div class="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24 relative">
-            <!-- Step 1 -->
-            <div class="relative z-10 w-full max-w-[280px]">
-              <div
-                class="w-20 h-20 bg-brand-500 text-white rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-xl shadow-brand-500/30">
-                1</div>
-              <h3 class="text-xl font-bold mb-2">Fill the Details</h3>
-              <p class="text-gray-600 dark:text-gray-400">Enter the name, special messages, and a beautiful cover photo.
-              </p>
-            </div>
-
-            <!-- Connector 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-up">
+          <!-- Feature 1 -->
+          <div
+            class="p-8 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 group">
             <div
-              class="hidden md:block absolute top-10 left-[35%] w-[10%] border-t-2 border-dashed border-gray-300 dark:border-gray-700">
-            </div>
-
-            <!-- Step 2 -->
-            <div class="relative z-10 w-full max-w-[280px]">
-              <div
-                class="w-20 h-20 bg-indigo-500 text-white rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-xl shadow-indigo-500/30">
-                2</div>
-              <h3 class="text-xl font-bold mb-2">Pick Music & Gift</h3>
-              <p class="text-gray-600 dark:text-gray-400">Choose from or upload a custom track and pick a virtual gift
-                box.</p>
-            </div>
-
-            <!-- Connector 2 -->
-            <div
-              class="hidden md:block absolute top-10 right-[35%] w-[10%] border-t-2 border-dashed border-gray-300 dark:border-gray-700">
-            </div>
-
-            <!-- Step 3 -->
-            <div class="relative z-10 w-full max-w-[280px]">
-              <div
-                class="w-20 h-20 bg-brand-500 text-white rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-xl shadow-brand-500/30">
-                3</div>
-              <h3 class="text-xl font-bold mb-2">Launch & Share</h3>
-              <p class="text-gray-600 dark:text-gray-400">Hit generate and send the magical link to your favorite
-                person.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA SECTION (Replaces local form) -->
-      <section id="launch" class="py-24 relative overflow-hidden fade-up">
-        <div class="absolute inset-0 bg-brand-500/5 -z-10"></div>
-        <div class="max-w-4xl mx-auto px-4 text-center">
-          <div class="glass p-12 md:p-20 rounded-[40px] border border-brand-500/20 shadow-2xl relative">
-            <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-500/10 rounded-full blur-3xl"></div>
-            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-500/10 rounded-full blur-3xl"></div>
-
-            <h2 class="text-4xl md:text-6xl font-display font-black tracking-tight mb-6">Ready to Create your <br />
-              <span class="gradient-text">Magical Moment?</span>
-            </h2>
-            <p class="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-xl mx-auto font-medium">
-              Join thousands of happy users and launch your professional celebration page in under 60 seconds.
-            </p>
-
-            <button onclick="launchApp()"
-              class="inline-flex items-center gap-3 px-12 py-6 bg-brand-600 text-white rounded-2xl text-xl font-bold btn-premium shadow-2xl shadow-brand-500/40">
-              Create Magic Now
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              class="w-14 h-14 rounded-2xl bg-brand-500/10 flex items-center justify-center text-brand-500 mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
               </svg>
-            </button>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Magic Music Sync</h3>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Choose from our curated library or upload your
+              own tracks. Our engine automatically syncs animations to the beat.</p>
+          </div>
 
-            <p
-              class="mt-8 text-sm text-gray-500 font-bold uppercase tracking-widest flex items-center justify-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              Server Live & Ready
+          <!-- Feature 2 -->
+          <div
+            class="p-8 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 group">
+            <div
+              class="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-500 mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Stunning Galleries</h3>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Upload up to 8 high-resolution photos. We
+              display them in a premium, interactive cinematic gallery.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="p-8 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 group">
+            <div
+              class="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Instant Sharing</h3>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Generate a unique link in seconds and share it
+              via WhatsApp, Instagram, or Facebook with one click.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="py-24 bg-gray-50 dark:bg-[#020617] fade-up">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3 text-center">Easy Process</h2>
+        <h3
+          class="text-4xl lg:text-5xl font-display font-black tracking-tight mb-16 text-center text-gray-900 dark:text-white">
+          Three Steps to <span class="gradient-text">Celebrate</span></h3>
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24 relative">
+          <!-- Step 1 -->
+          <div class="relative z-10 w-full max-w-[280px]">
+            <div
+              class="w-20 h-20 bg-brand-500 text-white rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-xl shadow-brand-500/30">
+              1</div>
+            <h3 class="text-xl font-bold mb-2">Fill the Details</h3>
+            <p class="text-gray-600 dark:text-gray-400">Enter the name, special messages, and a beautiful cover photo.
+            </p>
+          </div>
+
+          <!-- Connector 1 -->
+          <div
+            class="hidden md:block absolute top-10 left-[35%] w-[10%] border-t-2 border-dashed border-gray-300 dark:border-gray-700">
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative z-10 w-full max-w-[280px]">
+            <div
+              class="w-20 h-20 bg-indigo-500 text-white rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-xl shadow-indigo-500/30">
+              2</div>
+            <h3 class="text-xl font-bold mb-2">Pick Music & Gift</h3>
+            <p class="text-gray-600 dark:text-gray-400">Choose from or upload a custom track and pick a virtual gift
+              box.</p>
+          </div>
+
+          <!-- Connector 2 -->
+          <div
+            class="hidden md:block absolute top-10 right-[35%] w-[10%] border-t-2 border-dashed border-gray-300 dark:border-gray-700">
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative z-10 w-full max-w-[280px]">
+            <div
+              class="w-20 h-20 bg-brand-500 text-white rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-xl shadow-brand-500/30">
+              3</div>
+            <h3 class="text-xl font-bold mb-2">Launch & Share</h3>
+            <p class="text-gray-600 dark:text-gray-400">Hit generate and send the magical link to your favorite person.
             </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- TOP FEEDBACKS SECTION -->
-      <section id="feedbacks" class="py-24 bg-white dark:bg-gray-950 fade-up">
-        <div class="max-w-7xl mx-auto px-4">
-          <div class="text-center mb-16">
-            <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3">User Loved</h2>
-            <p class="text-4xl lg:text-5xl font-display font-black tracking-tight">Top <span
-                class="gradient-text">Feedbacks</span></p>
-          </div>
+    <!-- CTA SECTION (Replaces local form) -->
+    <section id="launch" class="py-24 relative overflow-hidden fade-up">
+      <div class="absolute inset-0 bg-brand-500/5 -z-10"></div>
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="glass p-12 md:p-20 rounded-[40px] border border-brand-500/20 shadow-2xl relative">
+          <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-500/10 rounded-full blur-3xl"></div>
+          <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-500/10 rounded-full blur-3xl"></div>
 
-          <!-- Dynamic Feedback Container - Carousel Style -->
-          <div id="feedbacksContainer"
-            class="feedback-carousel flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth min-h-[300px]">
-            <!-- Skeleton Loaders -->
-            <div
-              class="snap-center shrink-0 w-[85vw] md:w-[400px] p-8 rounded-3xl glass border border-gray-100 dark:border-gray-800 animate-pulse">
-              <div class="flex items-center gap-4 mb-6">
-                <div class="w-12 h-12 bg-gray-200 dark:bg-gray-800 rounded-full"></div>
-                <div class="space-y-2">
-                  <div class="h-4 w-24 bg-gray-200 dark:bg-gray-800 rounded"></div>
-                  <div class="h-3 w-16 bg-gray-100 dark:bg-gray-900 rounded"></div>
-                </div>
+          <h2 class="text-4xl md:text-6xl font-display font-black tracking-tight mb-6">Ready to Create your <br /> <span
+              class="gradient-text">Magical Moment?</span></h2>
+          <p class="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-xl mx-auto font-medium">
+            Join thousands of happy users and launch your professional celebration page in under 60 seconds.
+          </p>
+
+          <button onclick="launchApp()"
+            class="inline-flex items-center gap-3 px-12 py-6 bg-brand-600 text-white rounded-2xl text-xl font-bold btn-premium shadow-2xl shadow-brand-500/40">
+            Create Magic Now
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </button>
+
+          <p
+            class="mt-8 text-sm text-gray-500 font-bold uppercase tracking-widest flex items-center justify-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Server Live & Ready
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOP FEEDBACKS SECTION -->
+    <section id="feedbacks" class="py-24 bg-white dark:bg-gray-950 fade-up">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3">User Loved</h2>
+          <p class="text-4xl lg:text-5xl font-display font-black tracking-tight">Top <span
+              class="gradient-text">Feedbacks</span></p>
+        </div>
+
+        <!-- Dynamic Feedback Container - Carousel Style -->
+        <div id="feedbacksContainer"
+          class="feedback-carousel flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth min-h-[300px]">
+          <!-- Skeleton Loaders -->
+          <div
+            class="snap-center shrink-0 w-[85vw] md:w-[400px] p-8 rounded-3xl glass border border-gray-100 dark:border-gray-800 animate-pulse">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-gray-200 dark:bg-gray-800 rounded-full"></div>
+              <div class="space-y-2">
+                <div class="h-4 w-24 bg-gray-200 dark:bg-gray-800 rounded"></div>
+                <div class="h-3 w-16 bg-gray-100 dark:bg-gray-900 rounded"></div>
               </div>
-              <div class="space-y-3">
-                <div class="h-4 w-full bg-gray-100 dark:bg-gray-900 rounded"></div>
-                <div class="h-4 w-5/6 bg-gray-100 dark:bg-gray-900 rounded"></div>
-              </div>
+            </div>
+            <div class="space-y-3">
+              <div class="h-4 w-full bg-gray-100 dark:bg-gray-900 rounded"></div>
+              <div class="h-4 w-5/6 bg-gray-100 dark:bg-gray-900 rounded"></div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
 
 
-      <!-- FAQ SECTION -->
-      <section id="faq" class="py-24 fade-up">
-        <div class="max-w-4xl mx-auto px-4">
-          <div class="text-center mb-16">
-            <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3 text-center">Questions?</h2>
-            <p class="text-4xl lg:text-5xl font-display font-black tracking-tight mb-4">Frequently Asked <span
-                class="gradient-text">Questions</span></p>
-            <p class="text-gray-600 dark:text-gray-400 font-medium">Everything you need to know about creating the
-              perfect
-              celebration.</p>
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 fade-up">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3 text-center">Questions?</h2>
+          <p class="text-4xl lg:text-5xl font-display font-black tracking-tight mb-4">Frequently Asked <span
+              class="gradient-text">Questions</span></p>
+          <p class="text-gray-600 dark:text-gray-400 font-medium">Everything you need to know about creating the perfect
+            celebration.</p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div
+            class="faq-item group p-6 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/30 transition-all cursor-pointer"
+            onclick="toggleFaq(this)">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-lg dark:text-white">What exactly is WishCraft?</h4>
+              <div
+                class="faq-icon w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center text-brand-600">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
+              WishCraft is a premium digital celebration page builder. We help you create stunning, interactive, and
+              personalized websites for birthdays, anniversaries, and special moments in just a few clicks.
+            </div>
           </div>
 
-          <div class="space-y-4">
-            <!-- FAQ 1 -->
-            <div
-              class="faq-item group p-6 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/30 transition-all cursor-pointer"
-              onclick="toggleFaq(this)">
-              <div class="flex items-center justify-between">
-                <h4 class="font-bold text-lg dark:text-white">What exactly is WishCraft?</h4>
-                <div
-                  class="faq-icon w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center text-brand-600">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </div>
-              <div class="faq-answer text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
-                WishCraft is where your most special moments come to life. Create elegant, personalized celebration
-                pages
-                for birthdays, anniversaries, and meaningful occasions—designed to transform simple wishes into
-                unforgettable digital experiences.
+          <!-- FAQ 2 -->
+          <div
+            class="faq-item group p-6 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/30 transition-all cursor-pointer"
+            onclick="toggleFaq(this)">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-lg dark:text-white">Is it really free for everyone?</h4>
+              <div
+                class="faq-icon w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center text-brand-600">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                </svg>
               </div>
             </div>
+            <div class="faq-answer text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
+              Yes! Our core celebration page generator is completely free. You can create, customize, and share as many
+              pages as you want without any hidden charges.
+            </div>
+          </div>
 
-            <!-- FAQ 2 -->
-            <div
-              class="faq-item group p-6 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/30 transition-all cursor-pointer"
-              onclick="toggleFaq(this)">
-              <div class="flex items-center justify-between">
-                <h4 class="font-bold text-lg dark:text-white">Is it really free for everyone?</h4>
-                <div
-                  class="faq-icon w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center text-brand-600">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </div>
-              <div class="faq-answer text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
-                Yes! Our core celebration page generator is completely free. You can create, customize, and share as
-                many
-                pages as you want without any hidden charges.
+          <!-- FAQ 3 -->
+          <div
+            class="faq-item group p-6 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/30 transition-all cursor-pointer"
+            onclick="toggleFaq(this)">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-lg dark:text-white">Can I add my own music and photos?</h4>
+              <div
+                class="faq-icon w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center text-brand-600">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                </svg>
               </div>
             </div>
+            <div class="faq-answer text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
+              Absolutely. You can upload multiple photos to create a gallery and either choose from our curated library
+              or upload your own MP3 for the perfect soundtrack.
+            </div>
+          </div>
 
-            <!-- FAQ 3 -->
-            <div
-              class="faq-item group p-6 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/30 transition-all cursor-pointer"
-              onclick="toggleFaq(this)">
-              <div class="flex items-center justify-between">
-                <h4 class="font-bold text-lg dark:text-white">Can I add my own music and photos?</h4>
-                <div
-                  class="faq-icon w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center text-brand-600">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </div>
-              <div class="faq-answer text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
-                Absolutely. You can upload multiple photos to create a gallery and either choose from our curated
-                library
-                or upload your own MP3 for the perfect soundtrack.
+          <!-- FAQ 4 -->
+          <div
+            class="faq-item group p-6 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/30 transition-all cursor-pointer"
+            onclick="toggleFaq(this)">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-lg dark:text-white">How do I share my creation?</h4>
+              <div
+                class="faq-icon w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center text-brand-600">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                </svg>
               </div>
             </div>
-
-            <!-- FAQ 4 -->
-            <div
-              class="faq-item group p-6 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-brand-500/30 transition-all cursor-pointer"
-              onclick="toggleFaq(this)">
-              <div class="flex items-center justify-between">
-                <h4 class="font-bold text-lg dark:text-white">How do I share my creation?</h4>
-                <div
-                  class="faq-icon w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center text-brand-600">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </div>
-              <div class="faq-answer text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
-                Once you're done, we generate a unique, short link for your page. You can share it directly via
-                WhatsApp,
-                Instagram, or any other platform. It works perfectly on all devices.
-              </div>
+            <div class="faq-answer text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
+              Once you're done, we generate a unique, short link for your page. You can share it directly via WhatsApp,
+              Instagram, or any other platform. It works perfectly on all devices.
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- INSTAGRAM CTA -->
-      <section class="py-24 relative overflow-hidden bg-white dark:bg-[#030712] fade-up">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-          <div class="glass p-12 md:p-16 rounded-[40px] border border-pink-500/20 shadow-2xl relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 -z-10"></div>
-            <div class="absolute -top-24 -left-24 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl"></div>
+    <!-- INSTAGRAM CTA -->
+    <section class="py-24 relative overflow-hidden bg-white dark:bg-[#030712] fade-up">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="glass p-12 md:p-16 rounded-[40px] border border-pink-500/20 shadow-2xl relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 -z-10"></div>
+          <div class="absolute -top-24 -left-24 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl"></div>
 
-            <span
-              class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-50 dark:bg-pink-500/10 text-pink-600 dark:text-pink-400 text-sm font-bold mb-6">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <span
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-50 dark:bg-pink-500/10 text-pink-600 dark:text-pink-400 text-sm font-bold mb-6">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+            Join Our Community
+          </span>
+          <h2 class="text-3xl md:text-5xl font-display font-black tracking-tight mb-4">Follow the <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500">Magic</span>
+          </h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-lg mx-auto font-medium">
+            Get daily aesthetic inspiration, viral gift ideas, and behind-the-scenes sneak peeks right on your feed.
+          </p>
+
+          <div class="flex justify-center relative z-10">
+            <a href="https://www.instagram.com/yash_verma_690/" target="_blank"
+              class="px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white rounded-2xl font-bold hover:scale-105 transition-transform shadow-xl flex items-center gap-3">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
               </svg>
-              Join Our Community
-            </span>
-            <h2 class="text-3xl md:text-5xl font-display font-black tracking-tight mb-4">Follow the <span
-                class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500">Magic</span>
-            </h2>
-            <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-lg mx-auto font-medium">
-              Get daily aesthetic inspiration, viral gift ideas, and behind-the-scenes sneak peeks right on your feed.
-            </p>
-
-            <div class="flex justify-center relative z-10">
-              <a href="https://www.instagram.com/yash_verma_690/" target="_blank"
-                class="px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white rounded-2xl font-bold hover:scale-105 transition-transform shadow-xl flex items-center gap-3">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                </svg>
-                Follow on Instagram
-              </a>
-            </div>
-            <p class="text-xs text-gray-400 mt-6 font-medium uppercase tracking-widest">Connect with 10,000+ top
-              creators
-            </p>
+              Follow on Instagram
+            </a>
           </div>
+          <p class="text-xs text-gray-400 mt-6 font-medium uppercase tracking-widest">Connect with 10,000+ top creators
+          </p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- FEEDBACK SECTION -->
-      <section id="feedback" class="py-24 bg-gray-50 dark:bg-[#020617] fade-up">
-        <div class="max-w-4xl mx-auto px-4">
-          <div class="text-center mb-16">
-            <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3 text-center">Your Voice</h2>
-            <p class="text-4xl lg:text-5xl font-display font-black tracking-tight mb-4">Share Your <span
-                class="gradient-text">Feedback</span></p>
-            <p class="text-gray-600 dark:text-gray-400 font-medium">Help us make WishCraft even more magical.</p>
-          </div>
+    <!-- FEEDBACK SECTION -->
+    <section id="feedback" class="py-24 bg-gray-50 dark:bg-[#020617] fade-up">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3 text-center">Your Voice</h2>
+          <p class="text-4xl lg:text-5xl font-display font-black tracking-tight mb-4">Share Your <span
+              class="gradient-text">Feedback</span></p>
+          <p class="text-gray-600 dark:text-gray-400 font-medium">Help us make WishCraft even more magical.</p>
+        </div>
 
-          <div class="glass p-8 md:p-12 rounded-[32px] border border-brand-500/10 shadow-xl relative overflow-hidden">
-            <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-500/5 rounded-full blur-3xl"></div>
+        <div class="glass p-8 md:p-12 rounded-[32px] border border-brand-500/10 shadow-xl relative overflow-hidden">
+          <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-500/5 rounded-full blur-3xl"></div>
 
-            <form id="feedbackForm" class="relative space-y-6">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="space-y-2">
-                  <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Full Name</label>
-                  <input type="text" name="name" required
-                    class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium"
-                    placeholder="John Doe">
-                </div>
-                <div class="space-y-2">
-                  <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Email Address</label>
-                  <input type="email" name="email" required
-                    class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium"
-                    placeholder="john@example.com">
-                </div>
-              </div>
-
+          <form id="feedbackForm" class="relative space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="space-y-2">
-                <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Message</label>
-                <textarea name="message" required rows="4"
-                  class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium resize-none"
-                  placeholder="What's on your mind?"></textarea>
+                <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Full Name</label>
+                <input type="text" name="name" required
+                  class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium"
+                  placeholder="John Doe">
               </div>
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Email Address</label>
+                <input type="email" name="email" required
+                  class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium"
+                  placeholder="john@example.com">
+              </div>
+            </div>
 
-              <button type="submit" id="feedbackSubmit"
-                class="w-full py-5 bg-brand-600 text-white rounded-2xl text-lg font-bold btn-premium shadow-xl shadow-brand-500/20 flex items-center justify-center gap-3">
-                <span>Send Feedback</span>
-                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-            </form>
-          </div>
+            <div class="space-y-2">
+              <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Message</label>
+              <textarea name="message" required rows="4"
+                class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium resize-none"
+                placeholder="What's on your mind?"></textarea>
+            </div>
+
+            <button type="submit" id="feedbackSubmit"
+              class="w-full py-5 bg-brand-600 text-white rounded-2xl text-lg font-bold btn-premium shadow-xl shadow-brand-500/20 flex items-center justify-center gap-3">
+              <span>Send Feedback</span>
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+          </form>
         </div>
-      </section>
+      </div>
+    </section>
 
   </main>
+
 
   <!-- FOOTER -->
   <footer
@@ -797,8 +873,10 @@
         <!-- Brand Column -->
         <div class="space-y-6 lg:col-span-2 lg:pr-12">
           <div class="flex items-center gap-3">
-            <img src="assets/branding/favicon-192x192.png" alt="WishCraft Logo"
-              class="w-10 h-10 rounded-xl shadow-lg shadow-brand-500/20">
+            <div
+              class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-brand-500/20">
+              <span class="text-white font-bold text-xl">W</span>
+            </div>
             <span class="text-2xl font-display font-black tracking-tight text-gray-900 dark:text-white">Wish<span
                 class="text-brand-500">Craft</span></span>
           </div>
@@ -865,9 +943,9 @@
             <li><a href="javascript:void(0)" onclick="openModal('support')"
                 class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Support</a>
             </li>
-            <li><a href="about.html"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">About</a>
-            </li>
+            <li><a href="javascript:void(0)" onclick="openModal('status')"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Platform
+                Status</a></li>
             <li><a href="javascript:void(0)" onclick="openModal('releases')"
                 class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Release
                 Notes</a></li>
@@ -926,7 +1004,7 @@
               d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
               clip-rule="evenodd"></path>
           </svg>
-          <span>© 2026 WishCraft. A creation by Yash Verma · Powered by Aryan.</span>
+          <span>© 2026 WishCraft Inc. Crafted with magic.</span>
         </div>
 
         <div class="flex items-center gap-6 text-sm text-gray-400 font-medium">
@@ -1015,7 +1093,7 @@
           setTimeout(() => { logo.style.transform = 'scale(1) rotate(0deg)'; }, 300);
           setTimeout(() => { bar.style.width = '100%'; }, 50);
           setTimeout(() => {
-            window.open('https://wishcraft-xu43.onrender.com/', '_blank');
+            window.open('https://wishcraft-sxsd.onrender.com/', '_blank');
             setTimeout(() => {
               overlay.style.opacity = '0';
               setTimeout(() => overlay.classList.add('hidden'), 300);
@@ -1395,17 +1473,29 @@
         demo: {
           title: 'WishCraft Demo',
           content: `
-            <div class="space-y-6">
-              <div class="aspect-video rounded-[24px] overflow-hidden bg-gray-950 shadow-2xl border border-white/10 relative group">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/R3GfuzLMPkA?rel=0" title="WishCraft Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
-              </div>
-              <div class="flex flex-col items-center gap-3">
-                <a href="https://www.youtube.com/watch?v=R3GfuzLMPkA" target="_blank" class="w-full py-4 bg-brand-500 text-white rounded-xl font-bold shadow-lg shadow-brand-500/20 text-center hover:scale-[1.02] transition-transform">
-                  🚀 Watch on YouTube (Direct Link)
-                </a>
-                </div>
-            </div>
-          `
+    <div class="space-y-6">
+      <div class="aspect-video rounded-[24px] overflow-hidden bg-gray-950 shadow-2xl border border-white/10 relative group">
+        <iframe 
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/OPTSlYUe4Mg"
+          title="WishCraft Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+      </div>
+
+      <div class="flex flex-col items-center gap-3">
+        <a 
+          href="https://www.youtube.com/shorts/OPTSlYUe4Mg"
+          target="_blank"
+          class="w-full py-4 bg-brand-500 text-white rounded-xl font-bold shadow-lg shadow-brand-500/20 text-center hover:scale-[1.02] transition-transform">
+          🚀 Watch on YouTube (Direct Link)
+        </a>
+      </div>
+    </div>
+  `
         }
       };
 

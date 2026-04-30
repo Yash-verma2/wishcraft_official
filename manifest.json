@@ -1,8 +1,8 @@
 {
-  "name": "Wishcraft",
-  "short_name": "Wishcraft",
+  "name": "WishCraft",
+  "short_name": "WishCraft",
   "description": "The Best Digital Birthday & Celebration Page Generator",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#f43f5e",

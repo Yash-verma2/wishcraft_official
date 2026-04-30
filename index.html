@@ -403,6 +403,7 @@
               <img src="assets/previews/dashboard_preview_image_1.png"
                 alt="WishCraft digital celebration analytics dashboard" class="w-full h-full object-cover" />
             </div>
+
             <div class="preview-slide bg-white dark:bg-gray-900">
               <img src="assets/previews/dashboard_preview_image_3.png" alt="Premium mobile celebration experience"
                 class="w-full h-full object-cover" />
@@ -1469,17 +1470,37 @@
         demo: {
           title: 'WishCraft Demo',
           content: `
-            <div class="space-y-6">
-              <div class="aspect-video rounded-[24px] overflow-hidden bg-gray-950 shadow-2xl border border-white/10 relative group">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/R3GfuzLMPkA?rel=0" title="WishCraft Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
-              </div>
-              <div class="flex flex-col items-center gap-3">
-                <a href="https://www.youtube.com/watch?v=R3GfuzLMPkA" target="_blank" class="w-full py-4 bg-brand-500 text-white rounded-xl font-bold shadow-lg shadow-brand-500/20 text-center hover:scale-[1.02] transition-transform">
-                  🚀 Watch on YouTube (Direct Link)
-                </a>
-                </div>
-            </div>
-          `
+    <div class="space-y-6">
+
+      <!-- Video -->
+      <div class="relative w-full rounded-[24px] overflow-hidden 
+                  bg-gray-950 shadow-2xl border border-white/10">
+
+        <div class="relative w-full pt-[56.25%]">
+          <iframe 
+            class="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/OPTSlYUe4Mg?rel=0"
+            title="WishCraft Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+
+      <!-- Button -->
+      <div class="flex flex-col items-center gap-3">
+        <a href="https://www.youtube.com/shorts/OPTSlYUe4Mg" target="_blank"
+          class="w-full py-4 bg-brand-500 text-white rounded-xl font-bold 
+                 shadow-lg shadow-brand-500/20 text-center 
+                 hover:scale-[1.02] transition-transform">
+          🚀 Watch on YouTube
+        </a>
+      </div>
+
+    </div>
+  `
         }
       };
 

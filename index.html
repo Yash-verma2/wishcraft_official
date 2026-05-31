@@ -359,6 +359,8 @@
         </div>
 
 
+
+
         <h1 class="sr-only">Free Birthday Website Generator & Digital Celebration Maker</h1>
         <h2 class="text-5xl lg:text-7xl font-display font-black tracking-tight mb-8 leading-[1.1]">
           Make Them <br />
@@ -613,21 +615,21 @@
       </section>
 
       <!-- TOP FEEDBACKS SECTION -->
-      <section id="feedbacks" class="py-24 bg-white dark:bg-gray-950 fade-up">
+      <section id="feedbacks" class="py-16 bg-white dark:bg-gray-950 fade-up">
         <div class="max-w-7xl mx-auto px-4">
-          <div class="text-center mb-16">
-            <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-3">User Loved</h2>
+          <div class="text-center mb-10">
+            <h2 class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-2">User Loved</h2>
             <p class="text-4xl lg:text-5xl font-display font-black tracking-tight">Top <span
                 class="gradient-text">Feedbacks</span></p>
           </div>
 
           <!-- Dynamic Feedback Container - Carousel Style -->
           <div id="feedbacksContainer"
-            class="feedback-carousel flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth min-h-[300px]">
+            class="feedback-carousel flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory scroll-smooth min-h-[220px]">
             <!-- Skeleton Loaders -->
             <div
-              class="snap-center shrink-0 w-[85vw] md:w-[400px] p-8 rounded-3xl glass border border-gray-100 dark:border-gray-800 animate-pulse">
-              <div class="flex items-center gap-4 mb-6">
+              class="snap-center shrink-0 w-[85vw] md:w-[400px] p-6 rounded-2xl glass border border-gray-100 dark:border-gray-800 animate-pulse">
+              <div class="flex items-center gap-4 mb-4">
                 <div class="w-12 h-12 bg-gray-200 dark:bg-gray-800 rounded-full"></div>
                 <div class="space-y-2">
                   <div class="h-4 w-24 bg-gray-200 dark:bg-gray-800 rounded"></div>
@@ -1131,6 +1133,34 @@
         db = firebase.firestore();
       }
 
+      window.liveFeedbacks = [];
+
+      window.openFullFeedbackModal = function (idx) {
+        const data = window.liveFeedbacks[idx];
+        if (!data) return;
+
+        let dateStr = 'Just now';
+        if (data.timestamp && data.timestamp.toDate) {
+          dateStr = new Date(data.timestamp.toDate()).toLocaleDateString();
+        }
+
+        const modal = document.getElementById('resourceModal');
+        const titleEl = document.getElementById('modalTitle');
+        const contentEl = document.getElementById('modalBody');
+
+        titleEl.textContent = `Feedback from ${data.name || 'Anonymous'}`;
+        contentEl.innerHTML = `
+          <div class="space-y-4">
+            <div class="pb-2 border-b border-gray-100 dark:border-gray-800">
+              <span class="text-xs text-brand-600 font-bold uppercase tracking-wider">${dateStr}</span>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300 italic leading-relaxed text-lg whitespace-pre-wrap">"${data.message || ''}"</p>
+          </div>
+        `;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      };
+
       // Load Feedbacks from Firestore
       async function loadLiveFeedbacks() {
         const container = document.getElementById('feedbacksContainer');
@@ -1143,17 +1173,24 @@
 
         db.collection('feedbacks').orderBy('timestamp', 'desc').limit(6).onSnapshot((snapshot) => {
           container.innerHTML = '';
-          snapshot.forEach((doc) => {
+          window.liveFeedbacks = [];
+          
+          snapshot.docs.forEach((doc, idx) => {
             const data = doc.data();
+            window.liveFeedbacks.push(data);
             const card = document.createElement('div');
-            card.className = "snap-center shrink-0 w-[85vw] md:w-[400px] p-8 rounded-3xl glass border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 animate-fade-in";
+            card.className = "snap-center shrink-0 w-[85vw] md:w-[400px] p-6 rounded-2xl glass border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 animate-fade-in relative";
             // Ensure data.timestamp exists (Firestore might take a second to sync)
             let dateStr = 'Just now';
             if (data.timestamp && data.timestamp.toDate) {
               dateStr = new Date(data.timestamp.toDate()).toLocaleDateString();
             }
+
+            const isLong = data.message && data.message.length > 120;
+            const displayMessage = isLong ? `${data.message.slice(0, 120)}...` : data.message || '';
+
             card.innerHTML = `
-              <div class="flex items-center gap-4 mb-6">
+              <div class="flex items-center gap-4 mb-4">
                 <div class="w-12 h-12 bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center rounded-full text-xl font-bold text-brand-600">
                   ${(data.name || 'A').charAt(0).toUpperCase()}
                 </div>
@@ -1162,8 +1199,15 @@
                   <p class="text-[10px] text-brand-600 font-bold uppercase tracking-wider">${dateStr}</p>
                 </div>
               </div>
-              <p class="text-gray-600 dark:text-gray-400 italic leading-relaxed">"${data.message || ''}"</p>
+              <p class="text-gray-600 dark:text-gray-400 italic leading-relaxed">
+                "${displayMessage}"
+                ${isLong ? `<button onclick="openFullFeedbackModal(${idx})" class="text-brand-500 font-bold hover:underline ml-1 whitespace-nowrap">Read More</button>` : ''}
+              </p>
             `;
+            if (data.isDemo) {
+              // show small "Demo" badge
+              card.innerHTML += `<div class="absolute top-2 right-2 bg-brand-500 text-white px-2 py-1 text-xs rounded-full">Demo</div>`;
+            }
             container.appendChild(card);
           });
 
@@ -1171,11 +1215,6 @@
             container.innerHTML = `<div class="col-span-full py-12 text-center text-gray-400 font-medium">
               <p>No feedbacks yet. Be the first to share one!</p>
             </div>`;
-          }
-
-          if (data.isDemo) {
-            // show small "Demo" badge
-            card.innerHTML += `<div class="absolute top-2 right-2 bg-brand-500 text-white px-2 py-1 text-xs rounded-full">Demo</div>`;
           }
         });
       }
@@ -1185,7 +1224,7 @@
       // Auto-scroll logic
       function setupAutoScroll() {
         const container = document.getElementById('feedbacksContainer');
-        let scrollAmount = 0;
+        if (!container) return;
         let isPaused = false;
 
         container.addEventListener('mouseenter', () => isPaused = true);
@@ -1196,14 +1235,20 @@
         setInterval(() => {
           if (isPaused || !container.children.length) return;
 
-          const cardWidth = container.children[0].offsetWidth + 24; // Width + gap
-          scrollAmount += cardWidth;
+          // Check if there is actually overflow to scroll
+          if (container.scrollWidth <= container.offsetWidth) return;
 
-          if (scrollAmount >= container.scrollWidth - container.offsetWidth) {
-            scrollAmount = 0;
+          const cardWidth = container.children[0].offsetWidth + 24; // Width + gap
+          const currentScroll = container.scrollLeft;
+          const maxScroll = container.scrollWidth - container.offsetWidth;
+
+          // If at or near the end, loop back
+          if (currentScroll >= maxScroll - 10) {
             container.scrollTo({ left: 0, behavior: 'smooth' });
           } else {
-            container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            // Scroll to next card boundary cleanly
+            const nextScroll = Math.ceil((currentScroll + 1) / cardWidth) * cardWidth;
+            container.scrollTo({ left: Math.min(nextScroll, maxScroll), behavior: 'smooth' });
           }
         }, 3000);
       }

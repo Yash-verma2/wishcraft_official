@@ -37,7 +37,6 @@
   <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
   <link rel="dns-prefetch" href="https://www.gstatic.com">
 
   <!-- Open Graph -->
@@ -62,8 +61,8 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
     rel="stylesheet">
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Compiled Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
 
   <!-- Google tag (gtag.js) -->
@@ -81,42 +80,6 @@
   <!-- Google Verification -->
   <meta name="google-site-verification" content="Uwia-S7T9z1xzkMoqDzX38nJuxWbcPElMM2yqi8krJE" />
 
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            display: ['Outfit', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              50: '#fff1f2',
-              100: '#ffe4e6',
-              500: '#f43f5e',
-              600: '#e11d48',
-              700: '#be123c',
-            }
-          },
-          animation: {
-            float: 'float 3s ease-in-out infinite',
-            shimmer: 'shimmer 2s linear infinite',
-          },
-          keyframes: {
-            float: {
-              '0%,100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-10px)' },
-            },
-            shimmer: {
-              '0%': { backgroundPosition: '-200% 0' },
-              '100%': { backgroundPosition: '200% 0' },
-            }
-          }
-        }
-      }
-    }
-  </script>
 
   <!-- Firebase -->
   <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
@@ -292,8 +255,7 @@
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9926780793434030"
     crossorigin="anonymous"></script>
-  <script async="async" data-cfasync="false"
-    src="https://pl29293565.profitablecpmratenetwork.com/f0162b6cc97572c5ae465e8ca0ab4b36/invoke.js"></script>
+
 </head>
 
 
@@ -408,62 +370,20 @@
             </div>
 
             <div class="preview-slide bg-white dark:bg-gray-900">
-              <img src="assets/previews/dashboard_preview_image_3.png" alt="Premium mobile celebration experience"
+              <img src="assets/previews/dashboard_preview_image_2.png" alt="WishCraft theme customization editor"
                 class="w-full h-full object-cover" />
             </div>
 
-            <!-- ============================================================
-                 ADSTERRA AD SLIDE - Copy this entire block to add more ads
-                 Steps to reuse:
-                   1. Add a new <div class="preview-slide"> block below
-                   2. Change the `id` on the container div to your new ad's container ID
-                   3. Add the ad's <script> tag in the <head> section
-                   4. Update the JS scaleAdToFit() if needed for multiple ads
-                 ============================================================ -->
-            <div class="preview-slide">
-              <div id="adSlideWrapper"
-                class="absolute inset-0 flex flex-col justify-center items-center bg-gray-50/50 dark:bg-gray-800/20 overflow-hidden">
-
-                <!-- Sponsored label + info tooltip -->
-                <!-- Tooltip opens DOWNWARD to avoid being clipped by overflow:hidden -->
-                <div class="absolute top-4 right-6 flex items-center gap-1 z-20">
-                  <span class="text-[10px] font-bold text-gray-400/80 uppercase tracking-widest">Sponsored</span>
-                  <div class="relative group cursor-help">
-                    <svg class="w-3.5 h-3.5 text-gray-400/80 hover:text-brand-500 transition-colors" fill="none"
-                      stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <!-- Tooltip (opens downward so overflow:hidden doesn't clip it) -->
-                    <div
-                      class="absolute top-full right-0 mt-2 w-48 p-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs rounded-xl shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none text-center font-medium">
-                      <!-- Arrow pointing UP -->
-                      <div
-                        class="absolute bottom-full right-3 mb-[-1px] w-2.5 h-2 bg-gray-900 dark:bg-white transform rotate-45">
-                      </div>
-                      Ads help us keep WishCraft 100% free for everyone! 🎁
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Ad content - scaled by JS to fit the slide -->
-                <div id="adScaleWrapper" style="transform-origin: center center; transition: transform 0.3s ease;">
-                  <!-- Replace the id below with your Adsterra container ID -->
-                  <div id="container-f0162b6cc97572c5ae465e8ca0ab4b36" class="flex justify-center items-center"></div>
-                </div>
-
-              </div>
+            <div class="preview-slide bg-white dark:bg-gray-900">
+              <img src="assets/previews/dashboard_preview_image_3.png" alt="Premium mobile celebration experience"
+                class="w-full h-full object-cover" />
             </div>
-            <!-- ============================================================
-                 END ADSTERRA AD SLIDE
-                 ============================================================ -->
           </div>
         </div>
 
         <!-- Navigation Dots -->
         <div class="flex justify-center gap-2 mt-8">
           <div class="preview-dot w-2 h-2 rounded-full bg-brand-500 shadow-lg shadow-brand-500/40"></div>
-          <div class="preview-dot w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-800"></div>
           <div class="preview-dot w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-800"></div>
           <div class="preview-dot w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-800"></div>
         </div>
@@ -1338,33 +1258,7 @@
 
       setupPreviewSlideshow();
 
-      // Scale Adsterra ad to fit the carousel slide
-      function scaleAdToFit() {
-        const wrapper = document.getElementById('adSlideWrapper');
-        const scaleEl = document.getElementById('adScaleWrapper');
-        const adContainer = document.getElementById('container-f0162b6cc97572c5ae465e8ca0ab4b36');
-        if (!wrapper || !scaleEl || !adContainer) return;
 
-        // Wait for ad content to render
-        const iframe = adContainer.querySelector('iframe') || adContainer.querySelector('ins') || adContainer.firstElementChild;
-        if (!iframe) return;
-
-        const adH = iframe.offsetHeight || iframe.scrollHeight || adContainer.scrollHeight;
-        const adW = iframe.offsetWidth || iframe.scrollWidth || adContainer.scrollWidth;
-        const containerH = wrapper.clientHeight;
-        const containerW = wrapper.clientWidth;
-
-        if (adH > 0 && adW > 0) {
-          const scaleY = containerH / adH;
-          const scaleX = containerW / adW;
-          const scale = Math.min(scaleY, scaleX, 1); // never upscale, only downscale
-          scaleEl.style.transform = `scale(${scale})`;
-        }
-      }
-
-      // Try scaling at multiple intervals to catch when ad loads
-      [500, 1000, 2000, 3500].forEach(delay => setTimeout(scaleAdToFit, delay));
-      window.addEventListener('resize', scaleAdToFit);
       // Register Service Worker for PWA
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {

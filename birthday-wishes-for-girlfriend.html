@@ -22,10 +22,10 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
-  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="icon" href="assets/branding/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/branding/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="assets/branding/favicon-192x192.png">
+  <link rel="shortcut icon" href="assets/branding/favicon.ico">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +38,7 @@
   <meta property="og:title" content="100+ Best Birthday Wishes for Girlfriend | Romantic Messages" />
   <meta property="og:description"
     content="Make her smile with sweet, romantic, and deep birthday messages. Or even better, create a magical free celebration webpage." />
-  <meta property="og:image" content="https://wishcraft-pages.vercel.app/assets/branding/favicon-512x512.png" />
+  <meta property="og:image" content="https://wishcraft-pages.vercel.app/assets/branding/og-preview.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -46,7 +46,7 @@
   <meta name="twitter:title" content="100+ Best Birthday Wishes for Girlfriend" />
   <meta name="twitter:description"
     content="Romantic and sweet messages to make your girlfriend's birthday truly special." />
-  <meta name="twitter:image" content="https://wishcraft-pages.vercel.app/assets/branding/favicon-512x512.png" />
+  <meta name="twitter:image" content="https://wishcraft-pages.vercel.app/assets/branding/og-preview.png" />
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
@@ -136,23 +136,58 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "100+ Best Birthday Wishes for Girlfriend | Romantic Messages",
-    "description": "Make her smile with sweet, romantic, and deep birthday messages. Or even better, create a magical free celebration webpage.",
-    "author": {
-      "@type": "Organization",
-      "name": "WishCraft"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "WishCraft",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://wishcraft-pages.vercel.app/icon-192.png"
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://wishcraft-pages.vercel.app/birthday-wishes-for-girlfriend.html#article",
+        "isPartOf": {
+          "@type": "WebPage",
+          "@id": "https://wishcraft-pages.vercel.app/birthday-wishes-for-girlfriend.html"
+        },
+        "headline": "100+ Best Birthday Wishes for Girlfriend | Romantic Messages",
+        "description": "Find the perfect birthday wishes for your girlfriend. Express your love with deep, romantic, and sweet messages, or go the extra mile by creating a free digital birthday page with WishCraft.",
+        "image": "https://wishcraft-pages.vercel.app/assets/branding/og-preview.png",
+        "author": {
+          "@type": "Organization",
+          "name": "WishCraft"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "WishCraft",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wishcraft-pages.vercel.app/assets/branding/favicon-192x192.png"
+          }
+        },
+        "datePublished": "2026-04-30T08:00:00+00:00",
+        "dateModified": "2026-06-22T10:40:00+00:00"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How can I make my girlfriend's birthday wish romantic and special?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Go beyond plain text! Use WishCraft to generate a personalized digital aesthetic website featuring her photos, a special romantic message, a virtual gift, and a custom background song, free."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a sweet birthday quote for my girlfriend?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Quotes like 'You are my today and all of my tomorrows. Happy birthday, sweetheart' or 'Happy birthday to the girl who stole my heart and never gave it back' are highly romantic and sweet choices."
+            }
+          }
+        ]
       }
-    }
+    ]
   }
   </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4280772647004441"
+     crossorigin="anonymous"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5K0KP4T3ZN"></script>
   <script>
@@ -285,14 +320,32 @@
       <p class="text-gray-400 text-sm font-medium mb-8">© 2026 WishCraft Pages. All rights reserved. Made with ✨ by
         Yash.</p>
 
-      <div class="flex flex-wrap items-center justify-center gap-4 text-sm font-medium text-gray-500">
+      <div class="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center gap-y-3 gap-x-6 text-center text-xs sm:text-sm font-semibold text-gray-500 max-w-sm sm:max-w-none mx-auto mb-8">
         <a href="/birthday-wishes.html" class="hover:text-brand-500 transition-colors">Birthday Wishes</a>
-        <span>•</span>
+        <span class="hidden sm:inline text-gray-300 dark:text-gray-800">•</span>
+        <a href="/birthday-wishes-for-girlfriend.html" class="hover:text-brand-500 transition-colors">Girlfriend Wishes</a>
+        <span class="hidden sm:inline text-gray-300 dark:text-gray-800">•</span>
+        <a href="/birthday-wishes-for-boyfriend.html" class="hover:text-brand-500 transition-colors">Boyfriend Wishes</a>
+        <span class="hidden sm:inline text-gray-300 dark:text-gray-800">•</span>
+        <a href="/birthday-wishes-for-husband.html" class="hover:text-brand-500 transition-colors">Husband Wishes</a>
+        <span class="hidden sm:inline text-gray-300 dark:text-gray-800">•</span>
+        <a href="/birthday-wishes-for-best-friend.html" class="hover:text-brand-500 transition-colors">Best Friend</a>
+        <span class="hidden sm:inline text-gray-300 dark:text-gray-800">•</span>
         <a href="/anniversary-wishes.html" class="hover:text-brand-500 transition-colors">Anniversary Quotes</a>
-        <span>•</span>
+        <span class="hidden sm:inline text-gray-300 dark:text-gray-800">•</span>
         <a href="/valentine-wishes.html" class="hover:text-brand-500 transition-colors">Valentine Messages</a>
-        <span>•</span>
+        <span class="hidden sm:inline text-gray-300 dark:text-gray-800">•</span>
         <a href="/romantic-birthday-message.html" class="hover:text-brand-500 transition-colors">Romantic Texts</a>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] font-bold text-gray-400 mt-6 pt-6 border-t border-gray-100 dark:border-gray-900/60">
+        <a href="/about.html" class="hover:text-brand-500 transition-colors">About Us</a>
+        <span class="text-gray-300 dark:text-gray-800">•</span>
+        <a href="/privacy.html" class="hover:text-brand-500 transition-colors">Privacy Policy</a>
+        <span class="text-gray-300 dark:text-gray-800">•</span>
+        <a href="/terms.html" class="hover:text-brand-500 transition-colors">Terms of Service</a>
+        <span class="text-gray-300 dark:text-gray-800">•</span>
+        <a href="/contact.html" class="hover:text-brand-500 transition-colors">Contact Us</a>
       </div>
     </div>
   </footer>

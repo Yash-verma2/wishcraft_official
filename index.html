@@ -14,7 +14,7 @@
   <meta name="description"
     content="Create stunning digital birthday pages and celebration websites instantly for free. Add photos, music, and share magic with WishCraft's aesthetic generator." />
   <meta name="keywords"
-    content="free birthday website generator, create digital birthday card, online celebration page maker, aesthetic birthday website, digital anniversary page, free wishes maker , free birthday page generator, free anniversary page generator, free celebration page generator, free birthday website, free anniversary website, free celebration website, free birthday wishes, free anniversary wishes, free celebration wishes, free birthday card, free anniversary card, free celebration card, free birthday messages, free anniversary messages, free celebration messages, free birthday quotes, free anniversary quotes, free celebration quotes  " />
+    content="free birthday website generator, online celebration page maker, aesthetic birthday website, digital anniversary page, free wishes maker, free birthday card creator, romantic gift website, custom virtual birthday card, digital scrapbooks, aesthetic message sender" />
   <meta name="author" content="WishCraft" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
@@ -46,7 +46,7 @@
   <meta property="og:title" content="Free Birthday Website Generator | Create Magic - WishCraft" />
   <meta property="og:description"
     content="Create stunning digital birthday and celebration pages instantly for free. Add photos, music, and premium animations." />
-  <meta property="og:image" content="https://wishcraft-pages.vercel.app/assets/branding/favicon-512x512.png" />
+  <meta property="og:image" content="https://wishcraft-pages.vercel.app/assets/branding/og-preview.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -54,7 +54,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Free Birthday Website Generator - WishCraft" />
   <meta name="twitter:description" content="Create aesthetic digital celebration pages for free in seconds." />
-  <meta name="twitter:image" content="https://wishcraft-pages.vercel.app/assets/branding/favicon-512x512.png" />
+  <meta name="twitter:image" content="https://wishcraft-pages.vercel.app/assets/branding/og-preview.png" />
 
   <!-- Fonts (Optimized) -->
   <link
@@ -101,7 +101,7 @@
           "name": "WishCraft",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://wishcraft-pages.vercel.app/icon-192.png"
+            "url": "https://wishcraft-pages.vercel.app/assets/branding/favicon-192x192.png"
           }
         }
       },
@@ -117,6 +117,43 @@
           "price": "0",
           "priceCurrency": "USD"
         }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What exactly is WishCraft?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WishCraft is where your most special moments come to life. Create elegant, personalized celebration pages for birthdays, anniversaries, and meaningful occasions—designed to transform simple wishes into unforgettable digital experiences."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it really free for everyone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Our core celebration page generator is completely free. You can create, customize, and share as many pages as you want without any hidden charges."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I add my own music and photos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. You can upload multiple photos to create a gallery and either choose from our curated library or upload your own MP3 for the perfect soundtrack."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I share my creation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Once you're done, we generate a unique, short link for your page. You can share it directly via WhatsApp, Instagram, or any other platform. It works perfectly on all devices."
+            }
+          }
+        ]
       }
     ]
   }
@@ -253,7 +290,7 @@
       transform: translateY(0);
     }
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9926780793434030"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4280772647004441"
     crossorigin="anonymous"></script>
 
 </head>
@@ -271,7 +308,7 @@
       </div>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
-        <a href="about.html" class="hover:text-brand-500 transition-colors">About</a>
+        <a href="/about.html" class="hover:text-brand-500 transition-colors">About</a>
         <a href="#features" class="hover:text-brand-500 transition-colors">Features</a>
         <a href="#how-it-works" class="hover:text-brand-500 transition-colors">How it Works</a>
         <a href="#feedbacks" class="hover:text-brand-500 transition-colors">Top Feedbacks</a>
@@ -292,7 +329,7 @@
   <div id="mobileNav"
     class="fixed inset-0 z-[60] bg-white dark:bg-gray-900 hidden flex flex-col p-8 gap-6 pt-24 text-xl font-bold">
     <button class="absolute top-6 right-6 text-3xl" onclick="toggleMobileMenu()">×</button>
-    <a href="about.html" onclick="toggleMobileMenu()">About</a>
+    <a href="/about.html" onclick="toggleMobileMenu()">About</a>
     <a href="#features" onclick="toggleMobileMenu()">Features</a>
     <a href="#how-it-works" onclick="toggleMobileMenu()">How it Works</a>
     <a href="#feedbacks" onclick="toggleMobileMenu()">Top Feedbacks</a>
@@ -720,7 +757,7 @@
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="space-y-2">
                   <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Full Name</label>
-                  <input type="text" name="name" required
+                  <input type="text" name="name" required maxlength="50"
                     class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium"
                     placeholder="John Doe">
                 </div>
@@ -734,7 +771,7 @@
 
               <div class="space-y-2">
                 <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Message</label>
-                <textarea name="message" required rows="4"
+                <textarea name="message" required rows="4" maxlength="500"
                   class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium resize-none"
                   placeholder="What's on your mind?"></textarea>
               </div>
@@ -763,10 +800,10 @@
     </div>
 
     <div class="max-w-7xl mx-auto px-4 text-left relative z-10">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 mb-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 lg:gap-8 mb-16">
 
         <!-- Brand Column -->
-        <div class="space-y-6 lg:col-span-2 lg:pr-12">
+        <div class="space-y-6 col-span-2 lg:col-span-2 lg:pr-12">
           <div class="flex items-center gap-3">
             <img src="assets/branding/favicon-192x192.png" alt="WishCraft Logo"
               class="w-10 h-10 rounded-xl shadow-lg shadow-brand-500/20">
@@ -805,13 +842,27 @@
           </div>
         </div>
 
-        <!-- Ideas Column -->
-        <div class="lg:col-span-1">
-          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Inspiration</h4>
+        <!-- Birthday Column -->
+        <div class="col-span-1 lg:col-span-1">
+          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Birthday</h4>
           <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400 font-medium">
             <li><a href="/birthday-wishes.html"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Birthday
-                Wishes</a></li>
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">All Wishes</a></li>
+            <li><a href="/birthday-wishes-for-girlfriend.html"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">For Girlfriend</a></li>
+            <li><a href="/birthday-wishes-for-boyfriend.html"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">For Boyfriend</a></li>
+            <li><a href="/birthday-wishes-for-husband.html"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">For Husband</a></li>
+            <li><a href="/birthday-wishes-for-best-friend.html"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">For Best Friend</a></li>
+          </ul>
+        </div>
+
+        <!-- Occasions Column -->
+        <div class="col-span-1 lg:col-span-1">
+          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Love &amp; More</h4>
+          <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400 font-medium">
             <li><a href="/anniversary-wishes.html"
                 class="hover:text-brand-500 transition-colors inline-flex items-center gap-2 hover:translate-x-1 duration-200">Anniversary
                 Quotes <span
@@ -826,63 +877,43 @@
           </ul>
         </div>
 
-        <!-- Resources Column -->
-        <div class="lg:col-span-1">
-          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Resources</h4>
-          <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400 font-medium">
-            <li><a href="javascript:void(0)" onclick="openModal('help')"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Help
-                Center</a></li>
-            <li><a href="javascript:void(0)" onclick="openModal('support')"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Support</a>
-            </li>
-            <li><a href="about.html"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">About</a>
-            </li>
-            <li><a href="javascript:void(0)" onclick="openModal('releases')"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Release
-                Notes</a></li>
-          </ul>
-        </div>
-
-        <!-- Legal Column -->
-        <div class="lg:col-span-1">
-          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Legal</h4>
-          <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400 font-medium">
-            <li><a href="javascript:void(0)" onclick="openModal('privacy')"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Privacy
-                Policy</a></li>
-            <li><a href="javascript:void(0)" onclick="openModal('terms')"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Terms of
-                Service</a></li>
-            <li><a href="javascript:void(0)" onclick="openModal('cookies')"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Cookie
-                Policy</a></li>
-            <li><a href="javascript:void(0)" onclick="openModal('accessibility')"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Accessibility</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Support Column -->
-        <div class="lg:col-span-1">
+        <!-- Company/Support Column -->
+        <div class="col-span-1 md:col-span-2 lg:col-span-1">
           <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Support</h4>
           <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400 font-medium">
-            <li><a href="#feedbacks"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Top
-                Feedbacks</a></li>
-            <li><a href="javascript:void(0)" onclick="openModal('contact')"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Contact
-                Us</a></li>
-            <li><a href="#faq"
-                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">FAQs</a>
-            </li>
+            <li><a href="/about.html"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">About Us</a></li>
+            <li><a href="/contact.html"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Contact Us</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('help')"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Help Center</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('releases')"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Releases</a></li>
             <li><a href="mailto:support@wishcraft.io"
                 class="inline-flex items-center gap-2 group hover:translate-x-1 duration-200">
                 <span
                   class="text-brand-500 font-bold underline decoration-brand-500/30 group-hover:decoration-brand-500 transition-all">Email
                   Support</span>
               </a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Column -->
+        <div class="col-span-1 md:col-span-2 lg:col-span-1">
+          <h4 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Legal</h4>
+          <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400 font-medium">
+            <li><a href="/privacy.html"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Privacy
+                Policy</a></li>
+            <li><a href="/terms.html"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Terms of
+                Service</a></li>
+            <li><a href="/privacy.html#cookies"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Cookie
+                Policy</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('accessibility')"
+                class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Accessibility</a>
+            </li>
           </ul>
         </div>
 
@@ -986,7 +1017,7 @@
           setTimeout(() => { logo.style.transform = 'scale(1) rotate(0deg)'; }, 300);
           setTimeout(() => { bar.style.width = '100%'; }, 50);
           setTimeout(() => {
-            window.open('https://wishcraft-premium-ha6r.onrender.com', '_blank');
+            window.open('https://wishcraft-premium.onrender.com', '_blank');
             setTimeout(() => {
               overlay.style.opacity = '0';
               setTimeout(() => overlay.classList.add('hidden'), 300);
@@ -1074,7 +1105,7 @@
             <div class="pb-2 border-b border-gray-100 dark:border-gray-800">
               <span class="text-xs text-brand-600 font-bold uppercase tracking-wider">${dateStr}</span>
             </div>
-            <p class="text-gray-700 dark:text-gray-300 italic leading-relaxed text-lg whitespace-pre-wrap">"${data.message || ''}"</p>
+            <p class="text-gray-700 dark:text-gray-300 italic leading-relaxed text-lg whitespace-pre-wrap break-words">"${data.message || ''}"</p>
           </div>
         `;
         modal.classList.remove('hidden');
@@ -1094,12 +1125,12 @@
         db.collection('feedbacks').orderBy('timestamp', 'desc').limit(6).onSnapshot((snapshot) => {
           container.innerHTML = '';
           window.liveFeedbacks = [];
-          
+
           snapshot.docs.forEach((doc, idx) => {
             const data = doc.data();
             window.liveFeedbacks.push(data);
             const card = document.createElement('div');
-            card.className = "snap-center shrink-0 w-[85vw] md:w-[400px] p-6 rounded-2xl glass border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 animate-fade-in relative";
+            card.className = "snap-center shrink-0 w-[85vw] md:w-[400px] p-6 rounded-2xl glass border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 animate-fade-in relative flex flex-col justify-between min-h-[220px]";
             // Ensure data.timestamp exists (Firestore might take a second to sync)
             let dateStr = 'Just now';
             if (data.timestamp && data.timestamp.toDate) {
@@ -1110,19 +1141,23 @@
             const displayMessage = isLong ? `${data.message.slice(0, 120)}...` : data.message || '';
 
             card.innerHTML = `
-              <div class="flex items-center gap-4 mb-4">
-                <div class="w-12 h-12 bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center rounded-full text-xl font-bold text-brand-600">
-                  ${(data.name || 'A').charAt(0).toUpperCase()}
+              <div>
+                <div class="flex items-center gap-4 mb-4">
+                  <div class="w-12 h-12 bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center rounded-full text-xl font-bold text-brand-600">
+                    ${(data.name || 'A').charAt(0).toUpperCase()}
+                  </div>
+                  <div class="min-w-0 flex-1">
+                    <h4 class="font-bold break-words">${data.name || 'Anonymous'}</h4>
+                    <p class="text-[10px] text-brand-600 font-bold uppercase tracking-wider">${dateStr}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 class="font-bold">${data.name || 'Anonymous'}</h4>
-                  <p class="text-[10px] text-brand-600 font-bold uppercase tracking-wider">${dateStr}</p>
-                </div>
+                <p class="text-gray-600 dark:text-gray-400 italic leading-relaxed break-words">
+                  "${displayMessage}"
+                </p>
               </div>
-              <p class="text-gray-600 dark:text-gray-400 italic leading-relaxed">
-                "${displayMessage}"
-                ${isLong ? `<button onclick="openFullFeedbackModal(${idx})" class="text-brand-500 font-bold hover:underline ml-1 whitespace-nowrap">Read More</button>` : ''}
-              </p>
+              <div class="mt-4 flex justify-end">
+                ${isLong ? `<button onclick="openFullFeedbackModal(${idx})" class="text-brand-500 font-bold hover:underline whitespace-nowrap">Read More</button>` : ''}
+              </div>
             `;
             if (data.isDemo) {
               // show small "Demo" badge
@@ -1545,8 +1580,8 @@
       <button onclick="closeModal()"
         class="absolute top-8 right-8 w-12 h-12 rounded-full border border-gray-100 dark:border-gray-800 flex items-center justify-center text-gray-400 hover:text-brand-500 hover:border-brand-500 transition-all font-bold">×</button>
 
-      <div class="mb-8">
-        <h2 id="modalTitle" class="text-3xl font-display font-black tracking-tight gradient-text">Resource</h2>
+      <div class="mb-8 pr-12">
+        <h2 id="modalTitle" class="text-3xl font-display font-black tracking-tight gradient-text break-words">Resource</h2>
       </div>
 
       <div id="modalBody"

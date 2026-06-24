@@ -65,15 +65,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7NYNTDT0T"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-B7NYNTDT0T');
-  </script>
+  <!-- Google tag (gtag.js) loaded dynamically -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
 
@@ -81,9 +73,7 @@
   <meta name="google-site-verification" content="Uwia-S7T9z1xzkMoqDzX38nJuxWbcPElMM2yqi8krJE" />
 
 
-  <!-- Firebase -->
-  <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <!-- Firebase loaded dynamically -->
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -290,8 +280,7 @@
       transform: translateY(0);
     }
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4280772647004441"
-    crossorigin="anonymous"></script>
+  <!-- AdSense loaded dynamically -->
 
 </head>
 
@@ -299,7 +288,7 @@
 <body class="bg-[#fafafa] dark:bg-[#030712] text-gray-900 dark:text-gray-100 font-sans selection:bg-brand-500/30">
 
   <!-- HEADER -->
-  <header class="fixed top-0 left-0 w-full z-50 glass transition-all duration-300" id="mainHeader">
+  <header class="fixed top-0 left-0 w-full z-50 glass transition-colors duration-300" id="mainHeader" style="transition-property: background-color, border-color, backdrop-filter, box-shadow, padding;">
     <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3 group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         <img src="assets/branding/favicon-192x192.png" alt="WishCraft Logo"
@@ -344,16 +333,18 @@
     <section class="relative pt-40 pb-20 overflow-hidden">
       <!-- Background Blobs -->
       <div
-        class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-500/15 rounded-full blur-[120px] -z-10 animate-pulse">
+        class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-500/15 rounded-full blur-[120px] -z-10 animate-pulse"
+        style="will-change: opacity; transform: translate3d(0,0,0);">
       </div>
       <div
         class="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-orange-500/15 rounded-full blur-[100px] -z-10 animate-pulse"
-        style="animation-delay: 1s;"></div>
+        style="animation-delay: 1s; will-change: opacity; transform: translate3d(0,0,0);"></div>
 
       <div class="max-w-7xl mx-auto px-4 text-center">
         <div
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/5 border border-brand-500/10 text-brand-600 dark:text-brand-400 text-sm font-bold mb-8 animate-float">
-          <span class="flex h-2 w-2 rounded-full bg-brand-500 animate-pulse"></span>
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/5 border border-brand-500/10 text-brand-600 dark:text-brand-400 text-sm font-bold mb-8 animate-float"
+          style="will-change: transform;">
+          <span class="flex h-2 w-2 rounded-full bg-brand-500 animate-pulse" style="will-change: opacity;"></span>
           ✨ #1 Digital Celebration Platform | Voted Top Brand
         </div>
 
@@ -402,18 +393,18 @@
           class="rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-2xl transition-all duration-500 group-hover:scale-[1.01] group-hover:shadow-brand-500/10 bg-white dark:bg-gray-900">
           <div id="previewCarousel" class="preview-carousel">
             <div class="preview-slide bg-white dark:bg-gray-900">
-              <img src="assets/previews/dashboard_preview_image_1.png"
+              <img src="assets/previews/dashboard_preview_image_1.webp"
                 alt="WishCraft digital celebration analytics dashboard" class="w-full h-full object-cover" />
             </div>
 
             <div class="preview-slide bg-white dark:bg-gray-900">
-              <img src="assets/previews/dashboard_preview_image_2.png" alt="WishCraft theme customization editor"
-                class="w-full h-full object-cover" />
+              <img src="assets/previews/dashboard_preview_image_2.webp" alt="WishCraft theme customization editor"
+                class="w-full h-full object-cover" loading="lazy" />
             </div>
 
             <div class="preview-slide bg-white dark:bg-gray-900">
-              <img src="assets/previews/dashboard_preview_image_3.png" alt="Premium mobile celebration experience"
-                class="w-full h-full object-cover" />
+              <img src="assets/previews/dashboard_preview_image_3.webp" alt="Premium mobile celebration experience"
+                class="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -564,7 +555,7 @@
 
             <p
               class="mt-8 text-sm text-gray-500 font-bold uppercase tracking-widest flex items-center justify-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" style="will-change: opacity;"></span>
               Server Live & Ready
             </p>
           </div>
@@ -935,7 +926,8 @@
           <button onclick="openModal('status')"
             class="flex items-center gap-2 hover:text-gray-900 dark:hover:text-white transition-colors">
             <span
-              class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)] animate-pulse"></span>
+              class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)] animate-pulse"
+              style="will-change: opacity;"></span>
             All systems operational
           </button>
           <span class="w-1 h-1 rounded-full bg-gray-200 dark:bg-gray-800"></span>
@@ -950,11 +942,12 @@
     style="background: radial-gradient(ellipse at center, #1a0a10 0%, #030712 70%)">
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
       <div
-        class="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-brand-500/10 rounded-full blur-[120px] animate-pulse">
+        class="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-brand-500/10 rounded-full blur-[120px] animate-pulse"
+        style="will-change: opacity; transform: translate3d(0,0,0);">
       </div>
       <div
         class="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-indigo-500/10 rounded-full blur-[100px] animate-pulse"
-        style="animation-delay:0.8s"></div>
+        style="animation-delay:0.8s; will-change: opacity; transform: translate3d(0,0,0);"></div>
     </div>
     <div class="relative text-center">
       <div id="launchLogo"
@@ -1051,6 +1044,79 @@
 
     // Initial Load
     document.addEventListener('DOMContentLoaded', () => {
+      // Dynamic Script Loader
+      const loadScript = (src) => {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = src;
+          script.async = true;
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+      };
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAyof4JXS10wiMyJVNFoDpSxs713bId3Ug",
+        authDomain: "wishcraft-cb4b6.firebaseapp.com",
+        projectId: "wishcraft-cb4b6",
+        storageBucket: "wishcraft-cb4b6.firebasestorage.app",
+        messagingSenderId: "1091531835143",
+        appId: "1:1091531835143:web:19cb506dcc28a84ea7a7a2",
+        measurementId: "G-B7NYNTDT0T"
+      };
+
+      let db = null;
+      let firebasePromise = null;
+
+      const initFirebaseAndFeedbacks = () => {
+        if (firebasePromise) return firebasePromise;
+
+        firebasePromise = (async () => {
+          if (firebaseConfig.apiKey === "YOUR_API_KEY") {
+            const container = document.getElementById('feedbacksContainer');
+            if (container) {
+              container.innerHTML = `<div class="col-span-full py-12 text-center text-gray-400 font-medium"><p>Connect Firebase to see live feedbacks.</p></div>`;
+            }
+            return;
+          }
+          try {
+            await loadScript("https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js");
+            await loadScript("https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js");
+            firebase.initializeApp(firebaseConfig);
+            db = firebase.firestore();
+            loadLiveFeedbacks();
+          } catch (err) {
+            console.error("Firebase dynamic load failed:", err);
+            const container = document.getElementById('feedbacksContainer');
+            if (container) {
+              container.innerHTML = `<div class="col-span-full py-12 text-center text-gray-400 font-medium"><p>Failed to load feedbacks. Please reload the page.</p></div>`;
+            }
+          }
+        })();
+        return firebasePromise;
+      };
+
+      const initThirdParty = () => {
+        // Gtag
+        const gtagScript = document.createElement('script');
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-B7NYNTDT0T";
+        gtagScript.async = true;
+        document.head.appendChild(gtagScript);
+
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function() { dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-B7NYNTDT0T');
+
+        // AdSense
+        const adsScript = document.createElement('script');
+        adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4280772647004441";
+        adsScript.async = true;
+        adsScript.crossOrigin = "anonymous";
+        document.head.appendChild(adsScript);
+      };
+
       const firstGift = document.querySelector('.gift-options img:first-child');
       if (firstGift) selectGift(firstGift);
 
@@ -1066,22 +1132,17 @@
 
       document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-      // Firebase Configuration (PLACEHOLDER)
-      const firebaseConfig = {
-        apiKey: "AIzaSyAyof4JXS10wiMyJVNFoDpSxs713bId3Ug",
-        authDomain: "wishcraft-cb4b6.firebaseapp.com",
-        projectId: "wishcraft-cb4b6",
-        storageBucket: "wishcraft-cb4b6.firebasestorage.app",
-        messagingSenderId: "1091531835143",
-        appId: "1:1091531835143:web:19cb506dcc28a84ea7a7a2",
-        measurementId: "G-B7NYNTDT0T"
-      };
-
-      // Initialize Firebase (Check if config is filled)
-      let db = null;
-      if (firebaseConfig.apiKey !== "YOUR_API_KEY") {
-        firebase.initializeApp(firebaseConfig);
-        db = firebase.firestore();
+      // Trigger third party scripts and Firebase when idle or loaded
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          setTimeout(initThirdParty, 1000);
+          setTimeout(initFirebaseAndFeedbacks, 1500);
+        });
+      } else {
+        window.addEventListener('load', () => {
+          setTimeout(initThirdParty, 1500);
+          setTimeout(initFirebaseAndFeedbacks, 2500);
+        });
       }
 
       window.liveFeedbacks = [];
@@ -1537,30 +1598,32 @@
           btn.innerHTML = `<span class="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span> Sending...`;
 
           try {
+            if (!db) {
+              await initFirebaseAndFeedbacks();
+            }
+            if (!db) {
+              throw new Error('Firebase not initialized.');
+            }
+
             const formData = new FormData(feedbackForm);
             const feedbackData = {
               name: formData.get('name'),
               email: formData.get('email'),
               message: formData.get('message'),
-              timestamp: db ? firebase.firestore.FieldValue.serverTimestamp() : new Date()
+              timestamp: firebase.firestore.FieldValue.serverTimestamp()
             };
 
-            // 1. Save to Firestore (if connected)
-            if (db) {
-              await db.collection('feedbacks').add(feedbackData);
+            await db.collection('feedbacks').add(feedbackData);
 
-              // Immediate success feedback
-              btn.innerHTML = `<span class="text-emerald-500 font-bold">✅ Sent!</span>`;
-              feedbackForm.reset();
-              showToast('✨ Thank you! Your feedback is now live.');
+            // Immediate success feedback
+            btn.innerHTML = `<span class="text-emerald-500 font-bold">✅ Sent!</span>`;
+            feedbackForm.reset();
+            showToast('✨ Thank you! Your feedback is now live.');
 
-              setTimeout(() => {
-                btn.disabled = false;
-                btn.innerHTML = originalContent;
-              }, 800);
-            } else {
-              throw new Error('Firebase not initialized.');
-            }
+            setTimeout(() => {
+              btn.disabled = false;
+              btn.innerHTML = originalContent;
+            }, 800);
           } catch (error) {
             console.error("Submission Error:", error);
             showToast('❌ Submission failed. Please try again.', true);

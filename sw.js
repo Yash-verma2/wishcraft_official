@@ -1,27 +1,41 @@
-const CACHE_NAME = 'wishcraft-cache-v1';
-const ASSETS_TO_CACHE = [
-  'index.html',
-  'manifest.json',
-  'favicon.ico',
-  'favicon-16.png',
-  'favicon-32.png',
-  'icon-192.png',
-  'icon-512.png',
-  'apple-touch-icon.png'
+﻿const CACHE_NAME = 'wishcraft-static-v2';
+const CORE_ASSETS = [
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/assets/css/style.css',
+  '/assets/branding/favicon-192x192.png',
+  '/assets/branding/favicon-512x512.png',
+  '/assets/branding/favicon.ico'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS_TO_CACHE);
-    })
+    caches.open(CACHE_NAME)
+      .then((cache) => Promise.allSettled(CORE_ASSETS.map((asset) => cache.add(asset))))
+      .then(() => self.skipWaiting())
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys()
+      .then((keys) => Promise.all(keys
+        .filter((key) => key !== CACHE_NAME)
+        .map((key) => caches.delete(key))))
+      .then(() => self.clients.claim())
   );
 });
 
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
-  );
+  if (event.request.method !== 'GET' || !event.request.url.startsWith(self.location.origin)) {
+    return;
+  }
+
+  if (event.request.mode === 'navigate') {
+    event.respondWith(fetch(event.request).catch(() => caches.match('/index.html')));
+    return;
+  }
+
+  event.respondWith(caches.match(event.request).then((cached) => cached || fetch(event.request)));
 });

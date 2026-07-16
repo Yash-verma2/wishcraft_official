@@ -1,6 +1,4 @@
-User-agent: *
-Allow: /
-Disallow: /seeder.html
-Disallow: /assets/tools/seeder.html
-
-Sitemap: https://wishcraft-pages.vercel.app/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://wishcraft-premium.onrender.com/sitemap.xml

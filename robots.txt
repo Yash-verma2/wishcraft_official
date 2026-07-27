@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wishcraft-premium.onrender.com/sitemap.xml
+Sitemap: https://wishcraft-pages.vercel.app/sitemap.xml

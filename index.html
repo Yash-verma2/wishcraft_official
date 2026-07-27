@@ -112,50 +112,53 @@
   </script>
 
   <!-- Ad Integration -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4280772647004441"
-    crossorigin="anonymous"></script>
-
-  <!-- Firebase -->
-  <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        if (!document.getElementById('adsense-script')) {
+          var s = document.createElement('script');
+          s.id = 'adsense-script';
+          s.async = true;
+          s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4280772647004441";
+          s.crossOrigin = "anonymous";
+          document.head.appendChild(s);
+        }
+      }, 1200);
+    });
+  </script>
 
   <!-- Helper Scripts -->
   <script>
     // Mobile Menu Toggle
     window.toggleMobileMenu = function () {
-
       const nav = document.getElementById('mobileNav');
-
       const backdrop = document.getElementById('mobileNavBackdrop');
-
-      const isOpen = nav.classList.contains('translate-x-0');
+      if (!nav || !backdrop) return;
+      const isOpen = !nav.classList.contains('hidden') && nav.classList.contains('translate-x-0');
 
       if (isOpen) {
-
         nav.classList.remove('translate-x-0');
-
         nav.classList.add('translate-x-full');
-
         backdrop.classList.remove('opacity-100');
-
         backdrop.classList.add('opacity-0', 'pointer-events-none');
-
         document.body.classList.remove('overflow-hidden');
-
+        setTimeout(function() {
+          nav.classList.add('hidden');
+          backdrop.classList.add('hidden');
+        }, 300);
       } else {
-
-        nav.classList.remove('translate-x-full');
-
-        nav.classList.add('translate-x-0');
-
-        backdrop.classList.remove('opacity-0', 'pointer-events-none');
-
-        backdrop.classList.add('opacity-100');
-
-        document.body.classList.add('overflow-hidden');
-
+        nav.classList.remove('hidden');
+        backdrop.classList.remove('hidden');
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            nav.classList.remove('translate-x-full');
+            nav.classList.add('translate-x-0');
+            backdrop.classList.remove('opacity-0', 'pointer-events-none');
+            backdrop.classList.add('opacity-100');
+            document.body.classList.add('overflow-hidden');
+          });
+        });
       }
-
     };
 
     // Theme Switcher Logic
@@ -1083,8 +1086,7 @@
 
   <!-- MOBILE NAV SLIDE-OVER -->
 
-  <div id="mobileNav" style="max-width: 300px;"
-    class="fixed inset-y-0 right-0 z-[60] w-full max-w-[300px] bg-white dark:bg-gray-950 p-8 flex flex-col gap-6 pt-24 text-lg font-bold shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out border-l border-gray-100 dark:border-gray-900 md:hidden">
+  <div id="mobileNav" style="max-width: 300px; right: 0 !important; left: auto !important; margin-left: auto !important;" class="hidden fixed inset-y-0 right-0 left-auto ml-auto z-[60] w-full max-w-[300px] bg-white dark:bg-gray-950 p-8 flex flex-col gap-6 pt-24 text-lg font-bold shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out border-l border-gray-100 dark:border-gray-900 md:hidden">
 
     <button class="absolute top-6 right-6 p-2 text-gray-600 hover:text-brand-500 dark:text-gray-300 transition-colors"
       onclick="toggleMobileMenu()" aria-label="Close menu">
@@ -1413,7 +1415,7 @@
 
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">🎮 Asset Configurator</h3>
 
-              <p class="text-xs text-gray-400 font-semibold mb-6">Select elements to pack into your celebration page.
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-semibold mb-6">Select elements to pack into your celebration page.
 
               </p>
 
@@ -1422,7 +1424,7 @@
               <div class="space-y-3.5 mb-8">
 
                 <button id="tool-photos" onclick="toggleBuilderElement('photos')"
-                  class="builder-btn w-full p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 flex items-center justify-between text-left font-bold transition-all hover:scale-[1.01] active:scale-95 shadow-sm">
+                  class="builder-btn w-full p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 flex items-center justify-between text-left font-bold transition-all hover:scale-[1.01] active:scale-95 shadow-sm text-gray-900 dark:text-white">
 
                   <span class="flex items-center gap-3"><span class="text-lg">📸</span> Visual Photo Gallery</span>
 
@@ -1432,7 +1434,7 @@
                 </button>
 
                 <button id="tool-music" onclick="toggleBuilderElement('music')"
-                  class="builder-btn w-full p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 flex items-center justify-between text-left font-bold transition-all hover:scale-[1.01] active:scale-95 shadow-sm">
+                  class="builder-btn w-full p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 flex items-center justify-between text-left font-bold transition-all hover:scale-[1.01] active:scale-95 shadow-sm text-gray-900 dark:text-white">
 
                   <span class="flex items-center gap-3"><span class="text-lg">🎵</span> Birthday / Romantic Song</span>
 
@@ -1442,7 +1444,7 @@
                 </button>
 
                 <button id="tool-gift" onclick="toggleBuilderElement('gift')"
-                  class="builder-btn w-full p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 flex items-center justify-between text-left font-bold transition-all hover:scale-[1.01] active:scale-95 shadow-sm">
+                  class="builder-btn w-full p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 flex items-center justify-between text-left font-bold transition-all hover:scale-[1.01] active:scale-95 shadow-sm text-gray-900 dark:text-white">
 
                   <span class="flex items-center gap-3"><span class="text-lg">🎁</span> Interactive Gift Box</span>
 
@@ -1452,7 +1454,7 @@
                 </button>
 
                 <button id="tool-letters" onclick="toggleBuilderElement('letters')"
-                  class="builder-btn w-full p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 flex items-center justify-between text-left font-bold transition-all hover:scale-[1.01] active:scale-95 shadow-sm">
+                  class="builder-btn w-full p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 flex items-center justify-between text-left font-bold transition-all hover:scale-[1.01] active:scale-95 shadow-sm text-gray-900 dark:text-white">
 
                   <span class="flex items-center gap-3"><span class="text-lg">💬</span> Personal Letters & Jokes</span>
 
@@ -2419,7 +2421,7 @@
   <!-- FOOTER -->
 
   <footer
-    class="bg-white dark:bg-[#030712] pt-24 pb-8 border-t border-gray-100 dark:border-gray-800/60 relative overflow-hidden">
+    class="bg-white dark:bg-[#030712] pt-10 md:pt-20 pb-8 border-t border-gray-100 dark:border-gray-800/60 relative overflow-hidden">
 
     <!-- Subtle background glow -->
 
@@ -2430,11 +2432,11 @@
 
     <div class="max-w-7xl mx-auto px-4 text-left relative z-10">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 mb-16">
+      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-6 md:gap-12 lg:gap-8 mb-10 md:mb-16">
 
         <!-- Brand Column -->
 
-        <div class="space-y-6 lg:col-span-2 lg:pr-12">
+        <div class="col-span-2 space-y-4 lg:col-span-2 lg:pr-12">
 
           <div class="flex items-center gap-3">
 
@@ -2446,21 +2448,20 @@
 
           </div>
 
-          <p class="text-gray-600 dark:text-gray-300 text-sm leading-loose font-medium max-w-sm">
+          <p class="text-xs md:text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-medium max-w-sm">
 
             The world's most elegant platform for digital celebrations. Craft stunning, personalized aesthetic pages for
-
             the people you love in exactly 60 seconds.
 
           </p>
 
-          <div class="flex items-center gap-3 pt-2">
+          <div class="flex items-center gap-3 pt-1">
 
             <!-- Instagram -->
 
             <a href="https://www.instagram.com/yash_verma_690/" target="_blank" rel="noopener"
               aria-label="Follow us on Instagram"
-              class="w-10 h-10 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 hover:text-pink-500 hover:border-pink-500 hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-all shadow-sm">
+              class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 hover:text-pink-500 hover:border-pink-500 hover:bg-pink-50 dark:hover:bg-pink-900/20 transition-all shadow-sm">
 
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
 
@@ -2474,7 +2475,7 @@
             <!-- X/Twitter -->
 
             <a href="https://x.com/wishcraft_app" target="_blank" rel="noopener" aria-label="Follow us on X (Twitter)"
-              class="w-10 h-10 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 hover:text-black dark:hover:text-white hover:border-gray-900 dark:hover:border-gray-100 transition-all shadow-sm">
+              class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 hover:text-black dark:hover:text-white hover:border-gray-900 dark:hover:border-gray-100 transition-all shadow-sm">
 
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
 
@@ -2490,16 +2491,16 @@
         </div>
 
         <!-- Inspiration Column -->
-        <div class="lg:col-span-1">
-          <h3 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Inspiration</h3>
-          <ul class="space-y-4 text-sm text-gray-600 dark:text-gray-300 font-medium">
+        <div class="col-span-1 lg:col-span-1">
+          <h3 class="font-bold text-gray-900 dark:text-white mb-3 md:mb-6 uppercase text-xs tracking-widest">Inspiration</h3>
+          <ul class="space-y-2.5 md:space-y-4 text-xs md:text-sm text-gray-600 dark:text-gray-300 font-medium">
             <li><a href="birthday-wishes.html"
                 class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Birthday
                 Wishes</a></li>
             <li><a href="anniversary-wishes.html"
-                class="hover:text-brand-500 transition-colors inline-flex items-center gap-2 hover:translate-x-1 duration-200">Anniversary
+                class="hover:text-brand-500 transition-colors inline-flex items-center gap-1.5 md:gap-2 hover:translate-x-1 duration-200">Anniversary
                 Quotes <span
-                  class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-brand-50 dark:bg-brand-500/10 text-brand-500 flex-shrink-0">HOT</span></a>
+                  class="px-1.5 py-0.5 rounded text-[9px] md:text-[10px] font-bold bg-brand-50 dark:bg-brand-500/10 text-brand-500 flex-shrink-0">HOT</span></a>
             </li>
             <li><a href="valentine-wishes.html"
                 class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Valentine
@@ -2511,9 +2512,9 @@
         </div>
 
         <!-- Surprises (Programmatic Templates) Column -->
-        <div class="lg:col-span-1">
-          <h3 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Surprises</h3>
-          <ul class="space-y-4 text-sm text-gray-600 dark:text-gray-300 font-medium">
+        <div class="col-span-1 lg:col-span-1">
+          <h3 class="font-bold text-gray-900 dark:text-white mb-3 md:mb-6 uppercase text-xs tracking-widest">Surprises</h3>
+          <ul class="space-y-2.5 md:space-y-4 text-xs md:text-sm text-gray-600 dark:text-gray-300 font-medium">
             <li><a href="birthday-wishes-for-girlfriend.html"
                 class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">For
                 Girlfriend</a></li>
@@ -2530,9 +2531,9 @@
         </div>
 
         <!-- Resources Column -->
-        <div class="lg:col-span-1">
-          <h3 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Resources</h3>
-          <ul class="space-y-4 text-sm text-gray-600 dark:text-gray-300 font-medium">
+        <div class="col-span-1 lg:col-span-1">
+          <h3 class="font-bold text-gray-900 dark:text-white mb-3 md:mb-6 uppercase text-xs tracking-widest">Resources</h3>
+          <ul class="space-y-2.5 md:space-y-4 text-xs md:text-sm text-gray-600 dark:text-gray-300 font-medium">
             <li><a href="about.html"
                 class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">About
                 Us</a></li>
@@ -2549,9 +2550,9 @@
         </div>
 
         <!-- Support Column -->
-        <div class="lg:col-span-1">
-          <h3 class="font-bold text-gray-900 dark:text-white mb-6 uppercase text-xs tracking-widest">Support</h3>
-          <ul class="space-y-4 text-sm text-gray-600 dark:text-gray-300 font-medium">
+        <div class="col-span-1 lg:col-span-1">
+          <h3 class="font-bold text-gray-900 dark:text-white mb-3 md:mb-6 uppercase text-xs tracking-widest">Support</h3>
+          <ul class="space-y-2.5 md:space-y-4 text-xs md:text-sm text-gray-600 dark:text-gray-300 font-medium">
             <li><a href="#faq"
                 class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">FAQs</a>
             </li>
@@ -4061,6 +4062,9 @@
     <span class="feedback-text-desktop">Your feedback is precious to us</span>
   </button>
 
+  <!-- Firebase (Deferred) -->
+  <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 </body>
 
 </html>

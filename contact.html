@@ -103,7 +103,20 @@
   </script>
 
   <!-- Ad Integration -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4280772647004441" crossorigin="anonymous"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        if (!document.getElementById('adsense-script')) {
+          var s = document.createElement('script');
+          s.id = 'adsense-script';
+          s.async = true;
+          s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4280772647004441";
+          s.crossOrigin = "anonymous";
+          document.head.appendChild(s);
+        }
+      }, 1200);
+    });
+  </script>
 
   <!-- Firebase -->
   <script defer src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
@@ -112,40 +125,35 @@
   <!-- Helper Scripts -->
   <script>
     // Mobile Menu Toggle
-    window.toggleMobileMenu = function() {
-
+    window.toggleMobileMenu = function () {
       const nav = document.getElementById('mobileNav');
-
       const backdrop = document.getElementById('mobileNavBackdrop');
-
-      const isOpen = nav.classList.contains('translate-x-0');
+      if (!nav || !backdrop) return;
+      const isOpen = !nav.classList.contains('hidden') && nav.classList.contains('translate-x-0');
 
       if (isOpen) {
-
         nav.classList.remove('translate-x-0');
-
         nav.classList.add('translate-x-full');
-
         backdrop.classList.remove('opacity-100');
-
         backdrop.classList.add('opacity-0', 'pointer-events-none');
-
         document.body.classList.remove('overflow-hidden');
-
+        setTimeout(function() {
+          nav.classList.add('hidden');
+          backdrop.classList.add('hidden');
+        }, 300);
       } else {
-
-        nav.classList.remove('translate-x-full');
-
-        nav.classList.add('translate-x-0');
-
-        backdrop.classList.remove('opacity-0', 'pointer-events-none');
-
-        backdrop.classList.add('opacity-100');
-
-        document.body.classList.add('overflow-hidden');
-
+        nav.classList.remove('hidden');
+        backdrop.classList.remove('hidden');
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            nav.classList.remove('translate-x-full');
+            nav.classList.add('translate-x-0');
+            backdrop.classList.remove('opacity-0', 'pointer-events-none');
+            backdrop.classList.add('opacity-100');
+            document.body.classList.add('overflow-hidden');
+          });
+        });
       }
-
     };
 
     // Theme Switcher Logic
@@ -365,9 +373,7 @@ html { scroll-behavior: smooth; }
 
   <!-- MOBILE NAV SLIDE-OVER -->
 
-  <div id="mobileNav" style="max-width: 300px;"
-
-    class="fixed inset-y-0 right-0 z-[60] w-full max-w-[300px] bg-white dark:bg-gray-950 p-8 flex flex-col gap-6 pt-24 text-lg font-bold shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out border-l border-gray-100 dark:border-gray-900 md:hidden">
+  <div id="mobileNav" style="max-width: 300px; right: 0 !important; left: auto !important; margin-left: auto !important;" class="hidden fixed inset-y-0 right-0 left-auto ml-auto z-[60] w-full max-w-[300px] bg-white dark:bg-gray-950 p-8 flex flex-col gap-6 pt-24 text-lg font-bold shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out border-l border-gray-100 dark:border-gray-900 md:hidden">
 
     <button class="absolute top-6 right-6 p-2 text-gray-600 hover:text-brand-500 dark:text-gray-300 transition-colors" onclick="toggleMobileMenu()" aria-label="Close menu">
 
@@ -531,7 +537,7 @@ html { scroll-behavior: smooth; }
 
   </div>
 
-  <footer class="bg-white dark:bg-gray-950 pt-16 pb-8 border-t border-gray-100 dark:border-gray-900">
+  <footer class="bg-white dark:bg-gray-950 pt-8 md:pt-16 pb-6 md:pb-8 border-t border-gray-100 dark:border-gray-900">
 
     <div class="max-w-7xl mx-auto px-4 text-center">
 

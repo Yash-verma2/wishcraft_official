@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
   <!-- Core Identity -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -337,11 +347,10 @@
   </header>
 
   <!-- MOBILE NAV -->
-  <div id="mobileNavBackdrop"
-    class="fixed inset-0 z-[50] bg-gray-950/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"
+  <div id="mobileNavBackdrop" class="fixed inset-0 z-[50] bg-gray-950/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
     onclick="toggleMobileMenu()"></div>
-  <div id="mobileNav"
-    class="fixed inset-y-0 right-0 z-[60] w-full max-w-[300px] bg-white dark:bg-gray-950 p-8 flex flex-col gap-6 pt-24 text-lg font-bold shadow-2xl transform translate-x-full transition-transform duration-300 border-l border-gray-100 dark:border-gray-900">
+  <div id="mobileNav" style="max-width: 300px;"
+    class="fixed inset-y-0 right-0 z-[60] w-full max-w-[300px] bg-white dark:bg-gray-950 p-8 flex flex-col gap-6 pt-24 text-lg font-bold shadow-2xl transform translate-x-full transition-transform duration-300 border-l border-gray-100 dark:border-gray-900 md:hidden">
     <a href="index.html" onclick="toggleMobileMenu()" class="hover:text-brand-500">Home</a>
     <a href="about.html" onclick="toggleMobileMenu()" class="hover:text-brand-500">About</a>
     <a href="blog.html" onclick="toggleMobileMenu()" class="hover:text-brand-500 text-brand-500">Blog</a>

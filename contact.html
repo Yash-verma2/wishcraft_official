@@ -3,6 +3,16 @@
 <html lang="en">
 
 <head>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
   <!-- Core Identity -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -140,22 +150,9 @@
 
     // Theme Switcher Logic
 
-    window.toggleTheme = function() {
-
-      if (document.documentElement.classList.contains('dark')) {
-
-        document.documentElement.classList.remove('dark');
-
-        localStorage.setItem('theme', 'light');
-
-      } else {
-
-        document.documentElement.classList.add('dark');
-
-        localStorage.setItem('theme', 'dark');
-
-      }
-
+    window.toggleTheme = function () {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
     };
 
     // Launch App Logic
@@ -220,21 +217,7 @@
 
     };
 
-    (function() {
-
-      const savedTheme = localStorage.getItem('theme');
-
-      if (savedTheme === 'dark') {
-
-        document.documentElement.classList.add('dark');
-
-      } else {
-
-        document.documentElement.classList.remove('dark');
-
-      }
-
-    })();
+    
   </script>
 
   <!-- Structured Data -->
@@ -374,9 +357,7 @@ html { scroll-behavior: smooth; }
 
   <!-- MOBILE NAV BACKDROP -->
 
-  <div id="mobileNavBackdrop"
-
-    class="fixed inset-0 z-[50] bg-gray-950/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out"
+  <div id="mobileNavBackdrop" class="fixed inset-0 z-[50] bg-gray-950/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out md:hidden"
 
     onclick="toggleMobileMenu()">
 
@@ -384,9 +365,9 @@ html { scroll-behavior: smooth; }
 
   <!-- MOBILE NAV SLIDE-OVER -->
 
-  <div id="mobileNav"
+  <div id="mobileNav" style="max-width: 300px;"
 
-    class="fixed inset-y-0 right-0 z-[60] w-full max-w-[300px] bg-white dark:bg-gray-950 p-8 flex flex-col gap-6 pt-24 text-lg font-bold shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out border-l border-gray-100 dark:border-gray-900">
+    class="fixed inset-y-0 right-0 z-[60] w-full max-w-[300px] bg-white dark:bg-gray-950 p-8 flex flex-col gap-6 pt-24 text-lg font-bold shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out border-l border-gray-100 dark:border-gray-900 md:hidden">
 
     <button class="absolute top-6 right-6 p-2 text-gray-600 hover:text-brand-500 dark:text-gray-300 transition-colors" onclick="toggleMobileMenu()" aria-label="Close menu">
 

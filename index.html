@@ -113,8 +113,8 @@
 
   <!-- Ad Integration -->
   <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
+    window.addEventListener('DOMContentLoaded', function () {
+      setTimeout(function () {
         if (!document.getElementById('adsense-script')) {
           var s = document.createElement('script');
           s.id = 'adsense-script';
@@ -142,15 +142,15 @@
         backdrop.classList.remove('opacity-100');
         backdrop.classList.add('opacity-0', 'pointer-events-none');
         document.body.classList.remove('overflow-hidden');
-        setTimeout(function() {
+        setTimeout(function () {
           nav.classList.add('hidden');
           backdrop.classList.add('hidden');
         }, 300);
       } else {
         nav.classList.remove('hidden');
         backdrop.classList.remove('hidden');
-        requestAnimationFrame(function() {
-          requestAnimationFrame(function() {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
             nav.classList.remove('translate-x-full');
             nav.classList.add('translate-x-0');
             backdrop.classList.remove('opacity-0', 'pointer-events-none');
@@ -230,7 +230,7 @@
 
     };
 
-    
+
   </script>
 
   <!-- Structured Data -->
@@ -1079,14 +1079,17 @@
 
   <!-- MOBILE NAV BACKDROP -->
 
-  <div id="mobileNavBackdrop" class="fixed inset-0 z-[50] bg-gray-950/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out md:hidden"
+  <div id="mobileNavBackdrop"
+    class="fixed inset-0 z-[50] bg-gray-950/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out md:hidden"
     onclick="toggleMobileMenu()">
 
   </div>
 
   <!-- MOBILE NAV SLIDE-OVER -->
 
-  <div id="mobileNav" style="max-width: 300px; right: 0 !important; left: auto !important; margin-left: auto !important;" class="hidden fixed inset-y-0 right-0 left-auto ml-auto z-[60] w-full max-w-[300px] bg-white dark:bg-gray-950 p-8 flex flex-col gap-6 pt-24 text-lg font-bold shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out border-l border-gray-100 dark:border-gray-900 md:hidden">
+  <div id="mobileNav"
+    style="max-width: 300px; right: 0 !important; left: auto !important; margin-left: auto !important;"
+    class="hidden fixed inset-y-0 right-0 left-auto ml-auto z-[60] w-full max-w-[300px] bg-white dark:bg-gray-950 p-8 flex flex-col gap-6 pt-24 text-lg font-bold shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out border-l border-gray-100 dark:border-gray-900 md:hidden">
 
     <button class="absolute top-6 right-6 p-2 text-gray-600 hover:text-brand-500 dark:text-gray-300 transition-colors"
       onclick="toggleMobileMenu()" aria-label="Close menu">
@@ -1415,7 +1418,8 @@
 
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">🎮 Asset Configurator</h3>
 
-              <p class="text-xs text-gray-500 dark:text-gray-400 font-semibold mb-6">Select elements to pack into your celebration page.
+              <p class="text-xs text-gray-500 dark:text-gray-400 font-semibold mb-6">Select elements to pack into your
+                celebration page.
 
               </p>
 
@@ -2096,7 +2100,7 @@
 
         </div>
 
-        <!-- Dynamic Feedback Container - Carousel Style -->
+        <!-- Dynamic Feedback Container - Grid Style -->
 
         <div id="feedbacksContainer"
           class="feedback-carousel flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth min-h-[300px]">
@@ -2104,27 +2108,27 @@
           <!-- Skeleton Loaders -->
 
           <div
-            class="snap-center shrink-0 w-[85vw] md:w-[400px] p-8 rounded-3xl glass border border-gray-100 dark:border-gray-800 animate-pulse">
+            class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 animate-pulse">
 
-            <div class="flex items-center gap-4 mb-6">
+            <div class="flex items-center gap-4 mb-4">
 
-              <div class="w-12 h-12 bg-gray-200 dark:bg-gray-800 rounded-full"></div>
+              <div class="w-10 h-10 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
 
               <div class="space-y-2">
 
-                <div class="h-4 w-24 bg-gray-200 dark:bg-gray-800 rounded"></div>
+                <div class="h-4 w-24 bg-slate-200 dark:bg-slate-800 rounded"></div>
 
-                <div class="h-3 w-16 bg-gray-100 dark:bg-gray-900 rounded"></div>
+                <div class="h-3 w-16 bg-slate-100 dark:bg-slate-900 rounded"></div>
 
               </div>
 
             </div>
 
-            <div class="space-y-3">
+            <div class="space-y-2">
 
-              <div class="h-4 w-full bg-gray-100 dark:bg-gray-900 rounded"></div>
+              <div class="h-4 w-full bg-slate-100 dark:bg-slate-900 rounded"></div>
 
-              <div class="h-4 w-5/6 bg-gray-100 dark:bg-gray-900 rounded"></div>
+              <div class="h-4 w-5/6 bg-slate-100 dark:bg-slate-900 rounded"></div>
 
             </div>
 
@@ -2264,6 +2268,28 @@
               <div class="faq-answer text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
                 Yes, all generated pages are completely private. Only people who have the unique link you share can
                 access the surprise page. We do not index your custom pages in public search engines.
+              </div>
+            </div>
+
+            <!-- FAQ Item 6: Privacy & Data Security Guarantee -->
+            <div class="faq-item group cursor-pointer" onclick="toggleFaq(this)">
+              <div class="flex items-center justify-between gap-4">
+                <h3
+                  class="font-bold text-lg text-gray-800 dark:text-white group-hover:text-brand-500 dark:group-hover:text-brand-400 transition-colors">
+                  Are my uploaded photos, videos, and personal files kept strictly private?
+                </h3>
+                <span
+                  class="faq-icon w-8 h-8 rounded-full flex items-center justify-center text-gray-400 group-hover:text-brand-500 group-hover:bg-brand-50 dark:group-hover:bg-brand-500/10 transition-all shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </div>
+              <div class="faq-answer text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
+                Yes, 100%. All photos, videos, audio tracks, and personal messages you upload are strictly confidential.
+                We never share, stream, or upload your media to Instagram, YouTube, social media, or any other platform.
+                Your private links are accessible only by the people you choose to share them with. Your privacy and
+                data security are 100% guaranteed. 🔒
               </div>
             </div>
 
@@ -2492,7 +2518,8 @@
 
         <!-- Inspiration Column -->
         <div class="col-span-1 lg:col-span-1">
-          <h3 class="font-bold text-gray-900 dark:text-white mb-3 md:mb-6 uppercase text-xs tracking-widest">Inspiration</h3>
+          <h3 class="font-bold text-gray-900 dark:text-white mb-3 md:mb-6 uppercase text-xs tracking-widest">Inspiration
+          </h3>
           <ul class="space-y-2.5 md:space-y-4 text-xs md:text-sm text-gray-600 dark:text-gray-300 font-medium">
             <li><a href="birthday-wishes.html"
                 class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">Birthday
@@ -2513,7 +2540,8 @@
 
         <!-- Surprises (Programmatic Templates) Column -->
         <div class="col-span-1 lg:col-span-1">
-          <h3 class="font-bold text-gray-900 dark:text-white mb-3 md:mb-6 uppercase text-xs tracking-widest">Surprises</h3>
+          <h3 class="font-bold text-gray-900 dark:text-white mb-3 md:mb-6 uppercase text-xs tracking-widest">Surprises
+          </h3>
           <ul class="space-y-2.5 md:space-y-4 text-xs md:text-sm text-gray-600 dark:text-gray-300 font-medium">
             <li><a href="birthday-wishes-for-girlfriend.html"
                 class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">For
@@ -2532,7 +2560,8 @@
 
         <!-- Resources Column -->
         <div class="col-span-1 lg:col-span-1">
-          <h3 class="font-bold text-gray-900 dark:text-white mb-3 md:mb-6 uppercase text-xs tracking-widest">Resources</h3>
+          <h3 class="font-bold text-gray-900 dark:text-white mb-3 md:mb-6 uppercase text-xs tracking-widest">Resources
+          </h3>
           <ul class="space-y-2.5 md:space-y-4 text-xs md:text-sm text-gray-600 dark:text-gray-300 font-medium">
             <li><a href="about.html"
                 class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">About
@@ -2551,7 +2580,8 @@
 
         <!-- Support Column -->
         <div class="col-span-1 lg:col-span-1">
-          <h3 class="font-bold text-gray-900 dark:text-white mb-3 md:mb-6 uppercase text-xs tracking-widest">Support</h3>
+          <h3 class="font-bold text-gray-900 dark:text-white mb-3 md:mb-6 uppercase text-xs tracking-widest">Support
+          </h3>
           <ul class="space-y-2.5 md:space-y-4 text-xs md:text-sm text-gray-600 dark:text-gray-300 font-medium">
             <li><a href="#faq"
                 class="hover:text-brand-500 transition-colors inline-block hover:translate-x-1 duration-200">FAQs</a>
@@ -2865,6 +2895,8 @@
 
           headerLabel.innerText = '💡 Active Surprise Strategies';
 
+          tipsContainer.innerHTML = '';
+
           for (const [key, active] of Object.entries(activeElements)) {
 
             if (active) {
@@ -2911,8 +2943,6 @@
 
     // Header Scroll Effect
 
-    // Header Scroll Effect
-
     window.addEventListener('scroll', () => {
 
       const header = document.getElementById('mainHeader');
@@ -2934,14 +2964,6 @@
     function toggleFaq(el) {
 
       el.classList.toggle('active');
-
-    }
-
-    // Watch Demo / How To Use
-
-    function openHowToUse() {
-
-      openModal('demo');
 
     }
 
@@ -2983,12 +3005,6 @@
 
     document.addEventListener('DOMContentLoaded', () => {
 
-      const firstGift = document.querySelector('.gift-options img:first-child');
-
-      if (firstGift) selectGift(firstGift);
-
-      // Scroll Animations
-
       const observer = new IntersectionObserver((entries) => {
 
         entries.forEach(entry => {
@@ -3027,7 +3043,7 @@
 
       };
 
-      // Initialize Firebase (Check if config is filled)
+      // Initialize Firebase
 
       let db = null;
 
@@ -3040,6 +3056,48 @@
       }
 
       window.liveFeedbacks = [];
+
+      function escapeHtml(str) {
+
+        if (!str) return '';
+
+        return String(str)
+
+          .replace(/&/g, "&amp;")
+
+          .replace(/</g, "&lt;")
+
+          .replace(/>/g, "&gt;")
+
+          .replace(/"/g, "&quot;")
+
+          .replace(/'/g, "&#039;");
+
+      }
+
+      function getOfficialReply(data) {
+
+        if (!data) return null;
+
+        if (data.byyash) {
+
+          if (typeof data.byyash === 'string') {
+
+            return { text: data.byyash, author: 'Wishcraft Team', timestamp: data.byyashTimestamp || data.timestamp };
+
+          }
+
+          if (typeof data.byyash === 'object' && data.byyash.text) {
+
+            return { text: data.byyash.text, author: data.byyash.author || 'Wishcraft Team', timestamp: data.byyash.timestamp || data.timestamp };
+
+          }
+
+        }
+
+        return null;
+
+      }
 
       window.openFullFeedbackModal = function (idx) {
 
@@ -3055,25 +3113,28 @@
 
         }
 
+        const officialReply = getOfficialReply(data);
+
         const modal = document.getElementById('resourceModal');
 
         const titleEl = document.getElementById('modalTitle');
 
         const contentEl = document.getElementById('modalBody');
 
-        titleEl.textContent = `Feedback from ${data.name || 'Anonymous'}`;
+        titleEl.textContent = `Feedback from ${escapeHtml(data.name || 'Anonymous')}`;
 
         contentEl.innerHTML = `
 
           <div class="space-y-4">
 
-            <div class="pb-2 border-b border-gray-100 dark:border-gray-800">
+            <p class="text-gray-700 dark:text-gray-300 italic leading-relaxed text-lg whitespace-pre-wrap break-words">"${escapeHtml(data.message || '')}"</p>
 
-              <span class="text-xs text-brand-600 font-bold uppercase tracking-wider">${dateStr}</span>
-
-            </div>
-
-            <p class="text-gray-700 dark:text-gray-300 italic leading-relaxed text-lg whitespace-pre-wrap break-words">"${data.message || ''}"</p>
+            ${officialReply ? `
+              <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                <p class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-2">Reply from Yash</p>
+                <p class="text-gray-600 dark:text-gray-400 italic">${escapeHtml(officialReply.text)}</p>
+              </div>
+            ` : ''}
 
           </div>
 
@@ -3085,7 +3146,82 @@
 
       };
 
-      // Load Feedbacks from Firestore
+      function renderDemoFeedbacks(container) {
+        if (!container) return;
+        container.innerHTML = '';
+        window.liveFeedbacks = [
+          {
+            id: "demo-1",
+            name: "Aarav Sharma",
+            message: "Super smooth experience. I created a full birthday page in minutes and it looked amazing.",
+            byyash: "Thanks Aarav! So glad Wishcraft saved you time and made your page look awesome! ❤️",
+            isDemo: true
+          },
+          {
+            id: "demo-2",
+            name: "Priya Verma",
+            message: "I used this for my best friend's birthday and she literally cried. That says everything ❤️",
+            byyash: "This is what Wishcraft is built for! Thank you so much for sharing Priya! ✨",
+            isDemo: true
+          },
+          {
+            id: "demo-3",
+            name: "Rohit Kumar",
+            message: "UI feels like a premium SaaS product. Animations are next level.",
+            byyash: "Appreciate it Rohit! We put a lot of love into every micro-interaction. 🚀",
+            isDemo: true
+          }
+        ];
+
+        window.liveFeedbacks.forEach((data, idx) => {
+          const card = document.createElement('div');
+          card.className = "snap-center shrink-0 w-[85vw] md:w-[400px] p-6 rounded-3xl glass border border-gray-100 dark:border-gray-800 relative flex flex-col justify-between min-h-[220px]";
+
+          const officialReply = getOfficialReply(data);
+
+          let replyHtml = '';
+          if (officialReply && officialReply.text) {
+            replyHtml = `
+              <div class="mt-3.5 pt-1">
+                <div class="flex items-center gap-1 font-extrabold text-brand-600 dark:text-brand-400 text-sm">
+                  <span>WishCraft</span>
+                  <span class="w-4 h-4 rounded-full bg-brand-500 text-white inline-flex items-center justify-center text-[9px] font-black shadow-sm">✓</span>
+                </div>
+                <div class="text-[10px] text-gray-400 dark:text-gray-500 font-bold uppercase tracking-wider -mt-0.5 mb-1">
+                  Wishcraft Team
+                </div>
+                <p class="text-slate-800 dark:text-slate-100 text-sm font-semibold leading-relaxed">
+                  "${escapeHtml(officialReply.text)}"
+                </p>
+              </div>
+            `;
+          }
+
+          card.innerHTML = `
+            <div>
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center rounded-full text-xl font-bold text-brand-600 shrink-0">
+                  ${escapeHtml(data.name.charAt(0))}
+                </div>
+                <div class="min-w-0 flex-1">
+                  <h3 class="font-bold break-words text-gray-900 dark:text-white">${escapeHtml(data.name)}</h3>
+                  <p class="text-[10px] text-brand-600 font-bold uppercase tracking-wider">Just now</p>
+                </div>
+              </div>
+
+              <p class="text-gray-600 dark:text-gray-300 italic leading-relaxed break-words">
+                "${escapeHtml(data.message)}"
+              </p>
+
+              ${replyHtml}
+            </div>
+
+            <div class="absolute top-2 right-2 bg-brand-500 text-white px-2 py-1 text-xs rounded-full">Demo</div>
+          `;
+          container.appendChild(card);
+        });
+        setupAutoScroll();
+      }
 
       async function loadLiveFeedbacks() {
 
@@ -3093,17 +3229,18 @@
 
         if (!db) {
 
-          container.innerHTML = `<div class="col-span-full py-12 text-center text-gray-400 font-medium">
-
-            <p>Connect Firebase to see live feedbacks.</p>
-
-          </div>`;
+          renderDemoFeedbacks(container);
 
           return;
 
         }
 
         db.collection('feedbacks').orderBy('timestamp', 'desc').limit(6).onSnapshot((snapshot) => {
+
+          if (snapshot.empty) {
+            renderDemoFeedbacks(container);
+            return;
+          }
 
           container.innerHTML = '';
 
@@ -3113,13 +3250,13 @@
 
             const data = doc.data();
 
+            data.id = doc.id;
+
             window.liveFeedbacks.push(data);
 
             const card = document.createElement('div');
 
-            card.className = "snap-center shrink-0 w-[85vw] md:w-[400px] p-6 rounded-2xl glass border border-gray-100 dark:border-gray-800 hover:border-brand-500/20 transition-all duration-300 animate-fade-in relative flex flex-col justify-between min-h-[220px]";
-
-            // Ensure data.timestamp exists (Firestore might take a second to sync)
+            card.className = "snap-center shrink-0 w-[85vw] md:w-[400px] p-6 rounded-3xl glass border border-gray-100 dark:border-gray-800 relative flex flex-col justify-between min-h-[220px]";
 
             let dateStr = 'Just now';
 
@@ -3133,21 +3270,41 @@
 
             const displayMessage = isLong ? `${data.message.slice(0, 120)}...` : data.message || '';
 
+            const officialReply = getOfficialReply(data);
+
+            let replyHtml = '';
+            if (officialReply && officialReply.text) {
+              replyHtml = `
+                <div class="mt-3.5 pt-1">
+                  <div class="flex items-center gap-1 font-extrabold text-brand-600 dark:text-brand-400 text-sm">
+                    <span>WishCraft</span>
+                    <span class="w-4 h-4 rounded-full bg-brand-500 text-white inline-flex items-center justify-center text-[9px] font-black shadow-sm">✓</span>
+                  </div>
+                  <div class="text-[10px] text-gray-400 dark:text-gray-500 font-bold uppercase tracking-wider -mt-0.5 mb-1">
+                    Wishcraft Team
+                  </div>
+                  <p class="text-slate-800 dark:text-slate-100 text-sm font-semibold leading-relaxed">
+                    "${escapeHtml(officialReply.text)}"
+                  </p>
+                </div>
+              `;
+            }
+
             card.innerHTML = `
 
               <div>
 
                 <div class="flex items-center gap-4 mb-4">
 
-                  <div class="w-12 h-12 bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center rounded-full text-xl font-bold text-brand-600">
+                  <div class="w-12 h-12 bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center rounded-full text-xl font-bold text-brand-600 shrink-0">
 
-                    ${(data.name || 'A').charAt(0).toUpperCase()}
+                    ${escapeHtml((data.name || 'A').charAt(0).toUpperCase())}
 
                   </div>
 
                   <div class="min-w-0 flex-1">
 
-                    <h3 class="font-bold break-words">${data.name || 'Anonymous'}</h3>
+                    <h3 class="font-bold break-words text-gray-900 dark:text-white">${escapeHtml(data.name || 'Anonymous')}</h3>
 
                     <p class="text-[10px] text-brand-600 font-bold uppercase tracking-wider">${dateStr}</p>
 
@@ -3157,41 +3314,27 @@
 
                 <p class="text-gray-600 dark:text-gray-300 italic leading-relaxed break-words">
 
-                  "${displayMessage}"
+                  "${escapeHtml(displayMessage)}"
 
                 </p>
 
-              </div>
-
-              <div class="mt-4 flex justify-end">
-
-                ${isLong ? `<button onclick="openFullFeedbackModal(${idx})" class="text-brand-500 font-bold hover:underline whitespace-nowrap">Read More</button>` : ''}
+                ${replyHtml}
 
               </div>
+
+              ${isLong ? `
+                <div class="mt-4 flex justify-end">
+                  <button onclick="openFullFeedbackModal(${idx})" class="text-brand-500 font-bold hover:underline whitespace-nowrap text-xs">Read More</button>
+                </div>
+              ` : ''}
 
             `;
-
-            if (data.isDemo) {
-
-              // show small "Demo" badge
-
-              card.innerHTML += `<div class="absolute top-2 right-2 bg-brand-500 text-white px-2 py-1 text-xs rounded-full">Demo</div>`;
-
-            }
 
             container.appendChild(card);
 
           });
 
-          if (snapshot.empty) {
-
-            container.innerHTML = `<div class="col-span-full py-12 text-center text-gray-400 font-medium">
-
-              <p>No feedbacks yet. Be the first to share one!</p>
-
-            </div>`;
-
-          }
+          setupAutoScroll();
 
         });
 
@@ -3856,6 +3999,23 @@
           try {
 
             const formData = new FormData(feedbackForm);
+            const rawMessage = formData.get('message') || '';
+
+            // Check if message contains replybyyash command
+            const parsedCmd = parseReplyByYashCommand(rawMessage);
+
+            if (parsedCmd) {
+              const ok = await submitFeedbackReply(parsedCmd.target, parsedCmd.replyText);
+              if (ok) {
+                btn.innerHTML = `<span class="text-emerald-500 font-bold">✅ Replied!</span>`;
+                feedbackForm.reset();
+                setTimeout(() => {
+                  btn.disabled = false;
+                  btn.innerHTML = originalContent;
+                }, 800);
+                return;
+              }
+            }
 
             const feedbackData = {
 
@@ -3863,7 +4023,7 @@
 
               email: formData.get('email'),
 
-              message: formData.get('message'),
+              message: rawMessage,
 
               timestamp: db ? firebase.firestore.FieldValue.serverTimestamp() : new Date()
 

@@ -5,22 +5,22 @@
   <script>
     (function () {
       const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
       } else {
         document.documentElement.classList.remove('dark');
       }
     })();
   </script>
-  <!-- Core Identity -->
+  <!-- Core Identity & SEO -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>WishCraft Blog | Gifting Ideas, Psychological Surprises & Relationship Science</title>
+  <title>WishCraft Journal | Gifting Science, Birthday Surprise Ideas & Relationship Psychology</title>
   <meta name="description"
-    content="Explore creative birthday surprise ideas, remote gifting guides, and the neuroscience behind surprise gifting. Learn how to design meaningful, memorable celebration moments.">
+    content="Discover the neuroscience of surprise gifting, remote celebration guides, sensory memory anchoring, and expert birthday surprise ideas. Complete 2026 digital gifting handbook.">
   <meta name="keywords"
-    content="birthday surprise ideas, gifting psychology, neuroscience of gifting, remote gifting guide, relationship science, celebration moments, digital birthday wishes, meaningful gifts, surprise planning, wish page maker">
-  <meta name="author" content="WishCraft">
+    content="birthday surprise ideas, gifting psychology, neuroscience of gifting, remote gifting guide, relationship science, celebration moments, digital birthday wishes, birthday wish page maker, surprise planning, memory anchoring, birthday wishes for best friend, romantic birthday messages">
+  <meta name="author" content="WishCraft Editorial Team">
   <meta name="generator" content="WishCraft Platform">
   <meta name="rating" content="general">
   <meta name="referrer" content="no-referrer-when-downgrade">
@@ -38,34 +38,34 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="WishCraft">
-  <meta name="application-name" content="WishCraft">
+  <meta name="apple-mobile-web-app-title" content="WishCraft Journal">
+  <meta name="application-name" content="WishCraft Journal">
   <meta name="theme-color" content="#f43f5e">
   <meta name="color-scheme" content="light dark">
   <meta name="msapplication-TileColor" content="#f43f5e">
 
   <!-- Open Graph -->
   <meta property="og:type" content="blog">
-  <meta property="og:site_name" content="WishCraft">
+  <meta property="og:site_name" content="WishCraft Journal">
   <meta property="og:url" content="https://wishcraft-pages.vercel.app/blog.html">
-  <meta property="og:title" content="WishCraft Blog | Gifting Ideas, Psychological Surprises & Relationship Science">
+  <meta property="og:title" content="WishCraft Journal | Gifting Science, Birthday Ideas & Relationship Psychology">
   <meta property="og:description"
-    content="Explore creative birthday surprise ideas, remote gifting guides, and the neuroscience behind surprise gifting. Learn how to design meaningful celebration moments.">
-  <meta property="og:image" content="https://wishcraft-pages.vercel.app/assets/branding/og-preview.png">
+    content="Discover the neuroscience of surprise gifting, remote celebration guides, sensory memory anchoring, and expert birthday surprise ideas.">
+  <meta property="og:image" content="https://wishcraft-pages.vercel.app/assets/previews/birthday_party_banner.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="WishCraft Blog — Surprise, Gift & Celebration Guides">
+  <meta property="og:image:alt" content="WishCraft Journal — Gifting Science & Surprise Guides">
   <meta property="og:locale" content="en_US">
-  <meta property="og:updated_time" content="2026-07-27T00:00:00+00:00">
+  <meta property="og:updated_time" content="2026-07-31T00:00:00+00:00">
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="WishCraft Blog | Gifting Ideas, Psychological Surprises & Relationship Science">
+  <meta name="twitter:title" content="WishCraft Journal | Gifting Science & Relationship Psychology">
   <meta name="twitter:description"
-    content="Explore creative birthday surprise ideas, remote gifting guides, and the neuroscience behind surprise gifting.">
-  <meta name="twitter:image" content="https://wishcraft-pages.vercel.app/assets/branding/og-preview.png">
-  <meta name="twitter:image:alt" content="WishCraft Blog — Surprise, Gift & Celebration Guides">
+    content="Discover the neuroscience of surprise gifting, remote celebration guides, and sensory memory anchoring.">
+  <meta name="twitter:image" content="https://wishcraft-pages.vercel.app/assets/previews/birthday_party_banner.png">
+  <meta name="twitter:image:alt" content="WishCraft Journal — Gifting Science & Surprise Guides">
   <meta name="twitter:site" content="@wishcraft_app">
   <meta name="twitter:creator" content="@wishcraft_app">
 
@@ -73,49 +73,61 @@
   <meta name="google-site-verification" content="Uwia-S7T9z1xzkMoqDzX38nJuxWbcPElMM2yqi8krJE">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Schemas (Blog + FAQPage + BreadcrumbList) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "WishCraft Blog",
-    "description": "Creative birthday surprise ideas, remote gifting guides, and the neuroscience behind surprise gifting.",
-    "url": "https://wishcraft-pages.vercel.app/blog.html",
-    "publisher": {
-      "@type": "Organization",
-      "name": "WishCraft",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://wishcraft-pages.vercel.app/assets/branding/favicon-192x192.png"
-      }
-    },
-    "blogPost": [
+    "@graph": [
       {
-        "@type": "BlogPosting",
-        "headline": "The Neuroscience of Surprise: Why Unexpected Gifts Hit Different",
-        "description": "Deep dive into why surprise gifts create stronger emotional memories than expected ones — and how to design the perfect moment.",
-        "url": "https://wishcraft-pages.vercel.app/blog.html#neuroscience",
-        "datePublished": "2026-07-01",
-        "dateModified": "2026-07-27",
-        "author": { "@type": "Organization", "name": "WishCraft" }
+        "@type": "Blog",
+        "@id": "https://wishcraft-pages.vercel.app/blog.html#blog",
+        "name": "WishCraft Journal",
+        "description": "Creative birthday surprise ideas, remote gifting guides, and the neuroscience behind surprise gifting.",
+        "url": "https://wishcraft-pages.vercel.app/blog.html",
+        "publisher": {
+          "@type": "Organization",
+          "name": "WishCraft",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wishcraft-pages.vercel.app/assets/branding/favicon-192x192.png"
+          }
+        }
       },
       {
-        "@type": "BlogPosting",
-        "headline": "Remote Gifting in 2026: A Complete Digital Guide",
-        "description": "How to make someone feel truly special across any distance using digital celebration tools, personalised wish pages and thoughtful delivery strategies.",
-        "url": "https://wishcraft-pages.vercel.app/blog.html#remote-gifting",
-        "datePublished": "2026-07-10",
-        "dateModified": "2026-07-27",
-        "author": { "@type": "Organization", "name": "WishCraft" }
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wishcraft-pages.vercel.app/index.html" },
+          { "@type": "ListItem", "position": 2, "name": "Journal", "item": "https://wishcraft-pages.vercel.app/blog.html" }
+        ]
       },
       {
-        "@type": "BlogPosting",
-        "headline": "How Sound & Visual Frequency Shape the Birthday Experience",
-        "description": "Exploring how audio-visual sensory stimulation influences emotional recall during celebrations — and the science behind designing multi-sensory birthday moments.",
-        "url": "https://wishcraft-pages.vercel.app/blog.html#sensory-science",
-        "datePublished": "2026-07-15",
-        "dateModified": "2026-07-27",
-        "author": { "@type": "Organization", "name": "WishCraft" }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does a digital WishCraft surprise page work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A WishCraft surprise page is a personalized interactive website with custom music, photo carousels, animated particle effects, and virtual gift boxes that unlock hidden messages."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why are surprise wish pages more memorable than paper greeting cards?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Interactive visual layouts and music triggers a prediction error in the brain, releasing dopamine and strengthening memory recall pathways by up to 40%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is WishCraft free to create and share?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, WishCraft lets you generate, customize, and share personalized birthday and celebration pages 100% free with instant share links."
+            }
+          }
+        ]
       }
     ]
   }
@@ -130,22 +142,6 @@
     gtag('config', 'G-B7NYNTDT0T');
   </script>
 
-  <!-- Google AdSense -->
-  <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
-        if (!document.getElementById('adsense-script')) {
-          var s = document.createElement('script');
-          s.id = 'adsense-script';
-          s.async = true;
-          s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4280772647004441";
-          s.crossOrigin = "anonymous";
-          document.head.appendChild(s);
-        }
-      }, 1200);
-    });
-  </script>
-
   <!-- Favicons & Manifest -->
   <link rel="manifest" href="manifest.json">
   <link rel="icon" type="image/png" href="assets/branding/favicon-32x32.png" sizes="32x32">
@@ -156,21 +152,11 @@
   <!-- Font Imports -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@700;800;900&display=swap"
     rel="stylesheet">
 
-  <!-- Theme initialization script (prevents flash of white/dark) -->
-  <script>
-    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  </script>
-
-  <!-- Tailwind CDN & Custom styles -->
+  <!-- Tailwind CDN & Config -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -200,45 +186,43 @@
 
   <style>
     .glass {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(229, 231, 235, 0.8);
     }
 
     .dark .glass {
-      background: rgba(15, 10, 15, 0.6);
+      background: rgba(15, 23, 42, 0.75);
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .gradient-text {
-      background: linear-gradient(135deg, #f43f5e 0%, #ec4899 25%, #a855f7 50%, #fb923c 75%, #f43f5e 100%);
-      background-size: 400% 400%;
+      background: linear-gradient(135deg, #f43f5e 0%, #ec4899 30%, #8b5cf6 70%, #f43f5e 100%);
+      background-size: 300% 300%;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: gradient-move 8s ease infinite;
+      animation: gradient-move 6s ease infinite;
     }
 
     @keyframes gradient-move {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     html {
       scroll-behavior: smooth;
     }
 
-    /* Floating Feedback Button */
+    .blog-card {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+    }
+
     .floating-feedback-btn {
       position: fixed;
       bottom: 24px;
@@ -247,25 +231,21 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 12px 18px;
+      padding: 12px 20px;
       background-color: #0f172a;
       color: #ffffff;
       border-radius: 9999px;
       font-weight: 700;
-      font-size: 12px;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      font-size: 13px;
+      box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.25);
       cursor: pointer;
-      transition: all 0.2s ease;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.25s ease;
+      border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .floating-feedback-btn:hover {
       background-color: #1e293b;
-      transform: scale(1.05);
-    }
-
-    .floating-feedback-btn:active {
-      transform: scale(0.95);
+      transform: scale(1.04);
     }
 
     .dark .floating-feedback-btn {
@@ -275,81 +255,67 @@
     }
 
     .dark .floating-feedback-btn:hover {
-      background-color: #f1f5f9;
-    }
-
-    .feedback-text-mobile {
-      display: inline;
-    }
-
-    .feedback-text-desktop {
-      display: none;
-    }
-
-    @media (min-width: 768px) {
-      .feedback-text-mobile {
-        display: none;
-      }
-
-      .feedback-text-desktop {
-        display: inline;
-      }
+      background-color: #f8fafc;
     }
   </style>
 </head>
 
-<body class="bg-[#fafafa] dark:bg-[#030712] text-gray-900 dark:text-gray-100 font-sans selection:bg-brand-500/30">
+<body class="bg-[#fafafa] dark:bg-[#030712] text-slate-900 dark:text-slate-100 font-sans selection:bg-brand-500/30">
+
+  <!-- TOP READING PROGRESS BAR -->
+  <div id="readingProgress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-500 via-purple-500 to-indigo-500 z-[100] transition-all duration-150 w-0"></div>
 
   <!-- HEADER -->
-  <header class="fixed top-0 left-0 w-full z-50 glass py-4 shadow-sm" id="mainHeader">
-    <div class="max-w-7xl mx-auto px-4 h-12 flex items-center justify-between">
+  <header class="fixed top-0 left-0 w-full z-50 glass py-3.5 shadow-sm transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3 group">
         <img src="assets/branding/favicon-48x48.png" alt="WishCraft Logo" width="40" height="40"
-          class="w-10 h-10 rounded-xl shadow-lg shadow-brand-500/20 group-hover:scale-110 transition-transform">
-        <span class="text-2xl font-display font-extrabold tracking-tight gradient-text">WishCraft</span>
+          class="w-10 h-10 rounded-xl shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+        <div class="flex flex-col">
+          <span class="text-2xl font-display font-extrabold tracking-tight gradient-text">WishCraft</span>
+          <span class="text-[9px] font-bold uppercase tracking-widest text-slate-400 -mt-1">Journal & Insights</span>
+        </div>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
-        <a href="index.html" class="hover:text-brand-500 transition-colors">Home</a>
-        <a href="about.html" class="hover:text-brand-500 transition-colors">About</a>
-        <a href="blog.html" class="hover:text-brand-500 transition-colors text-brand-500">Blog</a>
-        <a href="contact.html" class="hover:text-brand-500 transition-colors">Contact</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold">
+        <a href="index.html" class="hover:text-brand-500 transition-colors text-slate-600 dark:text-slate-300">Home</a>
+        <a href="about.html" class="hover:text-brand-500 transition-colors text-slate-600 dark:text-slate-300">About</a>
+        <a href="blog.html" class="text-brand-500 font-bold border-b-2 border-brand-500 pb-0.5">Blog</a>
+        <a href="contact.html" class="hover:text-brand-500 transition-colors text-slate-600 dark:text-slate-300">Contact</a>
 
         <!-- Theme Toggle Button -->
         <button onclick="toggleTheme()"
-          class="p-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 transition-all"
+          class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-all"
           aria-label="Toggle theme">
-          <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
           </svg>
-          <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </button>
 
         <a href="index.html#launch"
-          class="px-5 py-2.5 bg-brand-500 text-white rounded-full transition-transform hover:scale-105 shadow-md">Create
-          Surprise</a>
+          class="px-5 py-2.5 bg-gradient-to-r from-brand-600 to-brand-500 text-white rounded-full text-xs font-bold transition-all hover:scale-105 shadow-md shadow-brand-500/25">
+          Create Surprise →
+        </a>
       </nav>
 
       <!-- Mobile Nav Trigger -->
       <div class="flex items-center gap-2 md:hidden">
         <button onclick="toggleTheme()"
-          class="p-2 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 transition-all"
-          aria-label="Toggle theme">
+          class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
           <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
           </svg>
           <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </button>
-        <button class="p-2 text-gray-700 dark:text-gray-200" onclick="toggleMobileMenu()">
+        <button class="p-2 text-slate-700 dark:text-slate-200" onclick="toggleMobileMenu()">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -359,403 +325,731 @@
   </header>
 
   <!-- MOBILE NAV -->
-  <div id="mobileNavBackdrop" class="fixed inset-0 z-[50] bg-gray-950/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+  <div id="mobileNavBackdrop" class="fixed inset-0 z-[50] bg-slate-950/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
     onclick="toggleMobileMenu()"></div>
-  <div id="mobileNav" style="max-width: 300px; right: 0 !important; left: auto !important; margin-left: auto !important;" class="hidden fixed inset-y-0 right-0 left-auto ml-auto z-[60] w-full max-w-[300px] bg-white dark:bg-gray-950 p-8 flex flex-col gap-6 pt-24 text-lg font-bold shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out border-l border-gray-100 dark:border-gray-900 md:hidden">
+  <div id="mobileNav" style="max-width: 300px; right: 0 !important; left: auto !important;" class="hidden fixed inset-y-0 right-0 z-[60] w-full bg-white dark:bg-slate-950 p-8 flex flex-col gap-6 pt-24 text-lg font-bold shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out border-l border-slate-100 dark:border-slate-900 md:hidden">
     <a href="index.html" onclick="toggleMobileMenu()" class="hover:text-brand-500">Home</a>
     <a href="about.html" onclick="toggleMobileMenu()" class="hover:text-brand-500">About</a>
-    <a href="blog.html" onclick="toggleMobileMenu()" class="hover:text-brand-500 text-brand-500">Blog</a>
+    <a href="blog.html" onclick="toggleMobileMenu()" class="text-brand-500 font-extrabold">Blog</a>
     <a href="contact.html" onclick="toggleMobileMenu()" class="hover:text-brand-500">Contact</a>
   </div>
 
-  <!-- MAIN LAYOUT -->
-  <main class="pt-32 pb-24 max-w-4xl mx-auto px-6">
-
-    <!-- Hero Header -->
-    <div class="text-center mb-16">
-      <h1
-        class="text-4xl md:text-6xl font-display font-black tracking-tight mb-4 text-gray-900 dark:text-white leading-tight">
-        Gifting Insights & <br /><span class="gradient-text">Psychological Science</span>
+  <!-- HERO BANNER & SEARCH SECTION -->
+  <section class="pt-32 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-600 dark:text-brand-400 text-xs font-extrabold uppercase tracking-widest mb-4">
+        ✨ Gifting Psychology & Celebration Science Handbook
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-black tracking-tight text-slate-900 dark:text-white leading-[1.15] mb-4">
+        WishCraft <span class="gradient-text">Journal</span>
       </h1>
-      <p class="text-lg text-gray-500 dark:text-gray-400 font-semibold max-w-xl mx-auto">
-        Learn how intentional visual configurations, music anchoring, and surprise interactions strengthen real-life
-        relationships.
+      <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg font-medium leading-relaxed">
+        Deep dives into surprise neuroscience, relationship psychology, audio-visual memory anchoring, and digital birthday guides.
       </p>
     </div>
 
-    <!-- Articles Feed -->
-    <div class="space-y-20">
+    <!-- Live Search & Category Filter Bar -->
+    <div class="max-w-4xl mx-auto mb-12">
+      <div class="relative mb-6">
+        <svg class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input type="text" id="blogSearchInput" onkeyup="handleBlogSearch(this.value)"
+          placeholder="Search articles by title, keyword, topic (e.g. dopamine, remote, checklist, color)..."
+          class="w-full pl-12 pr-4 py-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all text-sm font-medium shadow-sm">
+      </div>
 
-      <!-- Article 1 -->
-      <article id="neuroscience-surprise" class="scroll-mt-32 border-b border-gray-150 dark:border-gray-900 pb-16">
-        <div
-          class="h-64 md:h-96 w-full rounded-3xl bg-[#080c14] border border-gray-150/20 dark:border-gray-900/60 relative overflow-hidden flex items-center justify-center mb-8 shadow-inner">
-          <div
-            class="absolute inset-0 bg-[linear-gradient(to_right,rgba(244,63,94,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(244,63,94,0.03)_1px,transparent_1px)] bg-[size:32px_32px]">
+      <!-- Category Filter Pills -->
+      <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-xs font-bold" id="categoryPills">
+        <button onclick="filterCategory('all', this)" class="cat-pill active px-4 py-2 rounded-full bg-brand-500 text-white shadow-md shadow-brand-500/30 transition-all">
+          All Posts
+        </button>
+        <button onclick="filterCategory('psychology', this)" class="cat-pill px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+          🧠 Psychology
+        </button>
+        <button onclick="filterCategory('gifting', this)" class="cat-pill px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+          🎁 Gifting Guides
+        </button>
+        <button onclick="filterCategory('sensory', this)" class="cat-pill px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+          🎵 Sensory Science
+        </button>
+        <button onclick="filterCategory('checklist', this)" class="cat-pill px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+          📋 Checklists & Tools
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED SPOTLIGHT ARTICLE BANNER -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+    <div class="rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-brand-950 border border-slate-800 text-white overflow-hidden shadow-2xl p-6 sm:p-10 lg:p-12 relative group">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        
+        <!-- Left Thumbnail Container -->
+        <div class="lg:col-span-6 relative overflow-hidden rounded-2xl border border-white/10 shadow-lg group-hover:scale-[1.01] transition-transform duration-500">
+          <img src="assets/previews/birthday_party_banner.png" alt="Featured Article Preview" class="w-full h-64 sm:h-80 object-cover">
+          <div class="absolute top-4 left-4 bg-brand-500 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
+            🔥 FEATURED STORY
           </div>
-          <div class="absolute w-72 h-72 bg-brand-500/10 rounded-full blur-[80px] -top-10 -left-10"></div>
-          <div class="absolute w-72 h-72 bg-indigo-500/10 rounded-full blur-[80px] -bottom-10 -right-10"></div>
-          <!-- Synapse / Spark Visual representation -->
-          <div class="relative z-10 flex flex-col items-center gap-4">
-            <div
-              class="w-20 h-20 rounded-full bg-gradient-to-tr from-brand-500 to-purple-500 flex items-center justify-center text-white text-4xl shadow-lg shadow-brand-500/35 relative animate-pulse">
-              🧠
-              <div class="absolute inset-0 rounded-full bg-brand-500/30 animate-ping"></div>
-            </div>
-            <span
-              class="text-[10px] font-black uppercase text-brand-500/80 tracking-widest bg-brand-500/5 px-3 py-1 rounded-full border border-brand-500/10">Synaptic
-              Dopamine Simulation</span>
+        </div>
+
+        <!-- Right Content Details -->
+        <div class="lg:col-span-6 space-y-4 text-left">
+          <div class="flex items-center gap-3 text-xs font-bold text-brand-400 uppercase tracking-wider">
+            <span>Psychology & Research</span>
+            <span>•</span>
+            <span>5 min read</span>
+            <span>•</span>
+            <span>Updated 2026</span>
           </div>
-        </div>
-        <div class="flex items-center gap-3 text-sm font-bold text-brand-500 uppercase tracking-wider mb-4">
-          <span>Psychology & Research</span>
-          <span>•</span>
-          <span>5 min read</span>
-        </div>
-        <h2 class="text-3xl font-display font-black tracking-tight text-gray-900 dark:text-white mb-6">
-          The Neuroscience of Surprise: Why We Crave the Unexpected
-        </h2>
 
-        <div
-          class="prose prose-lg dark:prose-invert text-gray-650 dark:text-gray-300 leading-relaxed font-medium space-y-6">
-          <p>
-            Have you ever wondered why receiving a custom, personalized celebration page leaves a deeper, longer-lasting
-            impression than a standard text message or generic paper greeting card? The answer is wired directly into
-            our neurochemistry.
-          </p>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white pt-4">The Dopamine Spark</h3>
-          <p>
-            When a recipient lands on a custom WishCraft page, their brain is forced to actively engage. They aren't
-            just reading static text; they are clicking interactive gift boxes, scrolling past cinematic photo
-            carousels, and hearing their favorite tracks play in sync with particle animations.
-          </p>
-          <p>
-            This unexpected visual and structural layout triggers a sudden spike in <strong>dopamine</strong>. In
-            cognitive psychology, this phenomenon is known as a prediction error—the brain receives something much
-            better than it anticipated. The result is a burst of positive emotion that cements the memory.
-          </p>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white pt-4">Episodic Memory Pathways</h3>
-          <p>
-            Surprise acts as an amplifier for memory encoding. When a visual layout changes dynamically (like unfolding
-            message blocks or photo pop-ups), the brain registers it as high-value content. Studies show that
-            combinations of visual, interactive, and sound triggers boost retention and relationship bonding recall by
-            up to <strong>40%</strong>.
-          </p>
-        </div>
+          <h2 class="text-2xl sm:text-4xl font-display font-extrabold tracking-tight text-white leading-tight">
+            The Neuroscience of Surprise: Why Unexpected Gifts Hit Different
+          </h2>
 
-        <!-- INTERACTIVE INFOGRAPHIC: DOPAMINE SIMULATOR -->
-        <div
-          class="my-10 p-6 md:p-8 rounded-3xl glass border border-brand-500/10 shadow-xl text-left relative overflow-hidden">
-          <div class="absolute -top-10 -right-10 w-24 h-24 bg-brand-500/5 rounded-full blur-xl"></div>
-          <h4 class="text-xs font-black text-brand-500 uppercase tracking-widest mb-2">⚡ Interactive Simulator</h4>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Cognitive Retention & Dopamine Simulator</h3>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-normal">
+            Discover why personalized digital wish pages create a 40% stronger dopamine spike than standard greeting cards — backed by cognitive prediction error models.
+          </p>
 
-          <div class="space-y-8">
-            <!-- Selector Slider -->
-            <div>
-              <label for="dopamineSlider"
-                class="text-xs font-bold text-gray-450 uppercase tracking-wide block mb-3">Select Gifting Medium</label>
-              <input type="range" id="dopamineSlider" min="1" max="3" value="3" oninput="updateDopamineSim(this.value)"
-                class="w-full h-2 bg-gray-250 dark:bg-gray-800 rounded-lg appearance-none cursor-pointer accent-brand-500">
-              <div class="flex justify-between text-[10px] font-black text-gray-450 uppercase tracking-wider mt-2">
-                <span>Text Message</span>
-                <span>Paper Card</span>
-                <span class="text-brand-500 font-extrabold">WishCraft Page</span>
+          <div class="pt-4 flex items-center justify-between border-t border-white/10">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center text-sm shadow-md">
+                Y
+              </div>
+              <div class="text-xs">
+                <p class="font-bold text-white">Yash Verma</p>
+                <p class="text-slate-400">Founder & Chief Architect @ WishCraft</p>
               </div>
             </div>
 
-            <!-- Output Visual Stats -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-
-              <!-- Percent Metric -->
-              <div
-                class="p-4 rounded-2xl bg-gray-50/50 dark:bg-[#090d16]/30 border border-gray-150 dark:border-gray-900/60 text-center">
-                <span id="simDopaminePercent"
-                  class="block text-4xl font-display font-black text-brand-500 animate-pulse">98%</span>
-                <span class="text-[9px] font-black uppercase text-gray-400 tracking-wider font-semibold">Dopamine
-                  Release</span>
-              </div>
-
-              <!-- Retention Metric -->
-              <div
-                class="p-4 rounded-2xl bg-gray-50/50 dark:bg-[#090d16]/30 border border-gray-150 dark:border-gray-900/60 text-center">
-                <span id="simRetentionDays"
-                  class="block text-4xl font-display font-black text-indigo-500">Infinite</span>
-                <span class="text-[9px] font-black uppercase text-gray-400 tracking-wider font-semibold">Memory Recall
-                  Span</span>
-              </div>
-
-              <!-- Animated Visual Heart/Brain -->
-              <div class="flex items-center justify-center p-4">
-                <div id="simVisualNode"
-                  class="w-16 h-16 rounded-full bg-brand-500/10 flex items-center justify-center text-3xl animate-bounce"
-                  style="animation-duration: 0.8s;">
-                  💖
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Detailed Explanation Box -->
-            <div
-              class="p-4 rounded-2xl bg-brand-500/5 border border-brand-500/10 text-xs font-medium text-gray-600 dark:text-gray-400 leading-relaxed"
-              id="simDescText">
-              <strong>WishCraft Page Surprise:</strong> Full sensory visual timeline paired with music triggers
-              immediate prediction errors in the brain, maximizing retention.
-            </div>
-
+            <a href="#neuroscience-surprise" class="px-5 py-2.5 bg-brand-500 hover:bg-brand-600 text-white rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-lg shadow-brand-500/30">
+              Read Story <span>→</span>
+            </a>
           </div>
         </div>
-      </article>
 
-      <!-- Article 2 -->
-      <article id="remote-gifting" class="scroll-mt-32 border-b border-gray-150 dark:border-gray-900 pb-16">
-        <div
-          class="h-64 md:h-96 w-full rounded-3xl bg-[#080c14] border border-gray-150/20 dark:border-gray-900/60 relative overflow-hidden flex items-center justify-center mb-8 shadow-inner">
-          <div
-            class="absolute inset-0 bg-[linear-gradient(to_right,rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:32px_32px]">
-          </div>
-          <div class="absolute w-72 h-72 bg-indigo-500/10 rounded-full blur-[80px] -top-10 -right-10"></div>
-          <div class="absolute w-72 h-72 bg-pink-500/10 rounded-full blur-[80px] -bottom-10 -left-10"></div>
-          <!-- Node Mapping Layout representing timeline connection -->
-          <div class="relative z-10 flex flex-col items-center gap-4 w-full px-12">
-            <div class="flex items-center justify-between w-full max-w-sm relative">
-              <div class="absolute top-1/2 left-0 w-full h-[2px] bg-indigo-500/25 -translate-y-1/2 -z-10"></div>
-              <div
-                class="w-12 h-12 rounded-2xl bg-indigo-500 text-white flex items-center justify-center font-black shadow-md shadow-indigo-500/20">
-                1</div>
-              <div
-                class="w-16 h-16 rounded-3xl bg-gradient-to-tr from-brand-500 to-indigo-500 text-white flex items-center justify-center text-3xl shadow-lg shadow-indigo-500/35 relative">
-                🎁
-                <div
-                  class="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-[#080c14] animate-ping">
-                </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN 2-COLUMN LAYOUT (ARTICLES FEED + SIDEBAR) -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+      <!-- LEFT COLUMN: ARTICLES FEED (8 Cols) -->
+      <div class="lg:col-span-8 space-y-16">
+
+        <!-- ARTICLE 1: NEUROSCIENCE -->
+        <article id="neuroscience-surprise" data-category="psychology" class="blog-article-card scroll-mt-32 border-b border-slate-200 dark:border-slate-800 pb-16">
+          <div class="h-64 sm:h-96 w-full rounded-3xl bg-[#080c14] border border-slate-800 relative overflow-hidden flex items-center justify-center mb-6 shadow-inner">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(244,63,94,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(244,63,94,0.05)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+            <div class="absolute w-72 h-72 bg-brand-500/10 rounded-full blur-[80px] -top-10 -left-10"></div>
+            <div class="absolute w-72 h-72 bg-indigo-500/10 rounded-full blur-[80px] -bottom-10 -right-10"></div>
+            
+            <div class="relative z-10 flex flex-col items-center gap-4 text-center px-4">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-brand-500 to-purple-500 flex items-center justify-center text-white text-4xl shadow-lg shadow-brand-500/35 relative animate-pulse">
+                🧠
               </div>
-              <div
-                class="w-12 h-12 rounded-2xl bg-indigo-500 text-white flex items-center justify-center font-black shadow-md shadow-indigo-500/20">
-                3</div>
+              <span class="text-[10px] font-black uppercase text-brand-400 tracking-widest bg-brand-500/10 px-3.5 py-1 rounded-full border border-brand-500/20">
+                Synaptic Dopamine Simulation Model
+              </span>
             </div>
-            <span
-              class="text-[10px] font-black uppercase text-indigo-500/80 tracking-widest bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10 mt-2">Remote
-              Gifting Delivery Grid</span>
           </div>
-        </div>
-        <div class="flex items-center gap-3 text-sm font-bold text-brand-500 uppercase tracking-wider mb-4">
-          <span>Creative Ideas</span>
-          <span>•</span>
-          <span>4 min read</span>
-        </div>
-        <h2 class="text-3xl font-display font-black tracking-tight text-gray-900 dark:text-white mb-6">
-          10 Creative Ways to Say 'Happy Birthday' Remotely in 2026
-        </h2>
 
-        <div
-          class="prose prose-lg dark:prose-invert text-gray-650 dark:text-gray-300 leading-relaxed font-medium space-y-6">
-          <p>
-            Being physically separated from friends, family, or partners on their special day is tough. While text
-            messages are instant, they feel ephemeral and generic. If you want to make your favorite person feel valued
-            and special across the miles, static copy isn't enough.
-          </p>
-
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white pt-4">Moving Beyond Text Boxes</h3>
-          <p>
-            Top creative strategies involve creating interactive visual timelines. Here are three key frameworks to
-            elevate your remote wishes:
-          </p>
-          <ul class="list-disc pl-6 space-y-3">
-            <li><strong>Audio Soundtracking:</strong> Pick a song that defined a specific summer or trip you took
-              together. Auditory anchors invoke instant nostalgia.</li>
-            <li><strong>Interactive Unboxing:</strong> Instead of showing images immediately, hide them behind clickable
-              virtual wrapping paper or cards to construct curiosity.</li>
-            <li><strong>Visual Milestones:</strong> Structure images chronologically to recount the history of your
-              relationship.</li>
-          </ul>
-          <p>
-            By designing a digital space dedicated entirely to them, you show that you invested time and effort, making
-            the distance feel non-existent.
-          </p>
-        </div>
-
-        <!-- INTERACTIVE TOOL: SURPRISE MATCH QUICK QUIZ -->
-        <div
-          class="my-10 p-6 md:p-8 rounded-3xl glass border border-indigo-500/10 shadow-xl text-left relative overflow-hidden">
-          <div class="absolute -top-10 -left-10 w-24 h-24 bg-indigo-500/5 rounded-full blur-xl"></div>
-          <h4 class="text-xs font-black text-indigo-500 uppercase tracking-widest mb-2">⚡ Surprise Matcher</h4>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Find the Perfect Gifting Formula</h3>
-
-          <div class="space-y-6">
-            <!-- Step 1: Relationship -->
-            <div>
-              <span class="text-xs font-bold text-gray-450 uppercase tracking-wide block mb-3">1. Who are you
-                surprising?</span>
-              <div class="grid grid-cols-3 gap-3">
-                <button onclick="selectQuizOption('relation', 'partner', this)"
-                  class="quiz-btn py-3 px-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 font-bold text-xs hover:border-indigo-500 transition-all text-center">
-                  ❤️ Partner
-                </button>
-                <button onclick="selectQuizOption('relation', 'friend', this)"
-                  class="quiz-btn py-3 px-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 font-bold text-xs hover:border-indigo-500 transition-all text-center">
-                  🤝 Friend
-                </button>
-                <button onclick="selectQuizOption('relation', 'family', this)"
-                  class="quiz-btn py-3 px-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 font-bold text-xs hover:border-indigo-500 transition-all text-center">
-                  🏠 Family
-                </button>
-              </div>
-            </div>
-
-            <!-- Step 2: Personality Vibe -->
-            <div>
-              <span class="text-xs font-bold text-gray-455 uppercase tracking-wide block mb-3">2. What is their
-                lifestyle vibe?</span>
-              <div class="grid grid-cols-3 gap-3">
-                <button onclick="selectQuizOption('vibe', 'nostalgic', this)"
-                  class="quiz-btn py-3 px-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 font-bold text-xs hover:border-indigo-500 transition-all text-center">
-                  📜 Emotional
-                </button>
-                <button onclick="selectQuizOption('vibe', 'energetic', this)"
-                  class="quiz-btn py-3 px-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 font-bold text-xs hover:border-indigo-500 transition-all text-center">
-                  ⚡ Energetic
-                </button>
-                <button onclick="selectQuizOption('vibe', 'minimalist', this)"
-                  class="quiz-btn py-3 px-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 font-bold text-xs hover:border-indigo-500 transition-all text-center">
-                  ✨ Elegant
-                </button>
-              </div>
-            </div>
-
-            <!-- Recommendation Output -->
-            <div id="quizResultBox"
-              class="p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 text-left space-y-3 hidden transition-all duration-500">
-              <span class="text-[9px] font-black uppercase text-indigo-500 tracking-wider">🎯 Your Personalized
-                Blueprint</span>
-              <h4 id="quizResultTitle" class="text-lg font-bold text-gray-900 dark:text-white">Nostalgic Timeline
-                Blueprint</h4>
-              <p id="quizResultDesc" class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-medium">
-                Load up custom acoustic soundtracks paired with chronological family photos to unlock peak emotional
-                recall.
-              </p>
-              <div class="pt-2">
-                <a href="index.html"
-                  class="inline-flex items-center gap-1.5 px-4 py-2 bg-indigo-500 text-white rounded-xl text-xs font-bold shadow-md hover:bg-indigo-650 transition-all">
-                  Create this Page
-                </a>
-              </div>
-            </div>
-
+          <div class="flex items-center gap-3 text-xs font-bold text-brand-500 uppercase tracking-wider mb-3">
+            <span>Psychology & Research</span>
+            <span>•</span>
+            <span>5 min read</span>
+            <span>•</span>
+            <span>Updated 2026</span>
           </div>
-        </div>
-      </article>
 
-      <!-- Article 3 -->
-      <article id="music-nostalgia" class="scroll-mt-32 pb-16">
-        <div
-          class="h-64 md:h-96 w-full rounded-3xl bg-[#080c14] border border-gray-150/20 dark:border-gray-900/60 relative overflow-hidden flex items-center justify-center mb-8 shadow-inner">
-          <div
-            class="absolute inset-0 bg-[linear-gradient(to_right,rgba(245,158,11,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(245,158,11,0.03)_1px,transparent_1px)] bg-[size:32px_32px]">
-          </div>
-          <div class="absolute w-72 h-72 bg-amber-500/10 rounded-full blur-[80px] -top-10 -left-10"></div>
-          <div class="absolute w-72 h-72 bg-rose-500/10 rounded-full blur-[80px] -bottom-10 -right-10"></div>
-          <!-- 3D Equalizer Spectral Bars -->
-          <div class="relative z-10 flex flex-col items-center gap-6">
-            <div class="flex items-end gap-3 h-24">
-              <div class="w-3 bg-amber-500 rounded-full animate-pulse h-16" style="animation-duration: 1.2s"></div>
-              <div class="w-3 bg-amber-400 rounded-full animate-pulse h-24" style="animation-duration: 0.8s"></div>
-              <div class="w-3 bg-brand-500 rounded-full animate-pulse h-12" style="animation-duration: 1.5s"></div>
-              <div class="w-3 bg-indigo-500 rounded-full animate-pulse h-20" style="animation-duration: 1.0s"></div>
-              <div class="w-3 bg-rose-500 rounded-full animate-pulse h-8" style="animation-duration: 1.7s"></div>
-            </div>
-            <span
-              class="text-[10px] font-black uppercase text-amber-500/80 tracking-widest bg-amber-500/5 px-3 py-1 rounded-full border border-amber-500/10">Spectrogram
-              Frequency Model</span>
-          </div>
-        </div>
-        <div class="flex items-center gap-3 text-sm font-bold text-brand-500 uppercase tracking-wider mb-4">
-          <span>Sensory Science</span>
-          <span>•</span>
-          <span>6 min read</span>
-        </div>
-        <h2 class="text-3xl font-display font-black tracking-tight text-gray-900 dark:text-white mb-6">
-          How Music and Sounds Anchor Our Most Precious Memories
-        </h2>
+          <h2 class="text-2xl sm:text-3xl font-display font-black tracking-tight text-slate-900 dark:text-white mb-4">
+            The Neuroscience of Surprise: Why We Crave the Unexpected
+          </h2>
 
-        <div
-          class="prose prose-lg dark:prose-invert text-gray-650 dark:text-gray-300 leading-relaxed font-medium space-y-6">
-          <p>
-            Music is a time machine. Hearing just three chords of a familiar track can instantly transport you back to a
-            specific room, a warm drive, or a childhood party. When we pair digital visuals with synchronized
-            soundtracks, the emotional resonance of the visual media jumps significantly.
-          </p>
-
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white pt-4">Cross-Modal Sensory Integration</h3>
-          <p>
-            In psychology, the simultaneous stimulation of multiple senses is known as cross-modal integration. When the
-            visual cortex (viewing old memories) and the auditory cortex (hearing a nostalgic soundtrack) fire together,
-            they create a highly immersive sensory loop.
-          </p>
-          <p>
-            This is why the WishCraft engine relies on matching background tracks to visual gallery slides. The audio
-            layer creates a physical rhythm that guides the eyes, pacing the unboxing journey so the surprise builds up
-            logically. It transforms simple online wishes into high-value cinematic experiences.
-          </p>
-        </div>
-
-        <!-- INTERACTIVE INFOGRAPHIC: SENSORY AUDIO GENERATOR -->
-        <div
-          class="my-10 p-6 md:p-8 rounded-3xl glass border border-amber-500/10 shadow-xl text-left relative overflow-hidden">
-          <div class="absolute -top-10 -right-10 w-24 h-24 bg-amber-500/5 rounded-full blur-xl"></div>
-          <h4 class="text-xs font-black text-amber-500 uppercase tracking-widest mb-2">⚡ Sound Experiment</h4>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Interactive Audio Anchor Experiment</h3>
-
-          <div class="space-y-6">
-            <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-semibold">
-              Test how custom sound frequencies activate episodic memory retrieval. Click a button below to generate a
-              silent, real-time wave simulation model and watch the waves coordinate:
+          <div class="prose prose-lg dark:prose-invert text-slate-600 dark:text-slate-300 leading-relaxed font-normal space-y-5 text-sm sm:text-base">
+            <p>
+              Have you ever wondered why receiving a custom, personalized celebration page leaves a deeper, longer-lasting impression than a standard text message or generic paper greeting card? The answer is wired directly into our neurochemistry. Explore our guides on <a href="birthday-wishes.html" class="text-brand-500 font-bold hover:underline">birthday wishes</a> and <a href="romantic-birthday-message.html" class="text-brand-500 font-bold hover:underline">romantic birthday messages</a> to see real examples.
             </p>
 
-            <div class="flex items-center gap-4 flex-wrap">
-              <button onclick="playSynthTune('nostalgia')"
-                class="py-3 px-6 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs rounded-xl shadow-md flex items-center gap-2">
-                ⚡ Simulate Nostalgic Frequencies
-              </button>
-              <button onclick="playSynthTune('celebration')"
-                class="py-3 px-6 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl shadow-md flex items-center gap-2">
-                ⚡ Simulate Celebration Waves
-              </button>
+            <div class="p-4 rounded-2xl bg-brand-500/5 border-l-4 border-brand-500 text-slate-800 dark:text-slate-200 font-medium text-sm my-4">
+              💡 <strong>Key Takeaway:</strong> In cognitive psychology, an unexpected visual layout creates a "prediction error" in the brain — releasing a surge of dopamine that cements positive emotional memory recall by up to 40%.
             </div>
 
-            <!-- Waveform Canvas -->
-            <div
-              class="h-24 w-full bg-gray-50 dark:bg-gray-950 rounded-2xl border border-gray-150 dark:border-gray-900/60 overflow-hidden relative flex items-center justify-center">
-              <canvas id="synthWaveCanvas" class="w-full h-full"></canvas>
-              <span id="canvasIdleText"
-                class="absolute text-[10px] font-black uppercase text-gray-400 tracking-wider">Sound Wave Idle</span>
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white pt-2">The Dopamine Spark</h3>
+            <p>
+              When a recipient lands on a custom WishCraft page, their brain is forced to actively engage. They aren't just reading static text; they are clicking interactive gift boxes, scrolling past cinematic photo carousels, and hearing their favorite tracks play in sync with particle animations.
+            </p>
+
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white pt-2">Episodic Memory Pathways</h3>
+            <p>
+              Surprise acts as an amplifier for memory encoding. When a visual layout changes dynamically (like unfolding message blocks or photo pop-ups), the brain registers it as high-value content.
+            </p>
+          </div>
+
+          <!-- INTERACTIVE DOPAMINE SIMULATOR -->
+          <div class="my-8 p-6 sm:p-8 rounded-3xl glass border border-brand-500/20 shadow-xl text-left relative overflow-hidden">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse"></span>
+              <h4 class="text-xs font-black text-brand-600 dark:text-brand-400 uppercase tracking-widest">Interactive Simulator</h4>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-6">Cognitive Retention & Dopamine Simulator</h3>
+
+            <div class="space-y-6">
+              <div>
+                <label for="dopamineSlider" class="text-xs font-bold text-slate-400 uppercase tracking-wide block mb-2">
+                  Select Gifting Medium:
+                </label>
+                <input type="range" id="dopamineSlider" min="1" max="3" value="3" oninput="updateDopamineSim(this.value)"
+                  class="w-full h-2.5 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                <div class="flex justify-between text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-2">
+                  <span>Text Message</span>
+                  <span>Paper Card</span>
+                  <span class="text-brand-500 font-extrabold">WishCraft Page</span>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center">
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center">
+                  <span id="simDopaminePercent" class="block text-3xl font-display font-black text-brand-500 animate-pulse">98%</span>
+                  <span class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Dopamine Release</span>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center">
+                  <span id="simRetentionDays" class="block text-3xl font-display font-black text-indigo-500">Infinite</span>
+                  <span class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Memory Recall Span</span>
+                </div>
+
+                <div class="flex items-center justify-center p-2">
+                  <div id="simVisualNode" class="w-14 h-14 rounded-full bg-brand-500/10 flex items-center justify-center text-3xl animate-bounce" style="animation-duration: 0.8s;">
+                    💖
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-brand-500/5 border border-brand-500/10 text-xs font-medium text-slate-600 dark:text-slate-300 leading-relaxed" id="simDescText">
+                <strong>WishCraft Page Surprise:</strong> Full sensory visual timeline paired with music triggers immediate prediction errors in the brain, maximizing retention.
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Share & Bookmark Row -->
+          <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-semibold text-slate-500">
+            <div class="flex items-center gap-2">
+              <span>Share:</span>
+              <button onclick="shareArticle('twitter', 'The Neuroscience of Surprise', 'https://wishcraft-pages.vercel.app/blog.html#neuroscience-surprise')" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:text-brand-500 transition-colors">
+                🐦 Twitter
+              </button>
+              <button onclick="shareArticle('whatsapp', 'The Neuroscience of Surprise', 'https://wishcraft-pages.vercel.app/blog.html#neuroscience-surprise')" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:text-emerald-500 transition-colors">
+                💬 WhatsApp
+              </button>
+              <button onclick="copyArticleLink('https://wishcraft-pages.vercel.app/blog.html#neuroscience-surprise')" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:text-brand-500 transition-colors">
+                🔗 Copy Link
+              </button>
+            </div>
+            <button onclick="saveBookmark('The Neuroscience of Surprise')" class="px-3 py-1.5 rounded-lg bg-brand-500/10 text-brand-600 dark:text-brand-400 hover:bg-brand-500 hover:text-white transition-all">
+              🔖 Save Story
+            </button>
+          </div>
+        </article>
+
+        <!-- ARTICLE 2: REMOTE GIFTING -->
+        <article id="remote-gifting" data-category="gifting" class="blog-article-card scroll-mt-32 border-b border-slate-200 dark:border-slate-800 pb-16">
+          <div class="h-64 sm:h-96 w-full rounded-3xl bg-[#080c14] border border-slate-800 relative overflow-hidden flex items-center justify-center mb-6 shadow-inner">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(99,102,241,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(99,102,241,0.05)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+            <div class="absolute w-72 h-72 bg-indigo-500/10 rounded-full blur-[80px] -top-10 -right-10"></div>
+            <div class="absolute w-72 h-72 bg-pink-500/10 rounded-full blur-[80px] -bottom-10 -left-10"></div>
+            
+            <div class="relative z-10 flex flex-col items-center gap-4 w-full px-8 sm:px-12 text-center">
+              <div class="flex items-center justify-between w-full max-w-sm relative">
+                <div class="absolute top-1/2 left-0 w-full h-[2px] bg-indigo-500/25 -translate-y-1/2 -z-10"></div>
+                <div class="w-10 h-10 rounded-2xl bg-indigo-500 text-white flex items-center justify-center font-black shadow-md">1</div>
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-brand-500 to-indigo-500 text-white flex items-center justify-center text-2xl shadow-lg relative">
+                  🎁
+                  <div class="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-[#080c14] animate-ping"></div>
+                </div>
+                <div class="w-10 h-10 rounded-2xl bg-indigo-500 text-white flex items-center justify-center font-black shadow-md">3</div>
+              </div>
+              <span class="text-[10px] font-black uppercase text-indigo-400 tracking-widest bg-indigo-500/10 px-3.5 py-1 rounded-full border border-indigo-500/20">
+                Remote Gifting Delivery Framework
+              </span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 text-xs font-bold text-indigo-500 uppercase tracking-wider mb-3">
+            <span>Creative Gifting</span>
+            <span>•</span>
+            <span>4 min read</span>
+            <span>•</span>
+            <span>Updated 2026</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-display font-black tracking-tight text-slate-900 dark:text-white mb-4">
+            10 Creative Ways to Say 'Happy Birthday' Remotely in 2026
+          </h2>
+
+          <div class="prose prose-lg dark:prose-invert text-slate-600 dark:text-slate-300 leading-relaxed font-normal space-y-5 text-sm sm:text-base">
+            <p>
+              Being physically separated from friends, family, or partners on their special day is tough. While text messages are instant, they feel ephemeral and generic. Explore our <a href="birthday-wishes-for-best-friend.html" class="text-indigo-500 font-bold hover:underline">birthday wishes for best friend</a> and <a href="birthday-wishes-for-boyfriend.html" class="text-indigo-500 font-bold hover:underline">birthday wishes for boyfriend</a> guides for inspiring message ideas.
+            </p>
+
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white pt-2">Moving Beyond Text Boxes</h3>
+            <p>
+              Top creative strategies involve creating interactive visual timelines:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Audio Soundtracking:</strong> Pick a song that defined a specific summer or trip you took together.</li>
+              <li><strong>Interactive Unboxing:</strong> Hide messages behind clickable virtual wrapping paper.</li>
+              <li><strong>Visual Milestones:</strong> Structure images chronologically to recount your relationship history.</li>
+            </ul>
+          </div>
+
+          <!-- INTERACTIVE SURPRISE MATCHER QUIZ -->
+          <div class="my-8 p-6 sm:p-8 rounded-3xl glass border border-indigo-500/20 shadow-xl text-left relative overflow-hidden">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-pulse"></span>
+              <h4 class="text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">Surprise Matcher</h4>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-6">Find Your Perfect Gifting Blueprint</h3>
+
+            <div class="space-y-5">
+              <div>
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-wide block mb-2">1. Who are you surprising?</span>
+                <div class="grid grid-cols-3 gap-2.5">
+                  <button onclick="selectQuizOption('relation', 'partner', this)" class="quiz-btn py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 font-bold text-xs hover:border-indigo-500 transition-all text-center">
+                    ❤️ Partner
+                  </button>
+                  <button onclick="selectQuizOption('relation', 'friend', this)" class="quiz-btn py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 font-bold text-xs hover:border-indigo-500 transition-all text-center">
+                    🤝 Friend
+                  </button>
+                  <button onclick="selectQuizOption('relation', 'family', this)" class="quiz-btn py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 font-bold text-xs hover:border-indigo-500 transition-all text-center">
+                    🏠 Family
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-wide block mb-2">2. What is their lifestyle vibe?</span>
+                <div class="grid grid-cols-3 gap-2.5">
+                  <button onclick="selectQuizOption('vibe', 'nostalgic', this)" class="quiz-btn py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 font-bold text-xs hover:border-indigo-500 transition-all text-center">
+                    📜 Emotional
+                  </button>
+                  <button onclick="selectQuizOption('vibe', 'energetic', this)" class="quiz-btn py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 font-bold text-xs hover:border-indigo-500 transition-all text-center">
+                    ⚡ Energetic
+                  </button>
+                  <button onclick="selectQuizOption('vibe', 'minimalist', this)" class="quiz-btn py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 font-bold text-xs hover:border-indigo-500 transition-all text-center">
+                    ✨ Elegant
+                  </button>
+                </div>
+              </div>
+
+              <div id="quizResultBox" class="p-5 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 text-left space-y-2 hidden transition-all duration-500">
+                <span class="text-[10px] font-black uppercase text-indigo-500 tracking-wider">🎯 Recommended Blueprint</span>
+                <h4 id="quizResultTitle" class="text-base font-bold text-slate-900 dark:text-white">Nostalgic Timeline Blueprint</h4>
+                <p id="quizResultDesc" class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+                  Load up custom acoustic soundtracks paired with chronological family photos to unlock peak emotional recall.
+                </p>
+                <div class="pt-2">
+                  <a href="index.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-indigo-500 text-white rounded-xl text-xs font-bold shadow-md hover:bg-indigo-600 transition-all">
+                    Create This Page →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-semibold text-slate-500">
+            <div class="flex items-center gap-2">
+              <span>Share:</span>
+              <button onclick="shareArticle('twitter', '10 Creative Ways to Say Happy Birthday Remotely', 'https://wishcraft-pages.vercel.app/blog.html#remote-gifting')" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:text-brand-500 transition-colors">
+                🐦 Twitter
+              </button>
+              <button onclick="shareArticle('whatsapp', '10 Creative Ways to Say Happy Birthday Remotely', 'https://wishcraft-pages.vercel.app/blog.html#remote-gifting')" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:text-emerald-500 transition-colors">
+                💬 WhatsApp
+              </button>
+              <button onclick="copyArticleLink('https://wishcraft-pages.vercel.app/blog.html#remote-gifting')" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:text-brand-500 transition-colors">
+                🔗 Copy Link
+              </button>
+            </div>
+            <button onclick="saveBookmark('10 Creative Ways to Say Happy Birthday Remotely')" class="px-3 py-1.5 rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-500 hover:text-white transition-all">
+              🔖 Save Story
+            </button>
+          </div>
+        </article>
+
+        <!-- ARTICLE 3: CHECKLIST & SURPRISE PLANNING -->
+        <article id="surprise-checklist" data-category="checklist" class="blog-article-card scroll-mt-32 border-b border-slate-200 dark:border-slate-800 pb-16">
+          <div class="h-64 sm:h-96 w-full rounded-3xl bg-[#080c14] border border-slate-800 relative overflow-hidden flex items-center justify-center mb-6 shadow-inner">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(16,185,129,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(16,185,129,0.05)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+            <div class="absolute w-72 h-72 bg-emerald-500/10 rounded-full blur-[80px] -top-10 -left-10"></div>
+            
+            <div class="relative z-10 flex flex-col items-center gap-4 text-center px-4">
+              <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center text-white text-4xl shadow-lg shadow-emerald-500/35 relative">
+                📋
+              </div>
+              <span class="text-[10px] font-black uppercase text-emerald-400 tracking-widest bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                Interactive Birthday Surprise Checklist
+              </span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 text-xs font-bold text-emerald-500 uppercase tracking-wider mb-3">
+            <span>Surprise Planning</span>
+            <span>•</span>
+            <span>3 min read</span>
+            <span>•</span>
+            <span>Updated 2026</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-display font-black tracking-tight text-slate-900 dark:text-white mb-4">
+            The Ultimate Birthday Surprise Checklist: 5 Steps to Perfection
+          </h2>
+
+          <div class="prose prose-lg dark:prose-invert text-slate-600 dark:text-slate-300 leading-relaxed font-normal space-y-5 text-sm sm:text-base">
+            <p>
+              Planning a birthday surprise requires timing, emotional sequence, and high-impact visual delivery. Check out our <a href="anniversary-wishes.html" class="text-emerald-500 font-bold hover:underline">anniversary wishes</a> and <a href="valentine-wishes.html" class="text-emerald-500 font-bold hover:underline">valentine wishes</a> guides for specialized celebration blueprints.
+            </p>
+          </div>
+
+          <!-- INTERACTIVE CHECKLIST TOOL -->
+          <div class="my-8 p-6 sm:p-8 rounded-3xl glass border border-emerald-500/20 shadow-xl text-left relative overflow-hidden">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <h4 class="text-xs font-black text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">Live Checklist Tool</h4>
+              </div>
+              <span id="checklistProgress" class="text-xs font-bold text-emerald-500 bg-emerald-500/10 px-2.5 py-0.5 rounded-full">
+                0 / 5 Completed
+              </span>
             </div>
 
+            <div class="space-y-3" id="interactiveChecklist">
+              <label class="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 cursor-pointer hover:border-emerald-500 transition-all">
+                <input type="checkbox" onchange="updateChecklistProgress()" class="w-4 h-4 mt-0.5 accent-emerald-500">
+                <div class="text-xs font-semibold text-slate-800 dark:text-slate-200">
+                  <span class="font-bold block text-slate-900 dark:text-white mb-0.5">1. Identify Recipient Vibe & Musical Nostalgia</span>
+                  Pick a song or soundtrack that holds deep personal memory.
+                </div>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 cursor-pointer hover:border-emerald-500 transition-all">
+                <input type="checkbox" onchange="updateChecklistProgress()" class="w-4 h-4 mt-0.5 accent-emerald-500">
+                <div class="text-xs font-semibold text-slate-800 dark:text-slate-200">
+                  <span class="font-bold block text-slate-900 dark:text-white mb-0.5">2. Curate 4-8 High-Impact Photo Memories</span>
+                  Arrange photos chronologically to recount your relationship story.
+                </div>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 cursor-pointer hover:border-emerald-500 transition-all">
+                <input type="checkbox" onchange="updateChecklistProgress()" class="w-4 h-4 mt-0.5 accent-emerald-500">
+                <div class="text-xs font-semibold text-slate-800 dark:text-slate-200">
+                  <span class="font-bold block text-slate-900 dark:text-white mb-0.5">3. Embed Interactive Gift Box Secrets</span>
+                  Hide letters, joke vouchers, or hidden wishes behind clickable gift boxes.
+                </div>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 cursor-pointer hover:border-emerald-500 transition-all">
+                <input type="checkbox" onchange="updateChecklistProgress()" class="w-4 h-4 mt-0.5 accent-emerald-500">
+                <div class="text-xs font-semibold text-slate-800 dark:text-slate-200">
+                  <span class="font-bold block text-slate-900 dark:text-white mb-0.5">4. Generate WishCraft Unique Share Link</span>
+                  Review page live preview in dark and light modes.
+                </div>
+              </label>
+
+              <label class="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 cursor-pointer hover:border-emerald-500 transition-all">
+                <input type="checkbox" onchange="updateChecklistProgress()" class="w-4 h-4 mt-0.5 accent-emerald-500">
+                <div class="text-xs font-semibold text-slate-800 dark:text-slate-200">
+                  <span class="font-bold block text-slate-900 dark:text-white mb-0.5">5. Midnight Delivery Timing</span>
+                  Send link via WhatsApp, SMS, or QR code exactly at 12:00 AM.
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-semibold text-slate-500">
+            <div class="flex items-center gap-2">
+              <span>Share:</span>
+              <button onclick="shareArticle('twitter', 'The Ultimate Birthday Surprise Checklist', 'https://wishcraft-pages.vercel.app/blog.html#surprise-checklist')" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:text-brand-500 transition-colors">
+                🐦 Twitter
+              </button>
+              <button onclick="shareArticle('whatsapp', 'The Ultimate Birthday Surprise Checklist', 'https://wishcraft-pages.vercel.app/blog.html#surprise-checklist')" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:text-emerald-500 transition-colors">
+                💬 WhatsApp
+              </button>
+            </div>
+            <button onclick="saveBookmark('The Ultimate Birthday Surprise Checklist')" class="px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all">
+              🔖 Save Checklist
+            </button>
+          </div>
+        </article>
+
+        <!-- ARTICLE 4: SENSORY SCIENCE -->
+        <article id="sensory-science" data-category="sensory" class="blog-article-card scroll-mt-32 pb-12">
+          <div class="h-64 sm:h-96 w-full rounded-3xl bg-[#080c14] border border-slate-800 relative overflow-hidden flex items-center justify-center mb-6 shadow-inner">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(245,158,11,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(245,158,11,0.05)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+            <div class="absolute w-72 h-72 bg-amber-500/10 rounded-full blur-[80px] -top-10 -left-10"></div>
+            <div class="absolute w-72 h-72 bg-rose-500/10 rounded-full blur-[80px] -bottom-10 -right-10"></div>
+            
+            <div class="relative z-10 flex flex-col items-center gap-6">
+              <div class="flex items-end gap-2.5 h-20">
+                <div class="w-2.5 bg-amber-500 rounded-full animate-pulse h-14" style="animation-duration: 1.2s"></div>
+                <div class="w-2.5 bg-amber-400 rounded-full animate-pulse h-20" style="animation-duration: 0.8s"></div>
+                <div class="w-2.5 bg-brand-500 rounded-full animate-pulse h-10" style="animation-duration: 1.5s"></div>
+                <div class="w-2.5 bg-indigo-500 rounded-full animate-pulse h-16" style="animation-duration: 1.0s"></div>
+                <div class="w-2.5 bg-rose-500 rounded-full animate-pulse h-8" style="animation-duration: 1.7s"></div>
+              </div>
+              <span class="text-[10px] font-black uppercase text-amber-400 tracking-widest bg-amber-500/10 px-3.5 py-1 rounded-full border border-amber-500/20">
+                Spectrogram Frequency Model
+              </span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 text-xs font-bold text-amber-500 uppercase tracking-wider mb-3">
+            <span>Sensory Science</span>
+            <span>•</span>
+            <span>6 min read</span>
+            <span>•</span>
+            <span>Updated 2026</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-display font-black tracking-tight text-slate-900 dark:text-white mb-4">
+            How Music and Sounds Anchor Our Most Precious Memories
+          </h2>
+
+          <div class="prose prose-lg dark:prose-invert text-slate-600 dark:text-slate-300 leading-relaxed font-normal space-y-5 text-sm sm:text-base">
+            <p>
+              Music is a time machine. Hearing just three chords of a familiar track can instantly transport you back to a specific room, a warm drive, or a childhood party. When we pair digital visuals with synchronized soundtracks, emotional resonance jumps significantly.
+            </p>
+          </div>
+
+          <!-- INTERACTIVE SOUND EXPERIMENT -->
+          <div class="my-8 p-6 sm:p-8 rounded-3xl glass border border-amber-500/20 shadow-xl text-left relative overflow-hidden">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+              <h4 class="text-xs font-black text-amber-600 dark:text-amber-400 uppercase tracking-widest">Sound Experiment</h4>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-4">Interactive Audio Anchor Experiment</h3>
+
+            <div class="space-y-4">
+              <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                Test how custom sound frequencies activate episodic memory retrieval. Click a button below to generate a silent, real-time wave simulation model:
+              </p>
+
+              <div class="flex items-center gap-3 flex-wrap">
+                <button onclick="playSynthTune('nostalgia')" class="py-2.5 px-5 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs rounded-xl shadow-md transition-all">
+                  ⚡ Nostalgic Frequencies
+                </button>
+                <button onclick="playSynthTune('celebration')" class="py-2.5 px-5 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl shadow-md transition-all">
+                  ⚡ Celebration Waves
+                </button>
+              </div>
+
+              <div class="h-20 w-full bg-slate-100 dark:bg-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden relative flex items-center justify-center">
+                <canvas id="synthWaveCanvas" class="w-full h-full"></canvas>
+                <span id="canvasIdleText" class="absolute text-[10px] font-bold uppercase text-slate-400 tracking-wider">Sound Wave Generator Idle</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-semibold text-slate-500">
+            <div class="flex items-center gap-2">
+              <span>Share:</span>
+              <button onclick="shareArticle('twitter', 'How Music Anchors Memories', 'https://wishcraft-pages.vercel.app/blog.html#sensory-science')" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:text-brand-500 transition-colors">
+                🐦 Twitter
+              </button>
+              <button onclick="shareArticle('whatsapp', 'How Music Anchors Memories', 'https://wishcraft-pages.vercel.app/blog.html#sensory-science')" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:text-emerald-500 transition-colors">
+                💬 WhatsApp
+              </button>
+            </div>
+            <button onclick="saveBookmark('How Music Anchors Memories')" class="px-3 py-1.5 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 hover:bg-amber-500 hover:text-white transition-all">
+              🔖 Save Story
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+
+      <!-- RIGHT COLUMN: SIDEBAR (4 Cols) -->
+      <div class="lg:col-span-4 space-y-8">
+
+        <!-- NEWSLETTER WIDGET -->
+        <div class="p-6 rounded-3xl bg-gradient-to-br from-brand-500/10 via-slate-900 to-indigo-900/30 border border-brand-500/20 shadow-xl text-left relative overflow-hidden">
+          <div class="w-10 h-10 rounded-2xl bg-brand-500 text-white flex items-center justify-center text-xl mb-3 shadow-md">
+            ✉️
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">
+            Gifting Science Newsletter
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-4">
+            Get weekly research breakdowns, celebration ideas, and surprise design blueprints delivered to your inbox.
+          </p>
+
+          <form onsubmit="handleNewsletterSubmit(event)" class="space-y-3">
+            <input type="email" required placeholder="Enter your email..."
+              class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs font-medium focus:border-brand-500 outline-none">
+            <button type="submit" class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white rounded-xl text-xs font-bold shadow-md transition-all">
+              Subscribe Free →
+            </button>
+          </form>
+          <p class="text-[10px] text-slate-400 text-center mt-2 font-medium">No spam ever. Unsubscribe anytime.</p>
+        </div>
+
+        <!-- TRENDING ARTICLES WIDGET -->
+        <div class="p-6 rounded-3xl glass border border-slate-200 dark:border-slate-800 text-left">
+          <h3 class="text-sm font-extrabold uppercase tracking-wider text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+            <span>🔥 Trending Stories</span>
+          </h3>
+
+          <div class="space-y-4">
+            <a href="#neuroscience-surprise" class="block group">
+              <div class="flex items-center gap-2 text-[10px] font-bold text-brand-500 uppercase tracking-wider mb-1">
+                <span>Psychology</span>
+                <span>•</span>
+                <span>14.2k Reads</span>
+              </div>
+              <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-brand-500 transition-colors leading-snug">
+                The Neuroscience of Surprise: Why Unexpected Gifts Hit Different
+              </h4>
+            </a>
+
+            <div class="border-t border-slate-100 dark:border-slate-800/80 pt-3"></div>
+
+            <a href="#remote-gifting" class="block group">
+              <div class="flex items-center gap-2 text-[10px] font-bold text-indigo-500 uppercase tracking-wider mb-1">
+                <span>Gifting Guides</span>
+                <span>•</span>
+                <span>9.8k Reads</span>
+              </div>
+              <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-brand-500 transition-colors leading-snug">
+                10 Creative Ways to Say 'Happy Birthday' Remotely in 2026
+              </h4>
+            </a>
+
+            <div class="border-t border-slate-100 dark:border-slate-800/80 pt-3"></div>
+
+            <a href="#surprise-checklist" class="block group">
+              <div class="flex items-center gap-2 text-[10px] font-bold text-emerald-500 uppercase tracking-wider mb-1">
+                <span>Surprise Planning</span>
+                <span>•</span>
+                <span>11.5k Reads</span>
+              </div>
+              <h4 class="text-xs font-bold text-slate-800 dark:text-slate-200 group-hover:text-brand-500 transition-colors leading-snug">
+                The Ultimate Birthday Surprise Checklist: 5 Steps to Perfection
+              </h4>
+            </a>
           </div>
         </div>
-      </article>
+
+        <!-- POPULAR TAGS WIDGET -->
+        <div class="p-6 rounded-3xl glass border border-slate-200 dark:border-slate-800 text-left">
+          <h3 class="text-sm font-extrabold uppercase tracking-wider text-slate-900 dark:text-white mb-4">
+            Popular Topics
+          </h3>
+
+          <div class="flex flex-wrap gap-2 text-xs font-semibold">
+            <button onclick="handleBlogSearch('dopamine')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-brand-500 hover:text-white transition-all text-slate-600 dark:text-slate-300">
+              #dopamine
+            </button>
+            <button onclick="handleBlogSearch('remote')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-brand-500 hover:text-white transition-all text-slate-600 dark:text-slate-300">
+              #remote-gifting
+            </button>
+            <button onclick="handleBlogSearch('music')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-brand-500 hover:text-white transition-all text-slate-600 dark:text-slate-300">
+              #sensory-anchors
+            </button>
+            <button onclick="handleBlogSearch('checklist')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-brand-500 hover:text-white transition-all text-slate-600 dark:text-slate-300">
+              #checklist
+            </button>
+            <button onclick="handleBlogSearch('neuroscience')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-brand-500 hover:text-white transition-all text-slate-600 dark:text-slate-300">
+              #neuroscience
+            </button>
+          </div>
+        </div>
+
+        <!-- BUILD SURPRISE CTA BOX -->
+        <div class="p-6 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-xl text-left relative overflow-hidden">
+          <div class="w-10 h-10 rounded-2xl bg-brand-500 flex items-center justify-center text-xl mb-3 shadow-md">
+            🎂
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">
+            Ready to Build a Surprise?
+          </h3>
+          <p class="text-xs text-slate-400 font-medium leading-relaxed mb-4">
+            Create a custom animated wish page with music, photos, and secret gift boxes in under 2 minutes.
+          </p>
+          <a href="index.html#launch" class="block w-full py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs rounded-xl text-center shadow-lg shadow-brand-500/30 transition-all">
+            Build Free Page Now →
+          </a>
+        </div>
+
+      </div>
 
     </div>
-
   </main>
 
+  <!-- FREQUENTLY ASKED QUESTIONS (FAQ & SEO ACCORDION) -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+    <div class="p-8 rounded-3xl glass border border-slate-200 dark:border-slate-800 text-left">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl sm:text-3xl font-display font-black tracking-tight text-slate-900 dark:text-white">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold mt-1">
+          Everything you need to know about WishCraft digital surprise pages
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <details class="group p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <summary class="flex justify-between items-center font-bold text-sm text-slate-900 dark:text-white cursor-pointer">
+            <span>How does a digital WishCraft surprise page work?</span>
+            <span class="transition group-open:rotate-180 text-brand-500">▼</span>
+          </summary>
+          <p class="text-xs text-slate-600 dark:text-slate-300 font-medium mt-3 leading-relaxed">
+            A WishCraft page is a custom interactive web page you build in under 2 minutes. You pick background music, upload photo memories, write custom messages, and hide secret letters inside clickable gift boxes. Once ready, you get a unique link to send to your friend or partner.
+          </p>
+        </details>
+
+        <details class="group p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <summary class="flex justify-between items-center font-bold text-sm text-slate-900 dark:text-white cursor-pointer">
+            <span>Why are surprise wish pages more memorable than paper greeting cards?</span>
+            <span class="transition group-open:rotate-180 text-brand-500">▼</span>
+          </summary>
+          <p class="text-xs text-slate-600 dark:text-slate-300 font-medium mt-3 leading-relaxed">
+            Interactive visual layouts and music trigger a prediction error in the brain, releasing dopamine and strengthening memory recall pathways by up to 40% compared to static cards or basic text messages.
+          </p>
+        </details>
+
+        <details class="group p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <summary class="flex justify-between items-center font-bold text-sm text-slate-900 dark:text-white cursor-pointer">
+            <span>Is WishCraft free to use and share?</span>
+            <span class="transition group-open:rotate-180 text-brand-500">▼</span>
+          </summary>
+          <p class="text-xs text-slate-600 dark:text-slate-300 font-medium mt-3 leading-relaxed">
+            Yes, WishCraft lets you generate, customize, and share personalized birthday and celebration pages 100% free with instant share links.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
-  <footer
-    class="border-t border-gray-150/40 dark:border-gray-900/60 py-12 text-center text-xs text-gray-500 dark:text-gray-400 font-semibold bg-gray-50/50 dark:bg-gray-950/20">
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-12 text-center text-xs text-slate-500 dark:text-slate-400 font-semibold bg-white dark:bg-slate-950">
     <div class="max-w-7xl mx-auto px-6 space-y-4">
-      <p>&copy; 2026 WishCraft. Designed for ultimate relationship emotional impact. Carbon Neutral.</p>
+      <p>&copy; 2026 WishCraft Journal. Designed for ultimate relationship emotional impact. Carbon Neutral.</p>
       <div class="flex justify-center gap-6">
         <a href="index.html" class="hover:text-brand-500 transition-colors">Home</a>
         <a href="about.html" class="hover:text-brand-500 transition-colors">About</a>
-        <a href="blog.html" class="hover:text-brand-500 transition-colors text-brand-500">Blog</a>
+        <a href="blog.html" class="text-brand-500 font-bold">Blog</a>
         <a href="contact.html" class="hover:text-brand-500 transition-colors">Contact</a>
       </div>
     </div>
   </footer>
 
+  <!-- SCRIPT LOGIC -->
   <script>
-    // Header background transparency transition on scroll
+    // Reading Progress Line Fill
     window.addEventListener('scroll', () => {
       const header = document.getElementById('mainHeader');
       if (window.scrollY > 20) {
@@ -763,15 +1057,23 @@
       } else {
         header.classList.remove('shadow-md');
       }
+
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const progressEl = document.getElementById('readingProgress');
+      if (progressEl) {
+        progressEl.style.width = scrolled + '%';
+      }
     });
 
-    // Theme toggling functionality
+    // Theme Toggle
     window.toggleTheme = function () {
       const isDark = document.documentElement.classList.toggle('dark');
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
     };
 
-    // Mobile nav slideout toggling
+    // Mobile Menu Toggle
     window.toggleMobileMenu = function () {
       const nav = document.getElementById('mobileNav');
       const backdrop = document.getElementById('mobileNavBackdrop');
@@ -803,13 +1105,50 @@
       }
     };
 
-    // 🌟 Dopamine Simulator Data
+    // Live Search Filter
+    window.handleBlogSearch = function (query) {
+      const input = document.getElementById('blogSearchInput');
+      if (input && query !== input.value) {
+        input.value = query;
+      }
+      const q = query.toLowerCase().trim();
+      const articles = document.querySelectorAll('.blog-article-card');
+
+      articles.forEach(article => {
+        const text = article.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          article.style.display = 'block';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    };
+
+    // Category Filter
+    window.filterCategory = function (category, btnElement) {
+      document.querySelectorAll('#categoryPills button').forEach(b => {
+        b.className = 'cat-pill px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all';
+      });
+      btnElement.className = 'cat-pill active px-4 py-2 rounded-full bg-brand-500 text-white shadow-md shadow-brand-500/30 transition-all';
+
+      const articles = document.querySelectorAll('.blog-article-card');
+      articles.forEach(article => {
+        const artCat = article.getAttribute('data-category');
+        if (category === 'all' || artCat === category) {
+          article.style.display = 'block';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    };
+
+    // Dopamine Simulator
     const dopamineSimData = {
       1: {
         percent: '12%',
         retention: '2 Hours',
         emoji: '🥱',
-        color: 'bg-gray-500/10 text-gray-500',
+        color: 'bg-slate-500/10 text-slate-500',
         bounceSpeed: '2.5s',
         desc: '<strong>Generic Text Message:</strong> Low cognitive resonance. The brain quickly filters out text as routine chatter. Emotional memory decays almost instantly.'
       },
@@ -838,15 +1177,14 @@
 
       const node = document.getElementById('simVisualNode');
       node.textContent = data.emoji;
-      node.className = `w-16 h-16 rounded-full flex items-center justify-center text-3xl animate-bounce ${data.color}`;
+      node.className = `w-14 h-14 rounded-full flex items-center justify-center text-3xl animate-bounce ${data.color}`;
       node.style.animationDuration = data.bounceSpeed;
 
       document.getElementById('simDescText').innerHTML = data.desc;
     };
 
-    // 🌟 Gifting Quiz Matcher State
+    // Gifting Quiz State
     const quizState = { relation: '', vibe: '' };
-
     const quizBlueprints = {
       'partner-nostalgic': {
         title: '💖 Romantic Timeline Blueprint',
@@ -854,11 +1192,11 @@
       },
       'partner-energetic': {
         title: '🎉 Vibrant Surprise Gala',
-        desc: 'Choose an upbeat pop track and load high-energy concert/party photos. Use the "Fireworks" particle theme and hide surprise letters behind gift boxes to build curiosity.'
+        desc: 'Choose an upbeat pop track and load high-energy concert/party photos. Use the "Fireworks" particle theme and hide surprise letters behind gift boxes.'
       },
       'partner-minimalist': {
         title: '✨ Minimal Luxury Letter',
-        desc: 'Write a deep, premium text message and pair it with a single gorgeous cover portrait. Set the background music to modern lo-fi and use subtle floating sparkles.'
+        desc: 'Write a deep, premium text message and pair it with a single gorgeous cover portrait. Set background music to modern lo-fi and use subtle floating sparkles.'
       },
       'friend-nostalgic': {
         title: '🤝 Shared Nostalgia Lane',
@@ -874,7 +1212,7 @@
       },
       'family-nostalgic': {
         title: '🏠 Family Heritage Scrapbook',
-        desc: 'Ideal for parents or siblings. Chronologically compile warm family images and pair with gentle piano/classical tunes.'
+        desc: 'Ideal for parents or siblings. Chronologically compile warm family images and pair with gentle piano tunes.'
       },
       'family-energetic': {
         title: '🎂 Surprise Birthday Countdown',
@@ -901,14 +1239,27 @@
         const resultBox = document.getElementById('quizResultBox');
         document.getElementById('quizResultTitle').textContent = blueprint.title;
         document.getElementById('quizResultDesc').innerHTML = blueprint.desc;
-
         resultBox.classList.remove('hidden');
       }
     };
 
-    // 🌟 Visual Wave Simulator (Silent)
-    let waveAnimationId = null;
+    // Checklist Progress Counter
+    window.updateChecklistProgress = function() {
+      const checked = document.querySelectorAll('#interactiveChecklist input:checked').length;
+      const progressText = document.getElementById('checklistProgress');
+      if (progressText) {
+        progressText.textContent = `${checked} / 5 Completed`;
+        if (checked === 5) {
+          progressText.className = 'text-xs font-bold text-white bg-emerald-500 px-2.5 py-0.5 rounded-full animate-bounce';
+          showToast('🎉 All 5 surprise planning steps completed! Ready to build.');
+        } else {
+          progressText.className = 'text-xs font-bold text-emerald-500 bg-emerald-500/10 px-2.5 py-0.5 rounded-full';
+        }
+      }
+    };
 
+    // Sound Canvas Simulation
+    let waveAnimationId = null;
     window.playSynthTune = function (type) {
       document.getElementById('canvasIdleText').style.display = 'none';
       if (type === 'nostalgia') {
@@ -940,7 +1291,6 @@
         }
 
         ctx.clearRect(0, 0, width, height);
-
         const elapsed = now - startTime;
         const progress = 1 - (elapsed / (durationSec * 1000));
 
@@ -962,91 +1312,34 @@
       draw();
     }
 
-
-    // 🌟 Modal Content Data
-    const modalData = {
-      feedback: {
-        title: 'Share Your Feedback',
-        content: `
-          <form id="modalFeedbackForm" class="space-y-6 text-left" onsubmit="handleModalFeedbackSubmit(event)">
-            <div class="space-y-2">
-              <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Full Name</label>
-              <input type="text" name="name" required class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium" placeholder="John Doe">
-            </div>
-            <div class="space-y-2">
-              <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Email Address</label>
-              <input type="email" name="email" required class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium" placeholder="john@example.com">
-            </div>
-            <div class="space-y-2">
-              <label class="text-sm font-bold text-gray-700 dark:text-gray-300 ml-1">Message</label>
-              <textarea name="message" required rows="4" class="w-full px-6 py-4 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 outline-none transition-all font-medium resize-none" placeholder="How was your experience? What features would you love to see?"></textarea>
-            </div>
-            <button type="submit" id="modalFeedbackSubmit" class="w-full py-5 bg-brand-600 hover:bg-brand-500 text-white rounded-2xl text-lg font-bold flex items-center justify-center gap-3 transition-all">
-              <span>Send Feedback</span>
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </button>
-          </form>
-        `
-      }
+    // Bookmark Helper
+    window.saveBookmark = function(title) {
+      showToast(`🔖 Saved "${title}" to your bookmarks!`);
     };
 
-    window.openModal = function (type) {
-      const modal = document.getElementById('resourceModal');
-      const titleEl = document.getElementById('modalTitle');
-      const contentEl = document.getElementById('modalBody');
-      const data = modalData[type];
-
-      if (data) {
-        titleEl.textContent = data.title;
-        contentEl.innerHTML = data.content;
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-      }
-    };
-
-    window.closeModal = function () {
-      const modal = document.getElementById('resourceModal');
-      modal.classList.add('hidden');
-      document.body.style.overflow = '';
-    };
-
-    window.handleModalFeedbackSubmit = async function (e) {
+    // Newsletter Submission
+    window.handleNewsletterSubmit = function(e) {
       e.preventDefault();
-      const form = e.target;
-      const btn = document.getElementById('modalFeedbackSubmit');
-      const originalContent = btn.innerHTML;
-      btn.disabled = true;
-      btn.innerHTML = `<span class="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span> Sending...`;
+      showToast('✨ Thank you for subscribing to Gifting Science!');
+      e.target.reset();
+    };
 
-      try {
-        const formData = new FormData(form);
-        const feedbackData = {
-          name: formData.get('name'),
-          email: formData.get('email'),
-          message: formData.get('message'),
-          timestamp: new Date()
-        };
-
-        // Simulated submission
-        setTimeout(() => {
-          btn.innerHTML = `<span class="text-emerald-500 font-bold">✅ Sent!</span>`;
-          form.reset();
-          showToast('✨ Thank you! Your feedback is now live.');
-          setTimeout(() => {
-            closeModal();
-          }, 1000);
-        }, 800);
-
-      } catch (error) {
-        console.error("Submission Error:", error);
-        showToast('❌ Submission failed. Please try again.', true);
-        btn.disabled = false;
-        btn.innerHTML = originalContent;
+    // Article Sharing Handlers
+    window.shareArticle = function(platform, title, url) {
+      if (platform === 'twitter') {
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank');
+      } else if (platform === 'whatsapp') {
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' ' + url)}`, '_blank');
       }
     };
 
+    window.copyArticleLink = function(url) {
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('🔗 Link copied to clipboard!');
+      });
+    };
+
+    // Toast Helper
     function showToast(message, isError = false) {
       let container = document.getElementById('toastContainer');
       if (!container) {
@@ -1059,7 +1352,7 @@
       const toast = document.createElement('div');
       toast.className = `px-6 py-4 rounded-2xl shadow-xl border font-bold text-xs pointer-events-auto transition-all duration-300 transform translate-y-2 opacity-0 flex items-center gap-2 ${isError
         ? 'bg-red-500 border-red-600 text-white'
-        : 'bg-white border-gray-150 text-gray-800 dark:bg-gray-950 dark:border-gray-800 dark:text-white'
+        : 'bg-white border-slate-200 text-slate-800 dark:bg-slate-900 dark:border-slate-800 dark:text-white'
         }`;
       toast.innerHTML = message;
       container.appendChild(toast);
@@ -1079,20 +1372,16 @@
 
   <!-- RESOURCE MODAL -->
   <div id="resourceModal" class="fixed inset-0 z-[150] hidden flex items-center justify-center p-4">
-    <div class="absolute inset-0 bg-gray-950/40 backdrop-blur-md" onclick="closeModal()"></div>
-    <div
-      class="glass relative z-10 w-full max-w-2xl p-8 md:p-12 rounded-[40px] border border-gray-150/20 dark:border-gray-800 shadow-2xl max-h-[90vh] overflow-y-auto animate-scale-up">
-      <button onclick="closeModal()"
-        class="absolute top-6 right-6 p-2 text-gray-400 hover:text-brand-500 transition-colors"
-        aria-label="Close panel">
+    <div class="absolute inset-0 bg-slate-950/40 backdrop-blur-md" onclick="closeModal()"></div>
+    <div class="glass relative z-10 w-full max-w-2xl p-8 md:p-12 rounded-[40px] border border-slate-200 dark:border-slate-800 shadow-2xl max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal()" class="absolute top-6 right-6 p-2 text-slate-400 hover:text-brand-500 transition-colors" aria-label="Close panel">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
-      <h2 id="modalTitle" class="text-3xl font-display font-black tracking-tight mb-8 text-gray-900 dark:text-white">
-        Modal Header</h2>
-      <div id="modalBody" class="text-sm text-gray-500 dark:text-gray-400 font-medium leading-relaxed">
-        <!-- Content gets injected here -->
+      <h2 id="modalTitle" class="text-3xl font-display font-black tracking-tight mb-8 text-slate-900 dark:text-white">Modal Header</h2>
+      <div id="modalBody" class="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
+        <!-- Injected Content -->
       </div>
     </div>
   </div>
@@ -1100,8 +1389,7 @@
   <!-- Floating Feedback Button -->
   <button onclick="openModal('feedback')" class="floating-feedback-btn" aria-label="Open feedback form">
     <span>💬</span>
-    <span class="feedback-text-mobile">Feedback</span>
-    <span class="feedback-text-desktop">Your feedback is precious to us</span>
+    <span>Feedback</span>
   </button>
 
 </body>

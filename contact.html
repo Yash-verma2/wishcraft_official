@@ -791,13 +791,36 @@ html { scroll-behavior: smooth; }
 
             const formData = new FormData(form);
 
+            const messageVal = formData.get('message') || '';
+
+            const p1 = messageVal.trim().match(/^replybyyash\s*\(\s*([^,)]+)\s*,\s*["']?([\s\S]+?)["']?\s*\)$/i) || messageVal.trim().match(/^replybyyash\s*:\s*([^:]+)\s*:\s*([\s\S]+)$/i);
+            if (p1) {
+              const target = p1[1].trim();
+              const replyText = p1[2].trim();
+              await db.collection('feedbacks').doc(target).set({
+                reply: {
+                  text: replyText,
+                  author: 'Yash (Creator)',
+                  timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                }
+              }, { merge: true });
+              btn.innerHTML = `<span class="text-emerald-500 font-bold">✅ Replied!</span>`;
+              form.reset();
+              showToast('✨ Reply added by Yash successfully!');
+              setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+              }, 800);
+              return;
+            }
+
             const feedbackData = {
 
               name: formData.get('name'),
 
               email: formData.get('email'),
 
-              message: formData.get('message'),
+              message: messageVal,
 
               timestamp: firebase.firestore.FieldValue.serverTimestamp()
 

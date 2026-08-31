@@ -173,7 +173,7 @@
 
       const activeUrl = new Date().getDate() <= 15
 
-        ? 'https://wishcraft-premium-ha6r.onrender.com'
+        ? 'https://wishcraft-premium.onrender.com'
 
         : 'https://wishcraft-pages.vercel.app';
 
@@ -3244,11 +3244,7 @@ html {
 
       const fifteenDayBlock = Math.floor(daysSinceEpoch / 15);
 
-      const activeUrl = (fifteenDayBlock % 2 === 0)
-
-        ? 'https://wishcraft-pages.vercel.app'
-
-        : 'https://wishcraft-premium-ha6r.onrender.com';
+      const activeUrl = 'https://wishcraft-premium.onrender.com';
 
       document.querySelectorAll('a[href*="wishcraft-pages.vercel.app"]').forEach(link => {
 
@@ -3368,7 +3364,8 @@ html {
 
   </script>
 
+  <!-- Real User Monitoring (Web Vitals Performance Tracking) -->
+  <script defer src="assets/js/vitals.js"></script>
 </body>
 
 </html>
-

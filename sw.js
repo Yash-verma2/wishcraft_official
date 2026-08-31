@@ -1,9 +1,10 @@
-﻿const CACHE_NAME = 'wishcraft-static-v2';
+const CACHE_NAME = 'wishcraft-static-v3';
 const CORE_ASSETS = [
   '/',
   '/index.html',
   '/manifest.json',
   '/assets/css/style.css',
+  '/assets/js/vitals.js',
   '/assets/branding/favicon-192x192.png',
   '/assets/branding/favicon-512x512.png',
   '/assets/branding/favicon.ico'
